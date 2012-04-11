@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		
+		<title>Kevin Gorski - Software Architect &amp; Developer</title>
+		
+		<meta name="description" content="Kevin Gorski is a software architect and developer that turns good ideas into great products for start-ups and small businesses.">
+		<meta name="keywords" content="software developer,software architect,C#,.NET,node.js,start-up,small business">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+		
+		<script src="js/modernizr-1.6.min.js"></script>
+		<script type="text/javascript" src="http://use.typekit.com/nzv3adt.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	</head>
+	<body>
+		<header>
+			<hgroup>
+				<h1><a href="Index.html" rel="home">Kevin Gorski</a></h1>
+				<h2>I turn good ideas into great products for start-ups and small businesses</h2>
+			</hgroup>
+		</header>
+		
+		<div id="Content"><h1>Node.js</h1>
+<p><a href="http://nodejs.org">Node.js</a> has had the development community's attention since <a href="http://jsconf.eu/2009/video_nodejs_by_ryan_dahl.html">Ryan Dahl's introduction to it in 2009</a>, but in the second half of 2010 it became both stable enough to use and an impressive set of modules to make it useful for a variety of tasks.</p>
+<h2>What Is It?</h2>
+<p>"Node's goal is to provide an easy way to build scalable network programs." This could be Web sites or clients/servers that talk directly over TCP, or anything, really. When writing a Node.js application, you're writing JavaScript that is going to be handled by <a href="http://code.google.com/p/v8/">Google's V8 engine</a>, which itself is written in C++. The core of Node.js provides modules and objects that you use in JavaScript that are implemented in C++. The flow of an application is controlled by an <a href="http://en.wikipedia.org/wiki/Event-driven_programming">event loop</a>, which in itself is not unique (there are libraries for Python, Ruby, and other languages that also run like this). By setting the precedent that all potentially <a href="http://en.wikipedia.org/wiki/Blocking_(computing)">blocking</a> calls should be asynchronous/evented, the time spent blocking can be minimized and the application can do more useful work in the same amount of time within the same environment.</p>
+<p>Node.js modules conform to the <a href="http://www.commonjs.org/">CommonJS specification</a>, which immediately made general purpose JavaScript modules that conform to the spec available to use in this new context.</p>
+<h2>Why Do I Care?</h2>
+<p>Node is interesting to me because JavaScript can be fun to write and the energy of the community that's sprung up around it is infectious. The potential performance benefits for networked applications are nice, but since I haven't had to fight for performance on any of the projects I've used it for it's only been theoretical for me. Any time a discussion about server side JavaScript comes up, the possibility of <a href="http://caolanmcmahon.com/writing_for_node_and_the_browser.html">writing code that can run on both the client and server</a> is brought up, but in practice I've found that there's a very small amount of code that you'd actually want to re-use on both platforms. The resulting code is also <a href="http://onedayitwillmake.com/blog/2010/11/sharing-a-javascript-base-class-between-node-js-server-and-client-browser/">somewhat awkward to write</a>.</p>
+<h2>What Have I Done With Node.js?</h2>
+<p>When I started learning about Node in November 2010, I decided to start a blog detailing what I've learned called <a href="http://nodenerd.net/">Node Nerd</a> for a few reasons. I didn't really have a place where I was writing about technology yet and if felt like a topic that I was already excited about would be a good first venture. The first set of articles are mostly quick introductions, but as I get a good base of articles established I will write about more sophisticated modules and techniques.</p>
+<p>The product of these first articles is the <a href="https://github.com/kevingorski/github-commitmonitor">GitHub Commit Monitor</a>, a very simple, single-page web application that lists the most recent commits for a GitHub repository by using their REST API.</p>
+<p>I have some other ideas for projects to build with Node.js, but I'm going to put off talking them up until I have some code to show.</p>		</div>
+		<footer>			
+			<nav>
+				<ul>
+					<li><a href="Portfolio.html">Portfolio</a></li>
+					<li><a href="Learning.html">Learning</a></li>
+					<li><a href="Nodejs.html">Node.js</a></li>
+					<li><a href="Design.html">Design</a></li>
+					<li><a href="Other.html">Hobbies</a></li>
+				</ul>
+			</nav>
+
+			<section id="ProfessionalLinks">
+				<h1>Professional</h1>
+				<ul>
+					<li class="pdf"><a href="KevinGorski-Resume.pdf">Résumé</a> <img src="images/pdf.gif" alt="PDF document" width="16" height="16"></li>
+					<li class="LinkedIn"><a href="http://linkedin.com/in/kevingorski" rel="me">LinkedIn</a></li>
+					<li class="StackOverflow"><a href="http://stackoverflow.com/users/35806/kevin-gorski" rel="me">StackOverflow</a></li>
+					<li class="GitHub"><a href="https://github.com/kevingorski" rel="me">GitHub</a></li>
+					<li class="Tumblr"><a href="http://nodenerd.net" rel="me">Node Nerd Blog</a></li>
+				</ul>
+			</section>
+
+			<section id="PersonalLinks">
+				<h1>Personal</h1>
+				<ul>
+					<li class="Twitter"><a href="http://twitter.com/kevingorski" rel="me">Twitter</a></li>
+					<li class="GoogleReader"><a href="http://www.google.com/reader/shared/kevin.gorski" rel="me">Google Reader Shared Items</a></li>
+					<li class="LastFm"><a href="http://last.fm/user/ShortHairedG" rel="me">Last.fm</a></li>
+				</ul>
+			</section>
+
+			<section id="Contact">
+				<h1>Contact</h1>
+				<div id="hcard-Kevin-Gorski" class="vcard">
+					<figure><img src="images/KevinGorski.jpg" width="150" height="150" alt="Kevin Gorski"></figure>
+					<div class="url fn n">
+						<span class="given-name">Kevin</span>
+						<span class="family-name">Gorski</span>
+					</div>
+					<a class="email" href="mailto:kevin.gorski@gmail.com">kevin.gorski@gmail.com</a>
+					<div class="adr">Denver, CO</div>
+				</div>
+			</section>
+
+			<div class="clear">&nbsp;</div>
+		</footer>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+		<script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery-1.5.1.min.js"%3E%3C/script%3E'))</script>
+		<script type="text/javascript">
+			var _gauges = _gauges || [];
+
+			(function() {
+				var t   = document.createElement('script');
+				t.type  = 'text/javascript';
+				t.async = true;
+				t.id    = 'gauges-tracker';
+				t.setAttribute('data-site-id', '4e87704ff5a1f5304f000003');
+				t.src = '//secure.gaug.es/track.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(t, s);
+			})();
+		</script>
+	</body>
+</html>
