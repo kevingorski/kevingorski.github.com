@@ -189,25 +189,11 @@ a:active {
 }
 
 
-header h1 a:link,
-header h1 a:visited {
-	-webkit-transition: all 0.2s linear;
-	-moz-transition: all 0.2s linear;
-	-o-transition: all 0.2s linear;
-	transition: all 0.2s linear;
-}
-
 .csstransitions header h1 a:hover,
 .csstransitions header h1 a:focus,
 .csstransitions header h1 a:active{
 	background-color: transparent;
-	text-shadow: 2px 2px 4px #000000;
-	
-	-webkit-transform: translate(-3px,-3px);
-	-moz-transform: translate(-2px, -2px);
-	-o-transform: translate(-3px, -3px);
-	-ms-transform: translate(-3px, -3px);
-	transform: translate(-3px, -3px);
+	cursor: pointer;
 }
 
 h1,
@@ -241,7 +227,6 @@ header h1 {
 header h1 a:link,
 header h1 a:visited {
 	color: black;
-	text-decoration: none;
 	font-size: 3.4em;
 	line-height: 1.2em;
 	letter-spacing: 3px;
@@ -294,6 +279,10 @@ nav ul li li {
 
 #Content section section h1 {
 	margin: 0 0 1em;
+}
+
+#Content ul {
+	margin-bottom: 1em;
 }
 
 section header {
@@ -360,6 +349,7 @@ footer nav ul {
 footer nav ul li {
 	display: inline;
 	margin-right: 2em;
+	margin-left: 2em;
 }
 
 footer section {
