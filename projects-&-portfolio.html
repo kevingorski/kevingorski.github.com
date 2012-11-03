@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="dns-prefetch" href="//ajax.googleapis.com">
+    <title>Projects &amp; Porfolio - Kevin Gorski
+    </title>
+    <meta name="description" content="Kevin Gorski creates &amp; writes about software">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      /* A fix for the iOS orientationchange zoom bug. Script by @scottjehl, rebound by @wilto.MIT / GPLv2 License. */
+      (function(a){function m(){d.setAttribute("content",g),h=!0}function n(){d.setAttribute("content",f),h=!1}function o(b){l=b.accelerationIncludingGravity,i=Math.abs(l.x),j=Math.abs(l.y),k=Math.abs(l.z),(!a.orientation||a.orientation===180)&&(i>7||(k>6&&j<8||k<8&&j>6)&&i>5)?h&&n():h||m()}var b=navigator.userAgent;if(!(/iPhone|iPad|iPod/.test(navigator.platform)&&/OS [1-5]_[0-9_]* like Mac OS X/i.test(b)&&b.indexOf("AppleWebKit")>-1))return;var c=a.document;if(!c.querySelector)return;var d=c.querySelector("meta[name=viewport]"),e=d&&d.getAttribute("content"),f=e+",maximum-scale=1",g=e+",maximum-scale=10",h=!0,i,j,k,l;if(!d)return;a.addEventListener("orientationchange",m,!1),a.addEventListener("devicemotion",o,!1)})(this);
+    </script>
+    <script>
+      (function() {
+        var config = { kitId: 'cyf1blw', scriptTimeout: 3000 };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+      
+    </script>
+    <link rel="stylesheet" href="/css/de340019.styles.css">
+    <script src="/js/libs/modernizr-2.6.2.min.js"></script>
+    <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Kevin Gorski creates &amp; writes about software">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+  </head>
+  <body><!--[if lt IE 7]>
+    <p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+    <header class="clearfix">
+      <h1 class="center"><a href="/" class="grid">Kevin Gorski</a></h1>
+    </header>
+    <div id="content" role="main" class="clearfix">
+      <div class="center">
+        <div class="grid">
+          <header>
+            <h1>Projects & Portfolio</h1>
+          </header><p>Since getting my Computer Science degree in 2004, I&rsquo;ve primarily been doing .NET web development at my day job, but I&rsquo;ve been exploring other languages and environments in my own time. Most of my personal projects are in browser-based JavaScript or <a href="http://nodejs.org">Node.js</a>. Both .NET and Node have their advantages, but I&rsquo;m more interested in working with Node in the future.
+
+</p>
+<p>Here are some cherry-picked examples of projects I&rsquo;ve worked on in the past that you might find interesting. If you&rsquo;re more of a code person, my personal projects are all on <a href="https://github.com/kevingorski">GitHub</a>.
+
+
+</p>
+<h2>B-Cycle Admin Site &amp; Infrastructure</h2>
+<p><a href="http://bcycle.com">B-Cycle</a> was in a prototypical phase when we started working with them to build what would be the first production version of their automated bicycle sharing system. This project was technically interesting because it required multiple physically and logically separated systems to act in concert to provide a responsive end-user experience and an information rich administration system.
+
+</p>
+<p>Bikes are rented and returned to kiosks by users with either a credit card or an <abbr title="Radio Frequency Identification">RFID</abbr> card that had been previously purchased. Kiosks contact a central server to confirm the user account, manage payment details, and track the rented equipment. The central server bridged the distributed kiosks and the administration website, which aggregated user, equipment, and system level data. By tracking the <abbr title="Radio Frequency Identification">RFID</abbr> tag for each bike, usage patterns and equipment location was used to coordinated maintenance and customer service efforts.
+
+</p>
+<p>The administration website included some unique features that made the system powerful:
+
+</p>
+<ul>
+<li><span><a href="http://maps.google.com/">Google Maps</a>-based dashboard for geographic visualizations of near real-time data</span></li>
+<li><span>Configurable and templated messaging/alert system through email or <abbr title="Short Message Service">SMS</abbr> with localized messages</span></li>
+<li><span>Custom ticketing system based on user reports and maintenance schedules</span></li>
+<li><span>Remote hardware monitoring and control systems</span></li>
+<li><span>A public web service for supporting first- and third-party mobile applications</span></li>
+</ul>
+<h3>My Role</h3>
+<p>As the primary developer and architect of the central server application and administration web site I evaluated the high-level and detailed business requirements for technical feasibility, created a development plan that identified potential risks, provided plans to mitigate them, and used continuous integration to show our progress throughout the project.
+
+</p>
+<h3>Technologies</h3>
+<ul>
+<li><span>ASP.NET WebForms</span></li>
+<li><span><abbr title="Windows Communication Foundation">WCF</abbr> for web services</span></li>
+<li><span>NHibernate &amp; Fluent NHibernate</span></li>
+<li><span>Autofac</span></li>
+<li><span>CruiseControl.NET</span></li>
+<li><span>jQuery</span></li>
+<li><span>Google Maps <abbr title="Application Programming Interface">API</abbr></span></li>
+</ul>
+<h3>My Favorite Parts</h3>
+<ul>
+<li><span>A feel-good goal for the product: more biking, less driving, and better city living</span></li>
+<li><span>The development team cared about the success and well-being of the project and had many productive discussions about both the software and business</span></li>
+<li><span>Living in Denver, I&rsquo;m constantly reminded of this project when passing a B-Cycle or kiosk</span></li>
+</ul>
+<h2>Lead Management System for HomeAway</h2>
+<p>Managing vacation rental leads is a manual and unstructured process for many property managment companies, even if they use software to manage availability and the booking process. <abbr title="Lead Management System">LMS</abbr> is a &ldquo;modular application&rdquo; that tightly integrates into such systems with minimal changes to the existing codebase.
+
+</p>
+<p><abbr title="Lead Management System">LMS</abbr> consists of:
+
+</p>
+<ul>
+<li><span><abbr title="User Interface">UI</abbr> bootstrapped by a single JavaScript file</span></li>
+<li><span>.NET WebAPI service for the <abbr title="Lead Management System">LMS</abbr> <abbr title="User Interface">UI</abbr></span></li>
+<li><span>End system-specific web service implementations that are called from the <abbr title="Lead Management System">LMS</abbr> service</span></li>
+<li><span>An email retreival and parsing daemon to associate incoming messages with properties and people in the system</span></li>
+</ul>
+<h3>Technologies</h3>
+<ul>
+<li><span>Knockout</span></li>
+<li><span>jQuery</span></li>
+<li><span>ASP.NET MVC</span></li>
+<li><span>.NET Web API</span></li>
+<li><span>Entity Framework 5</span></li>
+<li><span>RabbitMQ</span></li>
+</ul>
+<h3>My Favorite Parts</h3>
+<ul>
+<li><span>This is one of the most sophisticated and complete JavaScript-based <abbr title="User Interface">UI</abbr>s I&rsquo;ve worked on</span></li>
+<li><span>Working with a motivated and talented development team</span></li>
+</ul>
+<h2>Can You Read It Now?</h2>
+<p><a href="http://canyoureaditnow.com/">Can You Read It Now</a> (or <abbr title="Can You Read It Now">CYRIN</abbr>) is a two-part project: an <a href="https://github.com/kevingorski/CanYouReadItNow">open-source jQuery plug-in</a> for analyzing the visual readability of text and <a href="http://canyoureaditnow.com/">a bookmarklet</a> to help users make specific style changes to improve readability. I wrote it to help me learn about typography, readability, and bookmarklets.
+
+</p>
+<h3>Technologies</h3>
+<ul>
+<li><span>jQuery</span></li>
+<li><span>Jasmine for testing the core analysis library</span></li>
+<li><span>Readability for finding the main content on a page</span></li>
+<li><span>Node.js for the bookmarklet hosting site and feedback</span></li>
+</ul>
+<h3>My Favorite Parts</h3>
+<ul>
+<li><span>It&rsquo;s a strange kind of fun evaluating specific pages for readability</span></li>
+<li><span>This was one of my first attempts at a non-trivial JavaScript code-base for both client and server</span></li>
+<li><span>I made the design for the <abbr title="Can You Read It Now">CYRIN</abbr> homepage and I don&rsquo;t hate it</span></li>
+</ul>
+<h2>TrackBoard</h2>
+<p><a href="https://github.com/kevingorski/TrackBoard">TrackBoard</a> is a browser-based dashboard built with HTML5, CSS3, and JavaScript. You can <a href="http://kevingorski.github.com/TrackBoard">see a demo of TrackBoard here</a>. Many features have been prioritized to maximize the opportunity to combine progressive enhancement and new-at-the-time browser features rather than based upon delivering something immediately useful. The overall goal was to have something more visually pleasing and immediately useful to a development team like the <a href="http://www.panic.com/blog/2010/03/the-panic-status-board/">Panic Status Board</a>. There are other, more complete commercial products in the same vein like <a href="http://www.geckoboard.com/">Geckoboard</a> that now exist in this space, but I was able to implement a decent set of features by utilizing open source libraries like <a href="http://jquery.com/">jQuery</a> and <a href="http://modernizr.com/">Modernizr</a>, which are credited on the project page.</p>
+
+        </div>
+      </div>
+    </div>
+    <footer class="clearfix">
+      <div class="center">
+        <div class="grid">
+          <nav><a href="/" class="back">Home</a> &middot; <a href="/archive.html">The&nbsp;Archives</a> &middot; <a href="/feed.xml">Articles&nbsp;RSS</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/libs/jquery-1.7.2.min.js"><\\/script>')</script>
+    <script src="/js/d5ef575e.scripts.js"></script>
+  </body>
+</html>
