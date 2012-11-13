@@ -9,6 +9,10 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://kevingorski.com/articles/CYRIN-Metrics-Part-1/</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/</loc>
     <priority>0.80</priority>
   </url>
