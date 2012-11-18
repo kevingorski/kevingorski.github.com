@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="dns-prefetch" href="//ajax.googleapis.com">
+    <title>CYRIN Metrics Part 2 - Kevin Gorski
+    </title>
+    <meta name="description" content="Kevin Gorski creates &amp; writes about software">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      /* A fix for the iOS orientationchange zoom bug. Script by @scottjehl, rebound by @wilto.MIT / GPLv2 License. */
+      (function(a){function m(){d.setAttribute("content",g),h=!0}function n(){d.setAttribute("content",f),h=!1}function o(b){l=b.accelerationIncludingGravity,i=Math.abs(l.x),j=Math.abs(l.y),k=Math.abs(l.z),(!a.orientation||a.orientation===180)&&(i>7||(k>6&&j<8||k<8&&j>6)&&i>5)?h&&n():h||m()}var b=navigator.userAgent;if(!(/iPhone|iPad|iPod/.test(navigator.platform)&&/OS [1-5]_[0-9_]* like Mac OS X/i.test(b)&&b.indexOf("AppleWebKit")>-1))return;var c=a.document;if(!c.querySelector)return;var d=c.querySelector("meta[name=viewport]"),e=d&&d.getAttribute("content"),f=e+",maximum-scale=1",g=e+",maximum-scale=10",h=!0,i,j,k,l;if(!d)return;a.addEventListener("orientationchange",m,!1),a.addEventListener("devicemotion",o,!1)})(this);
+    </script>
+    <script>
+      (function() {
+        var config = { kitId: 'cyf1blw', scriptTimeout: 3000 };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+      
+    </script>
+    <link rel="stylesheet" href="/css/7005c853.styles.css">
+    <script src="/js/libs/modernizr-2.6.2.min.js"></script>
+    <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Kevin Gorski creates &amp; writes about software">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <link rel="stylesheet" href="./article.css">
+  </head>
+  <body><!--[if lt IE 7]>
+    <p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+    <header class="clearfix">
+      <h1 class="center"><a href="/" class="grid">Kevin Gorski</a></h1>
+    </header>
+    <div id="content" role="main" class="clearfix">
+      <div class="center">
+        <div class="grid">
+          <article class="post">
+            <header>
+              <h1>CYRIN Metrics Part 2</h1>
+              <div id="metadata">
+                <time datetime="2012-11-18" class="publishDate">November 18th, 2012</time>
+              </div>
+            </header>
+            <section class="content"><p><a href="http://kevingorski.com/articles/CYRIN-Metrics-Part-1/">Continuing</a> our exploration of typographic terminology used by <a href="http://canyoureaditnow.com"><abbr title="Can You Read It Now?">CYRIN</abbr></a> and how its scores are calculated:
+
+</p>
+<h2>Justification</h2>
+<blockquote>
+<p>Left-justified text is most natural to read for most text.
+
+</p>
+</blockquote>
+<p>The justification of text describes how it will be aligned to the edges of your page, which in turn will determine how words will be distributed throughout those lines.
+
+</p>
+<p>There are four options for justification, but only two are good choices for body text and only one is feasible with the current state of browser technology. Let me explain.
+
+</p>
+<p>Centered text is terrible for reading more than a few lines at a time because of it&rsquo;s uneven left edge, making each new line a chore to begin. It can be interesting and artfully used for poetry or a piece with careful art direction, but for readability&rsquo;s sake it usually passes from interesting to distracting.
+
+</p>
+<p>Right-justified text isn&rsquo;t easy to follow for languages that read left-to-right for much the same reason, even through the right edge is easy enough to find.
+
+</p>
+<p>Fully-justified text (as often used in books and newspapers) is the easiest option to read when done well. This is — unfortunately — an area of browser technology that lags behind traditional publishing because the algorithm for placing text when fully justified is much more complicated than for text with a ragged edge.
+
+</p>
+<p>The simplest algorithm for full justification is what is currently used: fill a line with words and split the leftover space between each word. This gives the straight edges of full justification, but because it is inflexible it introduces a new readability problem between the edges: <a href="http://en.wikipedia.org/wiki/River_(typography)">&ldquo;rivers&rdquo;</a> of vertical whitespace.
+
+</p>
+<p>To avoid this and gain more control over the per-line-layout of text, words get hyphenated and <a href="http://en.wikipedia.org/wiki/Swash_(typography)">swashes</a> (alternate, decorative glyph forms that take up more horizontal space) take the place of some standard glyphs in order to balance each line&rsquo;s contents.
+
+</p>
+<p>Publishing software is built with automatic and configurable hyphenation and swashing (swashbuckling?) in mind, but as it stands today browsers don&rsquo;t have features that are as automatic <em>or</em> configurable. <a href="http://www.w3.org/TR/html401/struct/text.html#h-9.3.3">Soft hyphens</a> give you the option to manually include optional hyphenation points in text, but man, what a drag to have to bloat your documents to build yourself what the browser should be doing for you.
+
+</p>
+<p>If these features improve and are available across browsers this recommendation may change, but for now it&rsquo;s best to stick to left-justified text.
+
+</p>
+<h2>Margin &amp; Padding</h2>
+<blockquote>
+<p>Creating visual space on the left and right of text will make it easier to visually separate from the rest of the page.
+
+</p>
+</blockquote>
+<p>Margin &amp; padding are CSS attributes for creating space around specific elements on the page. By keeping the edges of your text clear from other content, background changes or the edge of the screen you&rsquo;ve prevented your reader from having to fight those distractions to keep focused on your text.
+
+</p>
+<h2>Text Color Contrast</h2>
+<blockquote>
+<p>The contrast ratio between the text color and the background color needs to be greater the smaller the text is.
+
+</p>
+</blockquote>
+<p>Color contrast enters into theory, mathematics and physiology that I only partially understand. It&rsquo;s big, hairy and complicated, but there&rsquo;s an algorithm to follow, so for now I trust the WCAG and hope that&rsquo;s enough to be useful.
+
+</p>
+<h2>Percentage of Text Stylized</h2>
+<blockquote>
+<p>Bold, italicized, and all-caps text should be kept to a minimum.
+
+</p>
+</blockquote>
+<p>Each of these styles have their place in emphacising or decorating specific parts of a body of text, but using any as the mainstay of your document will be a special kind of disaster.
+
+</p>
+<h2>Wrapping Up</h2>
+<p>That&rsquo;s it for further details of the metrics <abbr title="Can You Read It Now?">CYRIN</abbr> uses to rate text&rsquo;s readability. After Thanksgiving I&rsquo;ll cover the technical details of how <abbr title="Can You Read It Now?">CYRIN</abbr> works in the browser.
+
+</p>
+<p>Until next time.
+
+</p>
+</section>
+          </article>
+        </div>
+      </div>
+    </div>
+    <footer class="clearfix">
+      <div class="center">
+        <div class="grid">
+          <nav><a href="/" class="back">Home</a> &middot; <a href="/archive.html">The&nbsp;Archives</a> &middot; <a href="/projects-&amp;-portfolio.html">Projects&nbsp;&amp;&nbsp;Portfolio</a> &middot; <a href="/feed.xml">Articles&nbsp;RSS</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/libs/jquery-1.7.2.min.js"><\\/script>')</script>
+    <script src="/js/d5ef575e.scripts.js"></script>
+    <script>
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '4e87704ff5a1f5304f000003');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script>
+  </body>
+</html>
