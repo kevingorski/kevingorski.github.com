@@ -194,17 +194,21 @@ body > footer {
   padding: 3em 0 5em;
   text-align: center;
 }
-section.archive {
+section.archive,
+section.series {
   margin-top: 1em;
 }
-section.archive ol {
+section.archive ol,
+section.series ol {
   list-style: none;
   padding: 0;
 }
-section.archive ol ol.articles {
+section.archive ol.articles,
+section.series ol.articles {
   list-style: disc;
 }
-section.archive ol time.publishDate {
+section.archive time.publishDate,
+section.series time.publishDate {
   font-size: 1em;
   display: none;
 }
@@ -212,7 +216,8 @@ img {
   max-width: 400px;
 }
 @media screen and (min-width: 450px) {
-  section.archive ol time.publishDate {
+  section.archive ol time.publishDate,
+  section.series ol time.publishDate {
     display: inline;
     margin-right: 0.5em;
   }
@@ -266,14 +271,16 @@ img {
   time.publishDate {
     font-size: 14px;
   }
-  section.archive ol {
+  section.archive ol,
+  section.series ol {
     display: block;
     width: 972px;
     margin: 0 -6px;
     *width: 972px -correction;
     *margin: 0 -6px -correction;
   }
-  section.archive ol .year {
+  section.archive ol .year,
+  section.series ol .year {
     display: inline;
     float: left;
     overflow: hidden;
@@ -282,7 +289,12 @@ img {
     *width: 65px -correction;
     *margin: 0 6px -correction;
   }
-  section.archive ol ol.articles {
+  section.archive ol a,
+  section.series ol a {
+    display: block;
+  }
+  section.archive ol.articles,
+  section.series ol.articles {
     margin-left: 83px;
     display: inline;
     float: left;
@@ -293,7 +305,8 @@ img {
     *margin: 0 6px -correction;
     list-style: none;
   }
-  section.archive ol time.publishDate {
+  section.archive time.publishDate,
+  section.series time.publishDate {
     display: inline;
     float: left;
     overflow: hidden;
@@ -301,9 +314,6 @@ img {
     margin: 0 6px;
     *width: 142px -correction;
     *margin: 0 6px -correction;
-  }
-  section.archive ol a {
-    display: block;
   }
   img {
     max-width: 560px;
@@ -330,14 +340,16 @@ img {
   .wf-inactive li span {
     font-size: 17px;
   }
-  section.archive ol {
+  section.archive ol,
+  section.series ol {
     display: block;
     width: 972px;
     margin: 0 -6px;
     *width: 972px -correction;
     *margin: 0 -6px -correction;
   }
-  section.archive ol .year {
+  section.archive ol .year,
+  section.series ol .year {
     display: inline;
     float: left;
     overflow: hidden;
@@ -346,7 +358,8 @@ img {
     *width: 65px -correction;
     *margin: 0 6px -correction;
   }
-  section.archive ol ol.articles {
+  section.archive ol ol.articles,
+  section.series ol ol.articles {
     margin-left: 83px;
     display: inline;
     float: left;
