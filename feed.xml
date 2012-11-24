@@ -87,7 +87,7 @@
 &lt;p&gt;There are four options for justification, but only two are good choices for body text and only one is feasible with the current state of browser technology. Let me explain.
 
 &lt;/p&gt;
-&lt;p&gt;Centered text is terrible for reading more than a few lines at a time because of it&rsquo;s uneven left edge, making each new line a chore to begin. It can be interesting and artfully used for poetry or a piece with careful art direction, but for readability&rsquo;s sake it usually passes from interesting to distracting.
+&lt;p&gt;Centered text is terrible for reading more than a few lines at a time because of its uneven left edge, making each new line a chore to begin. It can be interesting and artfully used for poetry or a piece with careful art direction, but for readability&rsquo;s sake it usually passes from interesting to distracting.
 
 &lt;/p&gt;
 &lt;p&gt;Right-justified text isn&rsquo;t easy to follow for languages that read left-to-right for much the same reason, even through the right edge is easy enough to find.
@@ -114,7 +114,7 @@
 
 &lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Margin &amp; padding are CSS attributes for creating space around specific elements on the page. By keeping the edges of your text clear from other content, background changes or the edge of the screen you&rsquo;ve prevented your reader from having to fight those distractions to keep focused on your text.
+&lt;p&gt;Margin &amp; padding are &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; attributes for creating space around specific elements on the page. By keeping the edges of your text clear from other content, background changes or the edge of the screen you&rsquo;ve prevented your reader from having to fight those distractions to keep focused on your text.
 
 &lt;/p&gt;
 &lt;h2&gt;Text Color Contrast&lt;/h2&gt;
@@ -123,7 +123,7 @@
 
 &lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Color contrast enters into theory, mathematics and physiology that I only partially understand. It&rsquo;s big, hairy and complicated, but there&rsquo;s an algorithm to follow, so for now I trust the WCAG and hope that&rsquo;s enough to be useful.
+&lt;p&gt;Color contrast enters into theory, mathematics and physiology that I only partially understand. It&rsquo;s big, hairy and complicated, but there&rsquo;s an algorithm to follow, so for now I trust the &lt;a href=&quot;http://www.w3.org/TR/WCAG/&quot;&gt;&lt;abbr title=&quot;Web Content Accessibility Guidelines&quot;&gt;WCAG&lt;/abbr&gt;&lt;/a&gt; and hope that&rsquo;s enough to be useful.
 
 &lt;/p&gt;
 &lt;h2&gt;Percentage of Text Stylized&lt;/h2&gt;
