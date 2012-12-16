@@ -5,9 +5,81 @@
     <atom:link href="http://kevingorski.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://kevingorski.com</link>
     <description>Kevin Gorski creates &amp; writes about software</description>
-    <pubDate>Mon, 12 Nov 2012 12:00:00 -0700</pubDate>
+    <pubDate>Sun, 16 Dec 2012 12:00:00 -0700</pubDate>
     <generator>The mighty Wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>CYRIN In The Browser</title>
+      <link>http://kevingorski.com/articles/CYRIN-In-The-Browser/</link>
+      <pubDate>Sun, 16 Dec 2012 12:00:00 -0700</pubDate>
+      <guid isPermaLink="true">http://kevingorski.com/articles/CYRIN-In-The-Browser/</guid>
+      <author></author>
+      <description>&lt;p&gt;In order to rate the readability of text on a web page, Can You Read It Now has to do all of the following:
+
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Get access to the page contents&lt;/li&gt;
+&lt;li&gt;Find the text to be analyzed&lt;/li&gt;
+&lt;li&gt;Get the displayed style of each piece of text&lt;/li&gt;
+&lt;li&gt;Calculate ratings for each aspect of readability&lt;/li&gt;
+&lt;li&gt;Display the ratings to the user&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Accomplishing all of this with one click from the user required making several different trade-offs and design decisions. Let&rsquo;s cover each of these in turn.
+
+&lt;/p&gt;
+&lt;h2&gt;Get access to the page contents&lt;/h2&gt;
+&lt;p&gt;The simplest way to give &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; access to the current document would be to add an in-document JavaScript reference on the page to test, but that would mean changing the content of any page you want to rate, which is tedious and unnecessary. A different way to run third-party JavaScript in the context of the current document is a &lt;a href=&quot;http://en.wikipedia.org/wiki/Bookmarklet&quot;&gt;bookmarklet&lt;/a&gt;. As you might be able to gather from the name, bookmarklets are JavaScript that is saved and executed like a bookmark.
+
+&lt;/p&gt;
+&lt;p&gt;One pain point of building bookmarklets from a development standpoint is that you can&apos;t update the code once it&apos;s been saved. This can be mitigated by saving only code to load updatable script from a hosted location (like &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;canyoureaditnow.com&lt;/a&gt;).
+
+&lt;/p&gt;
+&lt;figure&gt;
+  &lt;pre&gt;
+&lt;code&gt;
+&lt;a id=&quot;Target&quot; href=&quot;javascript:
+  (function(){
+    if(typeof CYRIN==&apos;undefined&apos;
+     ||typeof CYRIN.Bookmarklet==&apos;undefined&apos;){
+
+      document.body.appendChild(document.createElement(&apos;script&apos;)).src=
+        &apos;http://canyoureaditnow.com/Bookmarklet.js?&apos;+(Math.random())
+
+    } else {
+      CYRIN.Bookmarklet.analyze()
+    }
+  })();&quot;&gt;CYRIN?&lt;/a&gt;
+&lt;/code&gt;
+  &lt;/pre&gt;
+  &lt;figcaption&gt;The &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; bookmarklet, expanded for readability&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+&lt;h2&gt;Find the text to be analyzed&lt;/h2&gt;
+&lt;p&gt;So, now that the JavaScript is running in the right context, how do we find the text to analyze? I knew it was possible to find the primary text for a page without requiring user input from seeing the Instapaper and Readability bookmarklets in action, but I wasn&rsquo;t sure how to go about implementing something like that myself. Fortunately for me, the &lt;a href=&quot;https://code.google.com/p/arc90labs-readability/&quot;&gt;original Readability bookmark is open source&lt;/a&gt; and I was able to re-use their working solution.
+
+&lt;/p&gt;
+&lt;h2&gt;Get the displayed style of each piece of text&lt;/h2&gt;
+&lt;p&gt;Once we&rsquo;ve got a handle to the container of the text to analyze, we can use jQuery&rsquo;s &lt;a href=&quot;http://api.jquery.com/css/&quot;&gt;css method&lt;/a&gt; to grab the computed &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; properties of each element. 
+
+&lt;/p&gt;
+&lt;h2&gt;Calculate ratings for each aspect of readability&lt;/h2&gt;
+&lt;p&gt;Style data from each piece of text and the elements nearby are used to calculate ratings which are then weighted by how much of the document by character count this text represents. This is how a tree of &lt;abbr title=&quot;Document Object Model&quot;&gt;DOM&lt;/abbr&gt; elements gets rated and turned into one set of scores for the entire page.
+
+&lt;/p&gt;
+&lt;h2&gt;Display the results&lt;/h2&gt;
+&lt;p&gt;Now we have a set of scores to display within the document that we just finished rating. In order to prevent the hosted page from affecting how the scores are styled they are displayed in an &lt;a href=&quot;http://en.wikipedia.org/wiki/iframe&quot;&gt;IFrame&lt;/a&gt;, where only the directly included styles will apply. This also allows the markup to be served by the &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; server rather than included in JavaScript.
+
+&lt;/p&gt;
+&lt;h2&gt;Wrapping up&lt;/h2&gt;
+&lt;p&gt;That&rsquo;s all I have to say about &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; for now. If you have any questions feel free to contact me at &lt;a href=&quot;mailto:kevin.gorski@gmail.com&quot;&gt;kevin.gorski@gmail.com&lt;/a&gt;.
+
+&lt;/p&gt;
+&lt;p&gt;Until next time.
+
+&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>CYRIN Metrics Part 1</title>
       <link>http://kevingorski.com/articles/CYRIN-Metrics-Part-1/</link>
@@ -64,84 +136,6 @@
 &lt;li&gt;Percentage of Text Stylized&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;More like this to follow. Until next time.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Typography &amp; Can You Read It&nbsp;Now?</title>
-      <link>http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/</link>
-      <pubDate>Sat, 03 Nov 2012 12:00:00 -0600</pubDate>
-      <guid isPermaLink="true">http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/</guid>
-      <author></author>
-      <description>&lt;p&gt;Typography can be a subtle art. Type is in front of us all day in one form or another, but it can take extreme examples of high- or low-quality typography to &lt;a href=&quot;http://www.typographydeconstructed.com/spur/&quot;&gt;spur&lt;/a&gt; us to think about type. Like most arts, the more you think about it, the more you notice details, which in turn makes you stop and evaluate what you might have glossed over before. This is both enthralling and maddening.
-
-
-&lt;/p&gt;
-&lt;h2&gt;Productive Frustration&lt;/h2&gt;
-&lt;p&gt;My entrance into the spiral of typographic concern started innocently enough: by reading a lot of software development articles on the Web. The content is often well-written by smart and articulate people, but the type is usually set in varying degrees of &lt;a href=&quot;http://en.wikipedia.org/wiki/Readability&quot;&gt;unreadable&lt;/a&gt;.
-
-&lt;/p&gt;
-&lt;p&gt;For non-technical content, there are work-arounds for this problem: use &lt;a href=&quot;http://instapaper.com&quot;&gt;Instapaper&lt;/a&gt;, &lt;a href=&quot;http://readability.com&quot;&gt;Readability&lt;/a&gt;, or Safari&rsquo;s Reader feature to set the text in a more readable way and go on with your life. This is great for prose and digital photos (which can usually be resized without losing meaning), but software development articles tend to include accompanying source code (which has different requirements for readability than prose) and detailed screen shots which tend to only be legible at full size.
-
-&lt;/p&gt;
-&lt;p&gt;Rather than lobbying for these tools to handle the code snippet use case, a different way to solve the problem is to make it easier for authors to make their text &lt;em&gt;readable enough&lt;/em&gt; without having to become typography or &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; expert.
-
-
-&lt;/p&gt;
-&lt;h2&gt;So I Made A Thing&lt;/h2&gt;
-&lt;p&gt;When I started working on &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;Can You Read It Now&lt;/a&gt; (&lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt;) I could identify readable text, but not the ways that distinguished it from the text that was a challenge to read. Since it was clear that I was not the only one with this problem, I spent some time reading about the basics of typesetting in the browser and applied some of what I learned in the &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; &lt;a href=&quot;http://en.wikipedia.org/wiki/Bookmarklet&quot;&gt;bookmarklet&lt;/a&gt;.
-
-&lt;/p&gt;
-&lt;figure&gt;
-&lt;img src=&quot;http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/scores.png&quot; alt=&quot;Example CYRIN scores&quot;&gt;
-&lt;figcaption&gt;&lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; gives immediate feedback in the current browser window&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-
-&lt;h2&gt;What Do I Do With This?&lt;/h2&gt;
-&lt;p&gt;The source for a lot of the ratings are the &lt;abbr title=&quot;World Wide Web Consortium&quot;&gt;W3C&lt;/abbr&gt;&rsquo;s &lt;a href=&quot;http://www.w3.org/WAI/intro/wcag.php&quot;&gt;Web Content Accessibility Guidelines&lt;/a&gt;, which are focused on making content accessible to as many people as possible. I&rsquo;ve used the formulas where they are included with the guidelines for calculating how readable text will be and tried to make clear ratings based on that guidance or personal preference everywhere else. In &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; higher scores (up to 10) mean that the text will be easier and possible for more people to read your content, but anything rated 7 or above can be good enough if you&rsquo;re not targeting visitors with &lt;a href=&quot;http://en.wikipedia.org/wiki/Low_vision&quot;&gt;low-vision&lt;/a&gt;.
-
-&lt;/p&gt;
-&lt;p&gt;&lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; also gives specific recommendations with &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; rules for making the target design more readable.
-
-&lt;/p&gt;
-&lt;figure&gt;
-&lt;img src=&quot;http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/suggestions.png&quot; alt=&quot;Example CYRIN suggestions&quot;&gt;
-&lt;figcaption&gt;Suggestions &amp; &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Finally, &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; also provides short descriptions of the aspects of typesetting that are being measured. There are more aspects of well-set type than are listed here and more subtlety to determining whether text is readable, but I think it&rsquo;s a good start for beginners and casual practitioners.
-
-&lt;/p&gt;
-&lt;figure&gt;
-&lt;img src=&quot;http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/aspect_description.png&quot; alt=&quot;Example CYRIN aspect description&quot;&gt;
-&lt;figcaption&gt;Description of &lt;a href=&quot;http://en.wikipedia.org/wiki/Leading&quot;&gt;line leading&lt;/a&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Go ahead, &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;try it out&lt;/a&gt;.
-
-
-&lt;/p&gt;
-&lt;h2&gt;What&rsquo;s coming&lt;/h2&gt;
-&lt;p&gt;There&rsquo;s more to tell about &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; and some of the basics of typography as it applies to readability, so I hope you&rsquo;ll look forward to:
-
-&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;More on the meanings of metrics that &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; evaluates&lt;/li&gt;
-&lt;li&gt;Notes on other aspects of typography in the browser&lt;/li&gt;
-&lt;li&gt;Technical details about how &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; was built&lt;/li&gt;
-&lt;li&gt;Feature updates&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Other Reading&lt;/h2&gt;
-&lt;p&gt;Here&apos;s some type-geek reading I&rsquo;ve enjoyed:
-
-&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style&quot;&gt;The Elements of Typographic Style&lt;/a&gt; - The One True Typography Book, as far as I know. Covers a great deal of what I&rsquo;d picked up in bits and pieces over time, but in greater detail, historical context and (of course) amazing typography.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://webtypography.net/&quot;&gt;The Elements of Typographic Style Applied to the Web&lt;/a&gt; - A long-running work in progress (started in 2005) that tries to capture more of the specifics of designing for the browser.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://informationarchitects.net/blog/&quot;&gt;Information Architects&lt;/a&gt; - Creators of iA Writer, they have written about how &lt;a href=&quot;http://informationarchitects.net/blog/responsive-typography-the-basics/&quot;&gt;they apply rigorous standards to the display of text&lt;/a&gt; in their cross-device text editors.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://elliotjaystocks.com/&quot;&gt;Elliot Jay Stocks&lt;/a&gt;&rsquo; Tomorrow&rsquo;s web type today series: &lt;a href=&quot;http://elliotjaystocks.com/blog/the-fine-flourish-of-the-ligature/&quot;&gt;ligatures&lt;/a&gt;, &lt;a href=&quot;http://elliotjaystocks.com/blog/expert-subsets-for-css-in-123/&quot;&gt;expert subsets&lt;/a&gt; (for real small caps and lower case numerals), &lt;a href=&quot;http://elliotjaystocks.com/blog/say-it-with-a-swash/&quot;&gt;swashes&lt;/a&gt; &amp; &lt;a href=&quot;http://elliotjaystocks.com/blog/stylesets/&quot;&gt;stylesets&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Until next time.&lt;/p&gt;
 </description>
     </item>
     <item>
@@ -220,6 +214,84 @@
 &lt;p&gt;Until next time.
 
 &lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Typography &amp; Can You Read It&nbsp;Now?</title>
+      <link>http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/</link>
+      <pubDate>Sat, 03 Nov 2012 12:00:00 -0600</pubDate>
+      <guid isPermaLink="true">http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/</guid>
+      <author></author>
+      <description>&lt;p&gt;Typography can be a subtle art. Type is in front of us all day in one form or another, but it can take extreme examples of high- or low-quality typography to &lt;a href=&quot;http://www.typographydeconstructed.com/spur/&quot;&gt;spur&lt;/a&gt; us to think about type. Like most arts, the more you think about it, the more you notice details, which in turn makes you stop and evaluate what you might have glossed over before. This is both enthralling and maddening.
+
+
+&lt;/p&gt;
+&lt;h2&gt;Productive Frustration&lt;/h2&gt;
+&lt;p&gt;My entrance into the spiral of typographic concern started innocently enough: by reading a lot of software development articles on the Web. The content is often well-written by smart and articulate people, but the type is usually set in varying degrees of &lt;a href=&quot;http://en.wikipedia.org/wiki/Readability&quot;&gt;unreadable&lt;/a&gt;.
+
+&lt;/p&gt;
+&lt;p&gt;For non-technical content, there are work-arounds for this problem: use &lt;a href=&quot;http://instapaper.com&quot;&gt;Instapaper&lt;/a&gt;, &lt;a href=&quot;http://readability.com&quot;&gt;Readability&lt;/a&gt;, or Safari&rsquo;s Reader feature to set the text in a more readable way and go on with your life. This is great for prose and digital photos (which can usually be resized without losing meaning), but software development articles tend to include accompanying source code (which has different requirements for readability than prose) and detailed screen shots which tend to only be legible at full size.
+
+&lt;/p&gt;
+&lt;p&gt;Rather than lobbying for these tools to handle the code snippet use case, a different way to solve the problem is to make it easier for authors to make their text &lt;em&gt;readable enough&lt;/em&gt; without having to become typography or &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; expert.
+
+
+&lt;/p&gt;
+&lt;h2&gt;So I Made A Thing&lt;/h2&gt;
+&lt;p&gt;When I started working on &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;Can You Read It Now&lt;/a&gt; (&lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt;) I could identify readable text, but not the ways that distinguished it from the text that was a challenge to read. Since it was clear that I was not the only one with this problem, I spent some time reading about the basics of typesetting in the browser and applied some of what I learned in the &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; &lt;a href=&quot;http://en.wikipedia.org/wiki/Bookmarklet&quot;&gt;bookmarklet&lt;/a&gt;.
+
+&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/scores.png&quot; alt=&quot;Example CYRIN scores&quot;&gt;
+&lt;figcaption&gt;&lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; gives immediate feedback in the current browser window&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+&lt;h2&gt;What Do I Do With This?&lt;/h2&gt;
+&lt;p&gt;The source for a lot of the ratings are the &lt;abbr title=&quot;World Wide Web Consortium&quot;&gt;W3C&lt;/abbr&gt;&rsquo;s &lt;a href=&quot;http://www.w3.org/WAI/intro/wcag.php&quot;&gt;Web Content Accessibility Guidelines&lt;/a&gt;, which are focused on making content accessible to as many people as possible. I&rsquo;ve used the formulas where they are included with the guidelines for calculating how readable text will be and tried to make clear ratings based on that guidance or personal preference everywhere else. In &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; higher scores (up to 10) mean that the text will be easier and possible for more people to read your content, but anything rated 7 or above can be good enough if you&rsquo;re not targeting visitors with &lt;a href=&quot;http://en.wikipedia.org/wiki/Low_vision&quot;&gt;low-vision&lt;/a&gt;.
+
+&lt;/p&gt;
+&lt;p&gt;&lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; also gives specific recommendations with &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; rules for making the target design more readable.
+
+&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/suggestions.png&quot; alt=&quot;Example CYRIN suggestions&quot;&gt;
+&lt;figcaption&gt;Suggestions &amp; &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Finally, &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; also provides short descriptions of the aspects of typesetting that are being measured. There are more aspects of well-set type than are listed here and more subtlety to determining whether text is readable, but I think it&rsquo;s a good start for beginners and casual practitioners.
+
+&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/aspect_description.png&quot; alt=&quot;Example CYRIN aspect description&quot;&gt;
+&lt;figcaption&gt;Description of &lt;a href=&quot;http://en.wikipedia.org/wiki/Leading&quot;&gt;line leading&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Go ahead, &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;try it out&lt;/a&gt;.
+
+
+&lt;/p&gt;
+&lt;h2&gt;What&rsquo;s coming&lt;/h2&gt;
+&lt;p&gt;There&rsquo;s more to tell about &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; and some of the basics of typography as it applies to readability, so I hope you&rsquo;ll look forward to:
+
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;More on the meanings of metrics that &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; evaluates&lt;/li&gt;
+&lt;li&gt;Notes on other aspects of typography in the browser&lt;/li&gt;
+&lt;li&gt;Technical details about how &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; was built&lt;/li&gt;
+&lt;li&gt;Feature updates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Other Reading&lt;/h2&gt;
+&lt;p&gt;Here&apos;s some type-geek reading I&rsquo;ve enjoyed:
+
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style&quot;&gt;The Elements of Typographic Style&lt;/a&gt; - The One True Typography Book, as far as I know. Covers a great deal of what I&rsquo;d picked up in bits and pieces over time, but in greater detail, historical context and (of course) amazing typography.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://webtypography.net/&quot;&gt;The Elements of Typographic Style Applied to the Web&lt;/a&gt; - A long-running work in progress (started in 2005) that tries to capture more of the specifics of designing for the browser.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://informationarchitects.net/blog/&quot;&gt;Information Architects&lt;/a&gt; - Creators of iA Writer, they have written about how &lt;a href=&quot;http://informationarchitects.net/blog/responsive-typography-the-basics/&quot;&gt;they apply rigorous standards to the display of text&lt;/a&gt; in their cross-device text editors.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://elliotjaystocks.com/&quot;&gt;Elliot Jay Stocks&lt;/a&gt;&rsquo; Tomorrow&rsquo;s web type today series: &lt;a href=&quot;http://elliotjaystocks.com/blog/the-fine-flourish-of-the-ligature/&quot;&gt;ligatures&lt;/a&gt;, &lt;a href=&quot;http://elliotjaystocks.com/blog/expert-subsets-for-css-in-123/&quot;&gt;expert subsets&lt;/a&gt; (for real small caps and lower case numerals), &lt;a href=&quot;http://elliotjaystocks.com/blog/say-it-with-a-swash/&quot;&gt;swashes&lt;/a&gt; &amp; &lt;a href=&quot;http://elliotjaystocks.com/blog/stylesets/&quot;&gt;stylesets&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Until next time.&lt;/p&gt;
 </description>
     </item>
   </channel>

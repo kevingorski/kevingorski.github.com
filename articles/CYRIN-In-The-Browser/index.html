@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="dns-prefetch" href="//ajax.googleapis.com" />
+    <title>CYRIN In The Browser - Kevin Gorski
+    </title>
+    <meta name="description" content="Kevin Gorski creates &amp; writes about software" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      /* A fix for the iOS orientationchange zoom bug. Script by @mathias, @cheeaun and @jdalton / GPLv2 License. */
+      (function(doc) {
+        var addEvent = 'addEventListener',
+            type = 'gesturestart',
+            qsa = 'querySelectorAll',
+            scales = [1, 1],
+            meta = qsa in doc ? doc[qsa]('meta[name=viewport]') : [];
+            
+        function fix() {
+          meta.content = 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1];
+          doc.removeEventListener(type, fix, true);
+        }
+        
+        if ((meta = meta[meta.length - 1]) && addEvent in doc) {
+          fix();
+          scales = [.25, 1.6];
+          doc[addEvent](type, fix, true);
+        }
+        
+      }(document));
+      
+    </script>
+    <script>
+      (function() {
+        var config = { kitId: 'cyf1blw', scriptTimeout: 3000 };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+      
+    </script>
+    <link rel="stylesheet" href="/css/32c61474.styles.css" />
+    <script src="/js/libs/modernizr-2.6.2.min.js"></script>
+    <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Kevin Gorski creates &amp; writes about software" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    <link rel="stylesheet" href="./article.css" />
+  </head>
+  <body><!--[if lt IE 7]>
+    <p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+    <header class="clearfix">
+      <h1 class="center"><a href="/" class="grid">Kevin Gorski</a></h1>
+    </header>
+    <div id="content" role="main" class="clearfix">
+      <div class="center">
+        <div class="grid">
+          <article class="post">
+            <header>
+              <h1>CYRIN In The Browser</h1>
+              <div id="metadata">
+                <time datetime="2012-12-16" class="publishDate">December 16th, 2012</time>
+                <iframe border="0" scrolling="no" width="78" height="17" allowtransparency="allowtransparency" frameborder="0" style="margin-bottom: -3px; z-index: 1338; border: 0px; background-color: transparent; overflow: hidden;" src="http://www.instapaper.com/e2?url=http://kevingorski.com/articles/CYRIN-In-The-Browser/&amp;title=CYRIN In The Browser"></iframe>
+              </div>
+            </header>
+            <section class="content"><p>In order to rate the readability of text on a web page, Can You Read It Now has to do all of the following:
+
+</p>
+<ul>
+<li><span>Get access to the page contents</span></li>
+<li><span>Find the text to be analyzed</span></li>
+<li><span>Get the displayed style of each piece of text</span></li>
+<li><span>Calculate ratings for each aspect of readability</span></li>
+<li><span>Display the ratings to the user</span></li>
+</ul>
+<p>Accomplishing all of this with one click from the user required making several different trade-offs and design decisions. Let’s cover each of these in turn.
+
+</p>
+<h2><a name="Get access to the page contents">Get access to the page contents</a><a class="section" href="#Get access to the page contents">§</a></h2>
+<p>The simplest way to give <abbr title="Can You Read It Now?">CYRIN</abbr> access to the current document would be to add an in-document JavaScript reference on the page to test, but that would mean changing the content of any page you want to rate, which is tedious and unnecessary. A different way to run third-party JavaScript in the context of the current document is a <a href="http://en.wikipedia.org/wiki/Bookmarklet">bookmarklet</a>. As you might be able to gather from the name, bookmarklets are JavaScript that is saved and executed like a bookmark.
+
+</p>
+<p>One pain point of building bookmarklets from a development standpoint is that you can't update the code once it's been saved. This can be mitigated by saving only code to load updatable script from a hosted location (like <a href="http://canyoureaditnow.com">canyoureaditnow.com</a>).
+
+</p>
+<figure>
+  <pre>
+<code>
+&lt;a id="Target" href="javascript:
+  (function(){
+    if(typeof CYRIN=='undefined'
+     ||typeof CYRIN.Bookmarklet=='undefined'){
+
+      document.body.appendChild(document.createElement('script')).src=
+        'http://canyoureaditnow.com/Bookmarklet.js?'+(Math.random())
+
+    } else {
+      CYRIN.Bookmarklet.analyze()
+    }
+  })();"&gt;CYRIN?&lt;/a&gt;
+</code>
+  </pre>
+  <figcaption>The <abbr title="Can You Read It Now?">CYRIN</abbr> bookmarklet, expanded for readability</figcaption>
+</figure>
+
+
+<h2><a name="Find the text to be analyzed">Find the text to be analyzed</a><a class="section" href="#Find the text to be analyzed">§</a></h2>
+<p>So, now that the JavaScript is running in the right context, how do we find the text to analyze? I knew it was possible to find the primary text for a page without requiring user input from seeing the Instapaper and Readability bookmarklets in action, but I wasn’t sure how to go about implementing something like that myself. Fortunately for me, the <a href="https://code.google.com/p/arc90labs-readability/">original Readability bookmark is open source</a> and I was able to re-use their working solution.
+
+</p>
+<h2><a name="Get the displayed style of each piece of text">Get the displayed style of each piece of text</a><a class="section" href="#Get the displayed style of each piece of text">§</a></h2>
+<p>Once we’ve got a handle to the container of the text to analyze, we can use jQuery’s <a href="http://api.jquery.com/css/">css method</a> to grab the computed <abbr title="Cascading Style Sheets">CSS</abbr> properties of each element. 
+
+</p>
+<h2><a name="Calculate ratings for each aspect of readability">Calculate ratings for each aspect of readability</a><a class="section" href="#Calculate ratings for each aspect of readability">§</a></h2>
+<p>Style data from each piece of text and the elements nearby are used to calculate ratings which are then weighted by how much of the document by character count this text represents. This is how a tree of <abbr title="Document Object Model">DOM</abbr> elements gets rated and turned into one set of scores for the entire page.
+
+</p>
+<h2><a name="Display the results">Display the results</a><a class="section" href="#Display the results">§</a></h2>
+<p>Now we have a set of scores to display within the document that we just finished rating. In order to prevent the hosted page from affecting how the scores are styled they are displayed in an <a href="http://en.wikipedia.org/wiki/iframe">IFrame</a>, where only the directly included styles will apply. This also allows the markup to be served by the <abbr title="Can You Read It Now?">CYRIN</abbr> server rather than included in JavaScript.
+
+</p>
+<h2><a name="Wrapping up">Wrapping up</a><a class="section" href="#Wrapping up">§</a></h2>
+<p>That’s all I have to say about <abbr title="Can You Read It Now?">CYRIN</abbr> for now. If you have any questions feel free to contact me at <a href="mailto:kevin.gorski@gmail.com">kevin.gorski@gmail.com</a>.
+
+</p>
+<p>Until next time.
+
+</p>
+<div class="flueron">❧</div></section>
+            <section class="series">
+              <h3>The <em>CYRIN</em> Series:</h3>
+              <ol class="articles">
+                <li class="article">
+                  <time datetime="2012-11-03" class="publishDate">November 3rd</time><a href="/articles/typography-&amp;-Can-You-Read-It-Now/">Typography &amp; Can You Read It&nbsp;Now?</a>
+                </li>
+                <li class="article">
+                  <time datetime="2012-11-12" class="publishDate">November 12th</time><a href="/articles/CYRIN-Metrics-Part-1/">CYRIN Metrics Part 1</a>
+                </li>
+                <li class="article">
+                  <time datetime="2012-11-18" class="publishDate">November 18th</time><a href="/articles/CYRIN-Metrics-Part-2/">CYRIN Metrics Part 2</a>
+                </li>
+                <li class="article">
+                  <time datetime="2012-12-16" class="publishDate">December 16th</time><span>CYRIN In The Browser</span>
+                </li>
+              </ol>
+            </section>
+          </article>
+        </div>
+      </div>
+    </div>
+    <footer class="clearfix">
+      <div class="center">
+        <div class="grid">
+          <nav><a href="/" class="back">Home</a> · <a href="/archive.html">The&nbsp;Archives</a> · <a href="/projects-&amp;-portfolio.html">Projects&nbsp;&amp;&nbsp;Portfolio</a> · <a href="/feed.xml">Articles&nbsp;RSS</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/ef02b9aa.scripts.js"></script>
+    <script>
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '4e87704ff5a1f5304f000003');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script>
+  </body>
+</html>

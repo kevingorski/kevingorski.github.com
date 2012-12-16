@@ -5,9 +5,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 */
 
 pre code {
-  display: block; padding: 0.5em;
+  background: #f8f8ff;
   color: #000;
-  background: #f8f8ff
+  display: block;
+  padding: 0.5em;
+  text-align: left;
 }
 
 pre .comment,
@@ -25,7 +27,7 @@ pre .javascript .title,
 pre .lisp .title,
 pre .subst {
   color: #000;
-  font-weight: bold
+  font-weight: bold;
 }
 
 pre .number,
