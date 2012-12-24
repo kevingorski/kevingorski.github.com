@@ -1,6 +1,5 @@
 @import 'normalize.css';
 @import 'H5BP.css';
-@import 'code.css';
 body {
   width: 100%;
   *zoom: 1;
@@ -30,9 +29,9 @@ body:after {
 .wf-loading p,
 .wf-loading time,
 .wf-loading li,
-.wf-loading div,
 .wf-loading li span,
-.wf-loading abbr[title] {
+.wf-loading abbr[title],
+.wf-loading .caphappy {
   visibility: hidden;
 }
 .wf-active h1,
@@ -45,11 +44,11 @@ body:after {
 .wf-active p,
 .wf-active time,
 .wf-active li,
-.wf-active div,
 .wf-active li span {
   font-family: "prenton";
 }
-.wf-active abbr[title] {
+.wf-active abbr[title],
+.wf-active .caphappy {
   font-family: "ff-basic-gothic-sc-web-pro", sans-serif;
   font-weight: 200;
   text-transform: lowercase;
@@ -61,9 +60,9 @@ body:after {
 .wf-inactive p,
 .wf-inactive time,
 .wf-inactive li,
-.wf-inactive div,
 .wf-inactive li span,
-.wf-inactive abbr[title] {
+.wf-inactive abbr[title],
+.wf-inactive .caphappy {
   font-family: sans-serif;
 }
 .wf-inactive h1,
@@ -75,9 +74,9 @@ body:after {
 .wf-inactive p,
 .wf-inactive time,
 .wf-inactive li,
-.wf-inactive div,
 .wf-inactive li span,
-.wf-inactive abbr[title] {
+.wf-inactive abbr[title],
+.wf-inactive .caphappy {
   font-size: 15px;
   line-height: 1.6em;
 }
@@ -186,6 +185,12 @@ figure figcaption {
 }
 figure img {
   box-shadow: 2px 2px 5px #aaa, 0 0 5px #ddd;
+}
+.gist {
+  text-align: left;
+}
+.gist .gist-file .gist-data .data {
+  font-size: 0.85em;
 }
 dl,
 menu,

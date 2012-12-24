@@ -217,12 +217,13 @@ samp {
  * Improves readability of pre-formatted text in all browsers.
  */
 
-pre {
+/* Disabled because it conflicts with Gist styles */
+/*pre {
     white-space: pre;
     white-space: pre-wrap;
     word-wrap: break-word;
 }
-
+*/
 /*
  * Addresses CSS quotes not supported in IE 6/7.
  */
