@@ -5,9 +5,66 @@
     <atom:link href="http://kevingorski.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://kevingorski.com</link>
     <description>Kevin Gorski creates &amp; writes about software</description>
-    <pubDate>Mon, 12 Nov 2012 12:00:00 -0700</pubDate>
+    <pubDate>Sun, 16 Dec 2012 12:00:00 -0700</pubDate>
     <generator>The mighty Wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>CYRIN In The Browser</title>
+      <link>http://kevingorski.com/articles/CYRIN-In-The-Browser/</link>
+      <pubDate>Sun, 16 Dec 2012 12:00:00 -0700</pubDate>
+      <guid isPermaLink="true">http://kevingorski.com/articles/CYRIN-In-The-Browser/</guid>
+      <author></author>
+      <description>&lt;p&gt;In order to rate the readability of text on a web page, Can You Read It Now has to do all of the following:
+
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Get access to the page contents&lt;/li&gt;
+&lt;li&gt;Find the text to be analyzed&lt;/li&gt;
+&lt;li&gt;Get the displayed style of each piece of text&lt;/li&gt;
+&lt;li&gt;Calculate ratings for each aspect of readability&lt;/li&gt;
+&lt;li&gt;Display the ratings to the user&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Accomplishing all of this with one click from the user required making several different trade-offs and design decisions. Let&rsquo;s cover each of these in turn.
+
+&lt;/p&gt;
+&lt;h2&gt;Get access to the page contents&lt;/h2&gt;
+&lt;p&gt;The simplest way to give &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; access to the current document would be to add an in-document JavaScript reference on the page to test, but that would mean changing the content of any page you want to rate, which is tedious and unnecessary. A different way to run third-party JavaScript in the context of the current document is a &lt;a href=&quot;http://en.wikipedia.org/wiki/Bookmarklet&quot;&gt;bookmarklet&lt;/a&gt;. As you might be able to gather from the name, bookmarklets are JavaScript that is saved and executed like a bookmark.
+
+&lt;/p&gt;
+&lt;p&gt;One pain point of building bookmarklets from a development standpoint is that you can&apos;t update the code once it&apos;s been saved. This can be mitigated by saving only code to load updatable script from a hosted location (like &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;canyoureaditnow.com&lt;/a&gt;).
+
+&lt;/p&gt;
+&lt;figure&gt;
+  &lt;script src=&quot;https://gist.github.com/4366664.js&quot;&gt;&lt;/script&gt;
+  &lt;figcaption&gt;The &lt;a href=&quot;https://gist.github.com/4366664&quot;&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; bookmarklet&lt;/a&gt;, expanded for readability&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+&lt;h2&gt;Find the text to be analyzed&lt;/h2&gt;
+&lt;p&gt;So, now that the JavaScript is running in the right context, how do we find the text to analyze? I knew it was possible to find the primary text for a page without requiring user input from seeing the Instapaper and Readability bookmarklets in action, but I wasn&rsquo;t sure how to go about implementing something like that myself. Fortunately for me, the &lt;a href=&quot;https://code.google.com/p/arc90labs-readability/&quot;&gt;original Readability bookmark is open source&lt;/a&gt; and I was able to re-use their working solution.
+
+&lt;/p&gt;
+&lt;h2&gt;Get the displayed style of each piece of text&lt;/h2&gt;
+&lt;p&gt;Once we&rsquo;ve got a handle to the container of the text to analyze, we can use jQuery&rsquo;s &lt;a href=&quot;http://api.jquery.com/css/&quot;&gt;css method&lt;/a&gt; to grab the computed &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; properties of each element. 
+
+&lt;/p&gt;
+&lt;h2&gt;Calculate ratings for each aspect of readability&lt;/h2&gt;
+&lt;p&gt;Style data from each piece of text and the elements nearby are used to calculate ratings which are then weighted by how much of the document by character count this text represents. This is how a tree of &lt;abbr title=&quot;Document Object Model&quot;&gt;DOM&lt;/abbr&gt; elements gets rated and turned into one set of scores for the entire page.
+
+&lt;/p&gt;
+&lt;h2&gt;Display the results&lt;/h2&gt;
+&lt;p&gt;Now we have a set of scores to display within the document that we just finished rating. In order to prevent the hosted page from affecting how the scores are styled they are displayed in an &lt;a href=&quot;http://en.wikipedia.org/wiki/iframe&quot;&gt;IFrame&lt;/a&gt;, where only the directly included styles will apply. This also allows the markup to be served by the &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; server rather than included in JavaScript.
+
+&lt;/p&gt;
+&lt;h2&gt;Wrapping up&lt;/h2&gt;
+&lt;p&gt;That&rsquo;s all I have to say about &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; for now. If you have any questions feel free to contact me at &lt;a href=&quot;mailto:kevin.gorski@gmail.com&quot;&gt;kevin.gorski@gmail.com&lt;/a&gt;.
+
+&lt;/p&gt;
+&lt;p&gt;Until next time.
+
+&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>CYRIN Metrics Part 1</title>
       <link>http://kevingorski.com/articles/CYRIN-Metrics-Part-1/</link>
@@ -64,141 +121,6 @@
 &lt;li&gt;Percentage of Text Stylized&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;More like this to follow. Until next time.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>CYRIN Metrics Part 2</title>
-      <link>http://kevingorski.com/articles/CYRIN-Metrics-Part-2/</link>
-      <pubDate>Sun, 18 Nov 2012 12:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://kevingorski.com/articles/CYRIN-Metrics-Part-2/</guid>
-      <author></author>
-      <description>&lt;p&gt;&lt;a href=&quot;http://kevingorski.com/articles/CYRIN-Metrics-Part-1/&quot;&gt;Continuing&lt;/a&gt; our exploration of typographic terminology used by &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt;&lt;/a&gt; and how its scores are calculated:
-
-&lt;/p&gt;
-&lt;h2&gt;Justification&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Left-justified text is most natural to read for most text.
-
-&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The justification of text describes how it will be aligned to the edges of your page, which in turn will determine how words will be distributed throughout those lines.
-
-&lt;/p&gt;
-&lt;p&gt;There are four options for justification, but only two are good choices for body text and only one is feasible with the current state of browser technology. Let me explain.
-
-&lt;/p&gt;
-&lt;p&gt;Centered text is terrible for reading more than a few lines at a time because of its uneven left edge, making each new line a chore to begin. It can be interesting and artfully used for poetry or a piece with careful art direction, but for readability&rsquo;s sake it usually passes from interesting to distracting.
-
-&lt;/p&gt;
-&lt;p&gt;Right-justified text isn&rsquo;t easy to follow for languages that read left-to-right for much the same reason, even through the right edge is easy enough to find.
-
-&lt;/p&gt;
-&lt;p&gt;Fully-justified text (as often used in books and newspapers) is the easiest option to read when done well. This is — unfortunately — an area of browser technology that lags behind traditional publishing because the algorithm for placing text when fully justified is much more complicated than for text with a ragged edge.
-
-&lt;/p&gt;
-&lt;p&gt;The simplest algorithm for full justification is what is currently used: fill a line with words and split the leftover space between each word. This gives the straight edges of full justification, but because it is inflexible it introduces a new readability problem between the edges: &lt;a href=&quot;http://en.wikipedia.org/wiki/River_(typography)&quot;&gt;&ldquo;rivers&rdquo;&lt;/a&gt; of vertical whitespace.
-
-&lt;/p&gt;
-&lt;p&gt;To avoid this and gain more control over the per-line-layout of text, words get hyphenated and &lt;a href=&quot;http://en.wikipedia.org/wiki/Swash_(typography)&quot;&gt;swashes&lt;/a&gt; (alternate, decorative glyph forms that take up more horizontal space) take the place of some standard glyphs in order to balance each line&rsquo;s contents.
-
-&lt;/p&gt;
-&lt;p&gt;Publishing software is built with automatic and configurable hyphenation and swashing (swashbuckling?) in mind, but as it stands today browsers don&rsquo;t have features that are as automatic &lt;em&gt;or&lt;/em&gt; configurable. &lt;a href=&quot;http://www.w3.org/TR/html401/struct/text.html#h-9.3.3&quot;&gt;Soft hyphens&lt;/a&gt; give you the option to manually include optional hyphenation points in text, but man, what a drag to have to bloat your documents to build yourself what the browser should be doing for you.
-
-&lt;/p&gt;
-&lt;p&gt;If these features improve and are available across browsers this recommendation may change, but for now it&rsquo;s best to stick to left-justified text.
-
-&lt;/p&gt;
-&lt;h2&gt;Margin &amp; Padding&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Creating visual space on the left and right of text will make it easier to visually separate from the rest of the page.
-
-&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Margin &amp; padding are &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; attributes for creating space around specific elements on the page. By keeping the edges of your text clear from other content, background changes or the edge of the screen you&rsquo;ve prevented your reader from having to fight those distractions to keep focused on your text.
-
-&lt;/p&gt;
-&lt;h2&gt;Text Color Contrast&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The contrast ratio between the text color and the background color needs to be greater the smaller the text is.
-
-&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Color contrast enters into theory, mathematics and physiology that I only partially understand. It&rsquo;s big, hairy and complicated, but there&rsquo;s an algorithm to follow, so for now I trust the &lt;a href=&quot;http://www.w3.org/TR/WCAG/&quot;&gt;&lt;abbr title=&quot;Web Content Accessibility Guidelines&quot;&gt;WCAG&lt;/abbr&gt;&lt;/a&gt; and hope that&rsquo;s enough to be useful.
-
-&lt;/p&gt;
-&lt;h2&gt;Percentage of Text Stylized&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Bold, italicized, and all-caps text should be kept to a minimum.
-
-&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Each of these styles have their place in emphacising or decorating specific parts of a body of text, but using any as the mainstay of your document will be a special kind of disaster.
-
-&lt;/p&gt;
-&lt;h2&gt;Wrapping Up&lt;/h2&gt;
-&lt;p&gt;That&rsquo;s it for further details of the metrics &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; uses to rate text&rsquo;s readability. After Thanksgiving I&rsquo;ll cover the technical details of how &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; works in the browser.
-
-&lt;/p&gt;
-&lt;p&gt;Until next time.
-
-&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>CYRIN In The Browser</title>
-      <link>http://kevingorski.com/articles/CYRIN-In-The-Browser/</link>
-      <pubDate>Sun, 16 Dec 2012 12:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://kevingorski.com/articles/CYRIN-In-The-Browser/</guid>
-      <author></author>
-      <description>&lt;p&gt;In order to rate the readability of text on a web page, Can You Read It Now has to do all of the following:
-
-&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Get access to the page contents&lt;/li&gt;
-&lt;li&gt;Find the text to be analyzed&lt;/li&gt;
-&lt;li&gt;Get the displayed style of each piece of text&lt;/li&gt;
-&lt;li&gt;Calculate ratings for each aspect of readability&lt;/li&gt;
-&lt;li&gt;Display the ratings to the user&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Accomplishing all of this with one click from the user required making several different trade-offs and design decisions. Let&rsquo;s cover each of these in turn.
-
-&lt;/p&gt;
-&lt;h2&gt;Get access to the page contents&lt;/h2&gt;
-&lt;p&gt;The simplest way to give &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; access to the current document would be to add an in-document JavaScript reference on the page to test, but that would mean changing the content of any page you want to rate, which is tedious and unnecessary. A different way to run third-party JavaScript in the context of the current document is a &lt;a href=&quot;http://en.wikipedia.org/wiki/Bookmarklet&quot;&gt;bookmarklet&lt;/a&gt;. As you might be able to gather from the name, bookmarklets are JavaScript that is saved and executed like a bookmark.
-
-&lt;/p&gt;
-&lt;p&gt;One pain point of building bookmarklets from a development standpoint is that you can&apos;t update the code once it&apos;s been saved. This can be mitigated by saving only code to load updatable script from a hosted location (like &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;canyoureaditnow.com&lt;/a&gt;).
-
-&lt;/p&gt;
-&lt;figure&gt;
-  &lt;script src=&quot;https://gist.github.com/4366664.js&quot;&gt;&lt;/script&gt;
-  &lt;figcaption&gt;The &lt;a href=&quot;https://gist.github.com/4366664&quot;&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; bookmarklet&lt;/a&gt;, expanded for readability&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-
-&lt;h2&gt;Find the text to be analyzed&lt;/h2&gt;
-&lt;p&gt;So, now that the JavaScript is running in the right context, how do we find the text to analyze? I knew it was possible to find the primary text for a page without requiring user input from seeing the Instapaper and Readability bookmarklets in action, but I wasn&rsquo;t sure how to go about implementing something like that myself. Fortunately for me, the &lt;a href=&quot;https://code.google.com/p/arc90labs-readability/&quot;&gt;original Readability bookmark is open source&lt;/a&gt; and I was able to re-use their working solution.
-
-&lt;/p&gt;
-&lt;h2&gt;Get the displayed style of each piece of text&lt;/h2&gt;
-&lt;p&gt;Once we&rsquo;ve got a handle to the container of the text to analyze, we can use jQuery&rsquo;s &lt;a href=&quot;http://api.jquery.com/css/&quot;&gt;css method&lt;/a&gt; to grab the computed &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; properties of each element. 
-
-&lt;/p&gt;
-&lt;h2&gt;Calculate ratings for each aspect of readability&lt;/h2&gt;
-&lt;p&gt;Style data from each piece of text and the elements nearby are used to calculate ratings which are then weighted by how much of the document by character count this text represents. This is how a tree of &lt;abbr title=&quot;Document Object Model&quot;&gt;DOM&lt;/abbr&gt; elements gets rated and turned into one set of scores for the entire page.
-
-&lt;/p&gt;
-&lt;h2&gt;Display the results&lt;/h2&gt;
-&lt;p&gt;Now we have a set of scores to display within the document that we just finished rating. In order to prevent the hosted page from affecting how the scores are styled they are displayed in an &lt;a href=&quot;http://en.wikipedia.org/wiki/iframe&quot;&gt;IFrame&lt;/a&gt;, where only the directly included styles will apply. This also allows the markup to be served by the &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; server rather than included in JavaScript.
-
-&lt;/p&gt;
-&lt;h2&gt;Wrapping up&lt;/h2&gt;
-&lt;p&gt;That&rsquo;s all I have to say about &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; for now. If you have any questions feel free to contact me at &lt;a href=&quot;mailto:kevin.gorski@gmail.com&quot;&gt;kevin.gorski@gmail.com&lt;/a&gt;.
-
-&lt;/p&gt;
-&lt;p&gt;Until next time.
-
-&lt;/p&gt;
 </description>
     </item>
     <item>
@@ -277,6 +199,84 @@
 &lt;li&gt;&lt;a href=&quot;http://elliotjaystocks.com/&quot;&gt;Elliot Jay Stocks&lt;/a&gt;&rsquo; Tomorrow&rsquo;s web type today series: &lt;a href=&quot;http://elliotjaystocks.com/blog/the-fine-flourish-of-the-ligature/&quot;&gt;ligatures&lt;/a&gt;, &lt;a href=&quot;http://elliotjaystocks.com/blog/expert-subsets-for-css-in-123/&quot;&gt;expert subsets&lt;/a&gt; (for real small caps and lower case numerals), &lt;a href=&quot;http://elliotjaystocks.com/blog/say-it-with-a-swash/&quot;&gt;swashes&lt;/a&gt; &amp; &lt;a href=&quot;http://elliotjaystocks.com/blog/stylesets/&quot;&gt;stylesets&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Until next time.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>CYRIN Metrics Part 2</title>
+      <link>http://kevingorski.com/articles/CYRIN-Metrics-Part-2/</link>
+      <pubDate>Sun, 18 Nov 2012 12:00:00 -0700</pubDate>
+      <guid isPermaLink="true">http://kevingorski.com/articles/CYRIN-Metrics-Part-2/</guid>
+      <author></author>
+      <description>&lt;p&gt;&lt;a href=&quot;http://kevingorski.com/articles/CYRIN-Metrics-Part-1/&quot;&gt;Continuing&lt;/a&gt; our exploration of typographic terminology used by &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt;&lt;/a&gt; and how its scores are calculated:
+
+&lt;/p&gt;
+&lt;h2&gt;Justification&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Left-justified text is most natural to read for most text.
+
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The justification of text describes how it will be aligned to the edges of your page, which in turn will determine how words will be distributed throughout those lines.
+
+&lt;/p&gt;
+&lt;p&gt;There are four options for justification, but only two are good choices for body text and only one is feasible with the current state of browser technology. Let me explain.
+
+&lt;/p&gt;
+&lt;p&gt;Centered text is terrible for reading more than a few lines at a time because of its uneven left edge, making each new line a chore to begin. It can be interesting and artfully used for poetry or a piece with careful art direction, but for readability&rsquo;s sake it usually passes from interesting to distracting.
+
+&lt;/p&gt;
+&lt;p&gt;Right-justified text isn&rsquo;t easy to follow for languages that read left-to-right for much the same reason, even through the right edge is easy enough to find.
+
+&lt;/p&gt;
+&lt;p&gt;Fully-justified text (as often used in books and newspapers) is the easiest option to read when done well. This is — unfortunately — an area of browser technology that lags behind traditional publishing because the algorithm for placing text when fully justified is much more complicated than for text with a ragged edge.
+
+&lt;/p&gt;
+&lt;p&gt;The simplest algorithm for full justification is what is currently used: fill a line with words and split the leftover space between each word. This gives the straight edges of full justification, but because it is inflexible it introduces a new readability problem between the edges: &lt;a href=&quot;http://en.wikipedia.org/wiki/River_(typography)&quot;&gt;&ldquo;rivers&rdquo;&lt;/a&gt; of vertical whitespace.
+
+&lt;/p&gt;
+&lt;p&gt;To avoid this and gain more control over the per-line-layout of text, words get hyphenated and &lt;a href=&quot;http://en.wikipedia.org/wiki/Swash_(typography)&quot;&gt;swashes&lt;/a&gt; (alternate, decorative glyph forms that take up more horizontal space) take the place of some standard glyphs in order to balance each line&rsquo;s contents.
+
+&lt;/p&gt;
+&lt;p&gt;Publishing software is built with automatic and configurable hyphenation and swashing (swashbuckling?) in mind, but as it stands today browsers don&rsquo;t have features that are as automatic &lt;em&gt;or&lt;/em&gt; configurable. &lt;a href=&quot;http://www.w3.org/TR/html401/struct/text.html#h-9.3.3&quot;&gt;Soft hyphens&lt;/a&gt; give you the option to manually include optional hyphenation points in text, but man, what a drag to have to bloat your documents to build yourself what the browser should be doing for you.
+
+&lt;/p&gt;
+&lt;p&gt;If these features improve and are available across browsers this recommendation may change, but for now it&rsquo;s best to stick to left-justified text.
+
+&lt;/p&gt;
+&lt;h2&gt;Margin &amp; Padding&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Creating visual space on the left and right of text will make it easier to visually separate from the rest of the page.
+
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Margin &amp; padding are &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; attributes for creating space around specific elements on the page. By keeping the edges of your text clear from other content, background changes or the edge of the screen you&rsquo;ve prevented your reader from having to fight those distractions to keep focused on your text.
+
+&lt;/p&gt;
+&lt;h2&gt;Text Color Contrast&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The contrast ratio between the text color and the background color needs to be greater the smaller the text is.
+
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Color contrast enters into theory, mathematics and physiology that I only partially understand. It&rsquo;s big, hairy and complicated, but there&rsquo;s an algorithm to follow, so for now I trust the &lt;a href=&quot;http://www.w3.org/TR/WCAG/&quot;&gt;&lt;abbr title=&quot;Web Content Accessibility Guidelines&quot;&gt;WCAG&lt;/abbr&gt;&lt;/a&gt; and hope that&rsquo;s enough to be useful.
+
+&lt;/p&gt;
+&lt;h2&gt;Percentage of Text Stylized&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Bold, italicized, and all-caps text should be kept to a minimum.
+
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Each of these styles have their place in emphacising or decorating specific parts of a body of text, but using any as the mainstay of your document will be a special kind of disaster.
+
+&lt;/p&gt;
+&lt;h2&gt;Wrapping Up&lt;/h2&gt;
+&lt;p&gt;That&rsquo;s it for further details of the metrics &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; uses to rate text&rsquo;s readability. After Thanksgiving I&rsquo;ll cover the technical details of how &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; works in the browser.
+
+&lt;/p&gt;
+&lt;p&gt;Until next time.
+
+&lt;/p&gt;
 </description>
     </item>
   </channel>

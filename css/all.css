@@ -30,6 +30,7 @@ body:after {
 .wf-loading time,
 .wf-loading li,
 .wf-loading li span,
+.wf-loading footer,
 .wf-loading abbr[title],
 .wf-loading .caphappy {
   visibility: hidden;
@@ -44,7 +45,8 @@ body:after {
 .wf-active p,
 .wf-active time,
 .wf-active li,
-.wf-active li span {
+.wf-active li span,
+.wf-active footer {
   font-family: "prenton";
 }
 .wf-active abbr[title],
@@ -61,6 +63,7 @@ body:after {
 .wf-inactive time,
 .wf-inactive li,
 .wf-inactive li span,
+.wf-inactive footer,
 .wf-inactive abbr[title],
 .wf-inactive .caphappy {
   font-family: sans-serif;
@@ -75,6 +78,7 @@ body:after {
 .wf-inactive time,
 .wf-inactive li,
 .wf-inactive li span,
+.wf-inactive footer,
 .wf-inactive abbr[title],
 .wf-inactive .caphappy {
   font-size: 15px;
