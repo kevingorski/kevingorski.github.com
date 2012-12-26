@@ -194,7 +194,7 @@ figure img {
   text-align: left;
 }
 .gist .gist-file .gist-data .data {
-  font-size: 0.85em;
+  font-size: 0.65em;
 }
 dl,
 menu,
@@ -251,6 +251,7 @@ img {
     *margin: 0 6px -correction;
     padding-left: 24px;
     padding-right: 24px;
+    overflow: visible;
   }
   h1,
   header.home h1 {
@@ -282,6 +283,14 @@ img {
   }
   time.publishDate {
     font-size: 14px;
+  }
+  figure.codelisting {
+    width: 110%;
+    position: relative;
+    left: -6%;
+  }
+  .gist .gist-file .gist-data .data {
+    font-size: 0.85em;
   }
   section.archive ol,
   section.series ol {
