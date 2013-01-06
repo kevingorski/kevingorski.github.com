@@ -178,17 +178,33 @@ p {
 p + p {
   text-indent: 1.4em;
 }
-figure {
+figure,
+iframe {
   margin: 1.5em 0;
-  text-align: center;
   overflow-x: scroll;
+}
+figure {
+  text-align: center;
 }
 figure figcaption {
   font-style: italic;
   margin: 0.5em 0;
 }
+figure>pre,
+figure noscript pre {
+  text-align: left;
+  overflow: auto;
+  background-color: #f8f8ff;
+  border: 1px solid #ddd;
+  font-size: 0.85em;
+  padding: 1em;
+}
 figure img {
   box-shadow: 2px 2px 5px #aaa, 0 0 5px #ddd;
+}
+code {
+  color: #777;
+  font-family: Consolas, 'Liberation Mono', Courier, monospace;
 }
 .gist {
   text-align: left;
@@ -247,8 +263,8 @@ img {
     overflow: hidden;
     width: 527px;
     margin: 0 6px;
-    *width: 527px -correction;
-    *margin: 0 6px -correction;
+    *width: 526.9479166666666px;
+    *margin: 0 5.947916666666667px;
     padding-left: 24px;
     padding-right: 24px;
     overflow: visible;
@@ -284,11 +300,6 @@ img {
   time.publishDate {
     font-size: 14px;
   }
-  figure.codelisting {
-    width: 110%;
-    position: relative;
-    left: -6%;
-  }
   .gist .gist-file .gist-data .data {
     font-size: 0.85em;
   }
@@ -297,8 +308,18 @@ img {
     display: block;
     width: 972px;
     margin: 0 -6px;
-    *width: 972px -correction;
-    *margin: 0 -6px -correction;
+    *width: 971.9479166666666px;
+    *margin: 0 -6.052083333333333px;
+  }
+  section.archive ol>li,
+  section.series ol>li {
+    display: block;
+    width: 972px;
+    margin: 0 -6px;
+    *width: 971.9479166666666px;
+    *margin: 0 -6.052083333333333px;
+    float: left;
+    clear: left;
   }
   section.archive ol .year,
   section.series ol .year {
@@ -307,8 +328,8 @@ img {
     overflow: hidden;
     width: 65px;
     margin: 0 6px;
-    *width: 65px -correction;
-    *margin: 0 6px -correction;
+    *width: 64.94791666666667px;
+    *margin: 0 5.947916666666667px;
   }
   section.archive ol a,
   section.series ol a {
@@ -322,8 +343,8 @@ img {
     overflow: hidden;
     width: 450px;
     margin: 0 6px;
-    *width: 450px -correction;
-    *margin: 0 6px -correction;
+    *width: 449.9479166666667px;
+    *margin: 0 5.947916666666667px;
     list-style: none;
   }
   section.archive time.publishDate,
@@ -333,8 +354,8 @@ img {
     overflow: hidden;
     width: 142px;
     margin: 0 6px;
-    *width: 142px -correction;
-    *margin: 0 6px -correction;
+    *width: 141.94791666666666px;
+    *margin: 0 5.947916666666667px;
   }
   img {
     max-width: 560px;
@@ -350,8 +371,8 @@ img {
     overflow: hidden;
     width: 604px;
     margin: 0 6px;
-    *width: 604px -correction;
-    *margin: 0 6px -correction;
+    *width: 603.9479166666666px;
+    *margin: 0 5.947916666666667px;
     padding-left: 71px;
   }
   .wf-inactive p,
@@ -366,8 +387,16 @@ img {
     display: block;
     width: 972px;
     margin: 0 -6px;
-    *width: 972px -correction;
-    *margin: 0 -6px -correction;
+    *width: 971.9479166666666px;
+    *margin: 0 -6.052083333333333px;
+  }
+  section.archive ol>li,
+  section.series ol>li {
+    display: block;
+    width: 972px;
+    margin: 0 -6px;
+    *width: 971.9479166666666px;
+    *margin: 0 -6.052083333333333px;
   }
   section.archive ol .year,
   section.series ol .year {
@@ -376,8 +405,8 @@ img {
     overflow: hidden;
     width: 65px;
     margin: 0 6px;
-    *width: 65px -correction;
-    *margin: 0 6px -correction;
+    *width: 64.94791666666667px;
+    *margin: 0 5.947916666666667px;
   }
   section.archive ol ol.articles,
   section.series ol ol.articles {
@@ -387,8 +416,8 @@ img {
     overflow: hidden;
     width: 527px;
     margin: 0 6px;
-    *width: 527px -correction;
-    *margin: 0 6px -correction;
+    *width: 526.9479166666666px;
+    *margin: 0 5.947916666666667px;
   }
   img {
     max-width: 740px;
@@ -453,10 +482,18 @@ a:visited {
   -webkit-transition: color 0.25s ease-in-out;
   transition: color 0.25s ease-in-out;
 }
-a[href]:hover {
+a:link code,
+a:visited code {
+  color: #5050ff;
+  -webkit-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
+}
+a[href]:hover,
+a[href]:hover code {
   color: #c81e1e;
 }
-a[href]:active {
+a[href]:active,
+a[href]:active code {
   color: #c86464;
 }
 a.section {

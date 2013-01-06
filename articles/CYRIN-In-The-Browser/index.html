@@ -15,7 +15,7 @@
       })();
       
     </script>
-    <link rel="stylesheet" href="/css/e240d558.styles.css" />
+    <link rel="stylesheet" href="/css/fdf4d4ec.styles.css" />
     <script src="/js/libs/modernizr-2.6.2.min.js"></script>
     <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Kevin Gorski creates &amp; writes about software" />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
@@ -58,6 +58,27 @@
 </p>
 <figure class="codelisting">
   <script src="https://gist.github.com/4366664.js"></script>
+  <noscript><pre><code><!-- This code would normally be compressed to one line and not include comments -->
+<a id="Target" href="javascript:
+  // Begin self-executing function
+  (function(){
+
+    // Check for existing definitions
+    if(typeof CYRIN == 'undefined'
+     ||typeof CYRIN.Bookmarklet == 'undefined'){
+
+      // Include updatable script
+      document.body.appendChild(
+        document.createElement('script')
+      ).src = '<a href="http://canyoureaditnow.com/Bookmarklet.js?">http://canyoureaditnow.com/Bookmarklet.js?</a>' + (Math.random())
+
+    } else {
+
+      // Otherwise skip to the analysis step
+      CYRIN.Bookmarklet.analyze()
+
+    }
+  }());">CYRIN?</a></code></pre></noscript>
   <figcaption>The <a href="https://gist.github.com/4366664"><abbr title="Can You Read It Now?">CYRIN</abbr> bookmarklet</a>, expanded for readability</figcaption>
 </figure>
 

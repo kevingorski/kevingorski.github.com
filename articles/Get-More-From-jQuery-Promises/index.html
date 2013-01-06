@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="dns-prefetch" href="//use.typekit.net" />
+    <title>Get More From jQuery Promises - Kevin Gorski
+    </title>
+    <meta name="description" content="Kevin Gorski creates &amp; writes about software" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        var config = { kitId: 'cyf1blw', scriptTimeout: 3000 };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+      
+    </script>
+    <link rel="stylesheet" href="/css/fdf4d4ec.styles.css" />
+    <script src="/js/libs/modernizr-2.6.2.min.js"></script>
+    <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Kevin Gorski creates &amp; writes about software" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+  </head>
+  <body><!--[if lt IE 7]>
+    <p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+    <header class="clearfix">
+      <h1 class="center"><a href="/" class="grid">Kevin Gorski</a></h1>
+    </header>
+    <div id="content" role="main" class="clearfix">
+      <div class="center">
+        <div class="grid">
+          <article class="post">
+            <header>
+              <h1>Get More From jQuery Promises</h1>
+              <div id="metadata">
+                <time datetime="2013-01-05" class="publishDate">January 5th, 2013</time>
+                <iframe border="0" scrolling="no" width="78" height="17" allowtransparency="allowtransparency" frameborder="0" style="margin-bottom: -3px; z-index: 1338; border: 0px; background-color: transparent; overflow: hidden;" src="http://www.instapaper.com/e2?url=http://kevingorski.com/articles/Get-More-From-jQuery-Promises/&amp;title=Get More From jQuery Promises"></iframe>
+              </div>
+            </header>
+            <section class="content"><p><a href="http://api.jquery.com/category/deferred-object/" title="jQuery promises documentation">Promises and deferred objects</a> were introduced to jQuery way back in <a href="http://blog.jquery.com/2011/01/31/jquery-15-released/">version 1.5</a> as part of a re-write of the <abbr title="Asynchronous JavaScript and XML">AJAX</abbr> module. I’ve only started using them in earnest in the past few months while building <a href="/projects-&amp;-portfolio.html#lms" title="HomeAway Lead Management System"><abbr title="Lead Management System">LMS</abbr></a>, but they’ve become essential to keeping asynchronous code readable and maintainable. There are already <a href="http://msdn.microsoft.com/en-us/magazine/gg723713.aspx" title="Julian Aubourg and Addy Osmani's article on MSDN">a lot</a> <a href="http://www.erichynds.com/jquery/using-deferreds-in-jquery/">of resources</a> available on this subject, but here I’ve included all of the useful details I picked up from different places while learning the ins and outs of using jQuery’s promise implementation.
+
+
+</p>
+<h2><a name="What Is A Promise Worth?">What Is A Promise Worth?</a><a class="section" href="#What Is A Promise Worth?">§</a></h2>
+<p>A <em>promise</em> represents the result of a single execution of a task that will complete at a time unknown to the caller. It could complete immediately, in the future or it could have already been completed. In code a promise object is used to register callbacks to be executed when the state of that task changes and to manage higher-level workflow, but never to change the state of the task.
+
+
+</p>
+<h2><a name="Promises From jQuery">Promises From jQuery</a><a class="section" href="#Promises From jQuery">§</a></h2>
+<p>Since promises were introduced as part of the <abbr title="Asynchronous JavaScript and XML">AJAX</abbr> re-write the go-to example is the <a href="http://api.jquery.com/category/ajax"><code>$.ajax</code></a> family of methods which now return promises in addition to the original <abbr title="Application Programming Interface">API</abbr> of accepting success and failure methods in the configuration object:
+
+</p>
+<figure class="codelisting">
+  <script src="https://gist.github.com/765b4f1bdf39d1091c03.js"></script>
+  <noscript><pre><code>// Original API
+$.ajax({
+  url: '<a href="http://example.com/fakeapi">http://example.com/fakeapi</a>', 
+  success: function(data, textStatus, jqXHR) {}, 
+  error: function(jqXHR, textStatus, errorThrown) {}, 
+  complete: function(jqXHR, textStatus) {}
+});
+
+// With Promises
+$.ajax({ url:'<a href="http://example.com/fakeapi">http://example.com/fakeapi</a>' })
+  .then(function(data, textStatus, jqXHR) {
+    // success
+  })
+  .fail(function(jqXHR, textStatus, errorThrown) {
+    // error
+  })
+  .always(function() {
+    // complete
+    // arguments will mirror success or error as called
+  });</code></pre></noscript>
+  <figcaption>Comparing the AJAX APIs</figcaption>
+</figure>
+
+<p>It looks a little cleaner, but what more can we do with a promise object?
+
+
+</p>
+<h3><a name="Chaining Promises">Chaining Promises</a><a class="section" href="#Chaining Promises">§</a></h3>
+<p>If a promise method like <a href="http://api.jquery.com/deferred.then"><code>then</code></a> returns another promise, so you can chain successive calls to form a descriptive timeline of tasks:
+
+</p>
+<figure class="codelisting">
+  <script src="https://gist.github.com/18e765eb52964bb2f02e.js"></script>
+  <noscript><pre><code>// Promise to get weather
+$.getJSON('<a href="http://weather.com/forecast/80001">http://weather.com/forecast/80001</a>')
+  .then(function() {
+    // Get the text description of the forecast
+    var description = data.forecast[0].description;
+
+    // Return promise to get photos
+    return $.getJSON('<a href="http://photos.com/search/">http://photos.com/search/</a>' + description);
+  })
+  .then(function(data) {
+    var photos = data.photos;
+
+    // Display the photos
+  });</code></pre></noscript>
+  <figcaption>Chaining promises for easy-to-read async code</figcaption>
+</figure>
+
+<p>The promise <abbr title="Application Programming Interface">API</abbr> also includes a function called <code>pipe</code> which was originally different from <code>then</code> for “pre-filtering” the results of a promise, but as of 1.8 <code>then === pipe</code>, as <a href="http://stackoverflow.com/questions/12011925/pipe-and-then-documentation-vs-reality-in-jquery-1-8">discussed on Stack Overflow</a>.
+
+</p>
+<p>In any case, using <code>then</code> is much cleaner than it would have been with configuration objects and nested callbacks, but we can take this further.
+
+
+</p>
+<h3><a name="Getting Multivariate">Getting Multivariate</a><a class="section" href="#Getting Multivariate">§</a></h3>
+<p>What if we have multiple task-based dependencies, but they don’t depend on each other?
+
+</p>
+<figure class="codelisting">
+  <script src="https://gist.github.com/df586dd9482a88b694d1.js"></script>
+  <noscript><pre><code>// Parameter list of promises
+$.when($.get('google'), $.get('bing'))
+  // All finished, results in same order
+  .then(function(googleData, bingData) {
+    // Now compare results
+  });</code></pre></noscript>
+  <figcaption>Combining multiple promises into an aggregate</figcaption>
+</figure>
+
+<p>Now we’re getting somewhere! Coordination of multiple asynchronous tasks would otherwise be difficult to write, difficult to read and difficult to debug, but by using promises everything is clear and concise.
+
+
+</p>
+<h3><a name="Say “When?”">Say “When?”</a><a class="section" href="#Say “When?”">§</a></h3>
+<p>At some point you will want to conditionally include promises in the parameter list to <a href="http://api.jquery.com/deferred.when"><code>when</code></a>. One way to do this is to add promises to an array and then use <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/Apply"><code>function.apply</code></a> to match the method signature:
+
+</p>
+<figure class="codelisting">
+  <pre><code>$.when.apply($, arrayOfPromises);</code></pre>
+  <figcaption>Applying <code>when</code> to an arbitrary number of promises</figcaption>
+</figure>
+
+<p>This will work, but has a few downsides:
+
+</p>
+<ul>
+<li><span>It’s an awkward expression to remember and repeat</span></li>
+<li><span>It’s no longer immediately clear what we’re waiting on</span></li>
+<li><span>If you’re expecting results from these promises they will now be given to the callback in an unpredictable order</span></li>
+</ul>
+<p>The first problem can be mitigated by writing a function that does this directly like <a href="https://github.com/kriskowal/q#combination">Q’s <code>all</code> method</a> (Q is another JavaScript promises implementation), but there’s an approach that has none of these downsides which I prefer.
+
+</p>
+<p>When you pass an object that isn’t a promise to <code>when</code> (determined by the existence of a <code>promise</code> function on the object) it’s interpreted as being an immediate result that will be passed through to <code>then</code> just like a successful promise result. By taking advantage of this behavior we can maintain clarity and avoid adding another method to the <abbr title="Application Programming Interface">API</abbr>:
+
+</p>
+<figure class="codelisting">
+  <script src="https://gist.github.com/7fbd5e9750691b642555.js"></script>
+  <noscript><pre><code>function getTemplate(premiumAccount) {
+  if(!premiumAccount)
+    return 'free template';
+
+  // Promise the premium template
+  return $.get('premiumTemplate');
+}
+
+function uploadResume(resumeFile, premiumAccount) {
+  return 
+    $.when(uploadResume(resumeFile), getTemplate(premiumAccount))
+      .then(function(resumeMediaKey, template) {
+        // Ready to display
+        return renderTemplate(template, resumeMediaKey);
+      });
+}</code></pre></noscript>
+  <figcaption>Combining promises and plain objects</figcaption>
+</figure>
+
+
+<h2><a name="Making Your Own Promises">Making Your Own Promises</a><a class="section" href="#Making Your Own Promises">§</a></h2>
+<p>Now that we know how to use promises, let’s make some of our own using deferred objects.
+
+</p>
+<p>A <em>deferred object</em> can do all that a promise can plus change the state of the task. You won’t see jQuery return a deferred object from anywhere but the factory method <a href="http://api.jquery.com/jQuery.Deferred"><code>$.Deferred</code></a> because the state of a task should only be changed by the code that has implemented that task.
+
+</p>
+<p>Once we’ve created our deferred object, there are three methods that you’ll likely need to use:
+
+</p>
+<ul>
+<li><span><a href="http://api.jquery.com/deferred.resolve"><code>resolve</code></a> - mark this task as having completed successfully, optionally passing values</span></li>
+<li><span><a href="http://api.jquery.com/deferred.reject"><code>reject</code></a> - mark this task as having failed, also with optional values</span></li>
+<li><span><a href="http://api.jquery.com/deferred.promise"><code>promise</code></a> - get the more targeted promise object for attaching handlers to state changes</span></li>
+</ul>
+<p>Here they are in a quick example:
+
+</p>
+<figure class="codelisting">
+  <script src="https://gist.github.com/ef56fbbf56c7cc62e099.js"></script>
+  <noscript><pre><code>function upload(fileName) {
+  var uploading = $.Deferred();
+
+  // Imaginary file upload API
+  file.upload(function(err, mediaKey) {
+    if(err) {
+      // Change to error/failed state
+      uploading.reject(err);
+    } else {
+      // Pass the generated key to observers
+      uploading.resolve(mediaKey);
+    }
+  });
+
+  return uploading.promise();
+}</code></pre></noscript>
+  <figcaption>Using resolve, reject, and promise</figcaption>
+</figure>
+
+<p>If you want even more control over how the success or failure methods are called, <a href="http://api.jquery.com/deferred.resolveWith"><code>resolveWith</code></a> and <a href="http://api.jquery.com/deferred.rejectWith"><code>rejectWith</code></a> set the first parameter as the context for executing those functions, meaning that within the callback <code>this</code> will point to the object you provide instead of the deferred object.
+
+</p>
+<p>There’s one more feature of jQuery’s promises that seems useful, but I haven’t seen used much: progress notifications. Deferred objects have a <a href="http://api.jquery.com/deferred.notify"><code>notify</code></a> method (and <a href="http://api.jquery.com/deferred.notifyWith"><code>notifyWith</code></a> as above) that will send data to <a href="http://api.jquery.com/deferred.progress"><code>progress</code></a> handlers.
+
+</p>
+<figure class="codelisting">
+  <script src="https://gist.github.com/b576c40071617d3f2035.js"></script>
+  <noscript><pre><code>// Task-based code with deferred object "fileUploading"
+file.updating(function(bytesReceived) {
+  uploading.notify(bytesReceived);
+});
+
+// Calling code, could also be the third parameter to "then"
+uploadFile(fileToUpload)
+  .progress(function(bytesReceived) {
+    console.log(bytesReceived + ' B / ' + file.totalBytes + ' B');
+  });</code></pre></noscript>
+  <figcaption>Notification via promises</figcaption>
+</figure>
+
+<p>Now let’s put everything together:
+
+</p>
+<iframe src="http://bl.ocks.org/d/4415942/" width="100%" height="225"></iframe>
+
+<figure class="codelisting">
+  <script src="https://gist.github.com/4415942.js"></script>
+  <noscript><pre><code>// Imaginary file upload API
+var file = {
+  totalBytes: 300,
+  upload: function(fileName) {
+    var uploading = $.Deferred(),
+      bytesTransferred = 0;
+      transferringInterval = setInterval(function() {
+        bytesTransferred += 50;
+
+        uploading.notify(bytesTransferred);
+
+        // Simulate error
+        if(Math.random() > 0.95) {
+          // Change to error/failed state
+          uploading.reject('Simulated network error');
+        }
+
+        if(bytesTransferred >= file.totalBytes) {
+          // Pass the generated key to observers
+          clearInterval(transferringInterval);
+
+          uploading.resolve('MEDIAKEY');
+        }
+      }, 250);
+
+    return uploading.promise();
+  }
+};
+
+$(function() {
+  var $console = $('#console'),
+    $uploadButton = $('#upload');
+
+  $uploadButton.click(function(){
+    $uploadButton.attr('disabled', 'disabled');
+
+    $console.empty();
+
+    file.upload('thefile')
+      .then(
+        // Success
+        function(resourceKey) {
+          $console.append('<li>File uploaded successfully with key ' + resourceKey + '</li>');
+        },
+        // Failure
+        function(err) {
+          $console.append('<li>File failed to upload: ' + err + '</li>');
+        },
+        // Progress
+        function(bytesReceived) {
+          $console.append('<li>' + bytesReceived + ' B / ' + file.totalBytes + ' B</li>');
+        })
+        .always(function() {
+          $console.append('<li>Complete.</li>');
+          $uploadButton.removeAttr('disabled');
+        });
+  });
+});</code></pre></noscript>
+  <figcaption>File uploading example</figcaption>
+</figure>
+
+
+<h2><a name="Wrapping Up">Wrapping Up</a><a class="section" href="#Wrapping Up">§</a></h2>
+<p>That’s promises in a nutshell. Remember that they can be used for more than coordinating network related code: you can model workflows like checkout processes, manage complex <abbr title="Document Object Model">DOM</abbr> interactions like animations, and more. I hope this introduction has given you the tools to appreciate and use promises in your own code.
+
+
+</p>
+<div class="flueron">❧</div></section>
+          </article>
+        </div>
+      </div>
+    </div>
+    <footer class="clearfix">
+      <div class="center">
+        <div class="grid">
+          <nav><a href="/" class="back">Home</a> · <a href="/archive.html">The&nbsp;Archives</a> · <a href="/projects-&amp;-portfolio.html">Projects&nbsp;&amp;&nbsp;Portfolio</a> · <a href="/feed.xml">Articles&nbsp;RSS</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script>
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '4e87704ff5a1f5304f000003');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script>
+  </body>
+</html>
