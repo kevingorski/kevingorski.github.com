@@ -243,6 +243,12 @@ section.series time.publishDate {
 img {
   max-width: 400px;
 }
+iframe.playlist {
+  display: block;
+  margin: 1em auto;
+  height: 250px;
+  width: 250px;
+}
 @media screen and (min-width: 450px) {
   section.archive ol time.publishDate,
   section.series ol time.publishDate {
@@ -359,6 +365,9 @@ img {
   }
   img {
     max-width: 560px;
+  }
+  iframe.playlist {
+    width: 500px;
   }
 }
 @media screen and (min-width: 800px) {
