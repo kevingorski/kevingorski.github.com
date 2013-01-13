@@ -15,7 +15,7 @@
       })();
       
     </script>
-    <link rel="stylesheet" href="/css/fdf4d4ec.styles.css" />
+    <link rel="stylesheet" href="/css/c56eb9be.styles.css" />
     <script src="/js/libs/html5shiv.js"></script>
     <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Kevin Gorski creates &amp; writes about software" />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
@@ -40,12 +40,12 @@
 
 
 </p>
-<h2><a name="What Is A Promise Worth?">What Is A Promise Worth?</a><a class="section" href="#What Is A Promise Worth?">§</a></h2>
+<h2><a name="What Is A Promise Worth?">What Is A Promise Worth?</a></h2>
 <p>A <em>promise</em> represents the result of a single execution of a task that will complete at a time unknown to the caller. It could complete immediately, in the future or it could have already been completed. In code a promise object is used to register callbacks to be executed when the state of that task changes and to manage higher-level workflow, but never to change the state of the task.
 
 
 </p>
-<h2><a name="Promises From jQuery">Promises From jQuery</a><a class="section" href="#Promises From jQuery">§</a></h2>
+<h2><a name="Promises From jQuery">Promises From jQuery</a></h2>
 <p>Since promises were introduced as part of the <abbr title="Asynchronous JavaScript and XML">AJAX</abbr> re-write the go-to example is the <a href="http://api.jquery.com/category/ajax"><code>$.ajax</code></a> family of methods which now return promises in addition to the original <abbr title="Application Programming Interface">API</abbr> of accepting success and failure methods in the configuration object:
 
 </p>
@@ -78,7 +78,7 @@ $.ajax({ url:'<a href="http://example.com/fakeapi">http://example.com/fakeapi</a
 
 
 </p>
-<h3><a name="Chaining Promises">Chaining Promises</a><a class="section" href="#Chaining Promises">§</a></h3>
+<h3><a name="Chaining Promises">Chaining Promises</a></h3>
 <p>If a promise method like <a href="http://api.jquery.com/deferred.then"><code>then</code></a> returns another promise, so you can chain successive calls to form a descriptive timeline of tasks:
 
 </p>
@@ -108,7 +108,7 @@ $.getJSON('<a href="http://weather.com/forecast/80001">http://weather.com/foreca
 
 
 </p>
-<h3><a name="Getting Multivariate">Getting Multivariate</a><a class="section" href="#Getting Multivariate">§</a></h3>
+<h3><a name="Getting Multivariate">Getting Multivariate</a></h3>
 <p>What if we have multiple task-based dependencies, but they don’t depend on each other?
 
 </p>
@@ -127,7 +127,7 @@ $.when($.get('google'), $.get('bing'))
 
 
 </p>
-<h3><a name="Say “When?”">Say “When?”</a><a class="section" href="#Say “When?”">§</a></h3>
+<h3><a name="Say “When?”">Say “When?”</a></h3>
 <p>At some point you will want to conditionally include promises in the parameter list to <a href="http://api.jquery.com/deferred.when"><code>when</code></a>. One way to do this is to add promises to an array and then use <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/Apply"><code>function.apply</code></a> to match the method signature:
 
 </p>
@@ -172,7 +172,7 @@ function uploadResume(resumeFile, premiumAccount) {
 </figure>
 
 
-<h2><a name="Making Your Own Promises">Making Your Own Promises</a><a class="section" href="#Making Your Own Promises">§</a></h2>
+<h2><a name="Making Your Own Promises">Making Your Own Promises</a></h2>
 <p>Now that we know how to use promises, let’s make some of our own using deferred objects.
 
 </p>
@@ -301,7 +301,7 @@ $(function() {
 </figure>
 
 
-<h2><a name="Wrapping Up">Wrapping Up</a><a class="section" href="#Wrapping Up">§</a></h2>
+<h2><a name="Wrapping Up">Wrapping Up</a></h2>
 <p>That’s promises in a nutshell. Remember that they can be used for more than coordinating network related code: you can model workflows like checkout processes, manage complex <abbr title="Document Object Model">DOM</abbr> interactions like animations, and more. I hope this introduction has given you the tools to appreciate and use promises in your own code.
 
 

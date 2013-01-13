@@ -15,7 +15,7 @@
       })();
       
     </script>
-    <link rel="stylesheet" href="/css/fdf4d4ec.styles.css" />
+    <link rel="stylesheet" href="/css/c56eb9be.styles.css" />
     <script src="/js/libs/html5shiv.js"></script>
     <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Kevin Gorski creates &amp; writes about software" />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
@@ -49,7 +49,7 @@
 <p>Accomplishing all of this with one click from the user required making several different trade-offs and design decisions. Let’s cover each of these in turn.
 
 </p>
-<h2><a name="Get access to the page contents">Get access to the page contents</a><a class="section" href="#Get access to the page contents">§</a></h2>
+<h2><a name="Get access to the page contents">Get access to the page contents</a></h2>
 <p>The simplest way to give <abbr title="Can You Read It Now?">CYRIN</abbr> access to the current document would be to add an in-document JavaScript reference on the page to test, but that would mean changing the content of any page you want to rate, which is tedious and unnecessary. A different way to run third-party JavaScript in the context of the current document is a <a href="http://en.wikipedia.org/wiki/Bookmarklet">bookmarklet</a>. As you might be able to gather from the name, bookmarklets are JavaScript that is saved and executed like a bookmark.
 
 </p>
@@ -83,23 +83,23 @@
 </figure>
 
 
-<h2><a name="Find the text to be analyzed">Find the text to be analyzed</a><a class="section" href="#Find the text to be analyzed">§</a></h2>
+<h2><a name="Find the text to be analyzed">Find the text to be analyzed</a></h2>
 <p>So, now that the JavaScript is running in the right context, how do we find the text to analyze? I knew it was possible to find the primary text for a page without requiring user input from seeing the Instapaper and Readability bookmarklets in action, but I wasn’t sure how to go about implementing something like that myself. Fortunately for me, the <a href="https://code.google.com/p/arc90labs-readability/">original Readability bookmark is open source</a> and I was able to re-use their working solution.
 
 </p>
-<h2><a name="Get the displayed style of each piece of text">Get the displayed style of each piece of text</a><a class="section" href="#Get the displayed style of each piece of text">§</a></h2>
+<h2><a name="Get the displayed style of each piece of text">Get the displayed style of each piece of text</a></h2>
 <p>Once we’ve got a handle to the container of the text to analyze, we can use jQuery’s <a href="http://api.jquery.com/css/">css method</a> to grab the computed <abbr title="Cascading Style Sheets">CSS</abbr> properties of each element. 
 
 </p>
-<h2><a name="Calculate ratings for each aspect of readability">Calculate ratings for each aspect of readability</a><a class="section" href="#Calculate ratings for each aspect of readability">§</a></h2>
+<h2><a name="Calculate ratings for each aspect of readability">Calculate ratings for each aspect of readability</a></h2>
 <p>Style data from each piece of text and the elements nearby are used to calculate ratings which are then weighted by how much of the document by character count this text represents. This is how a tree of <abbr title="Document Object Model">DOM</abbr> elements gets rated and turned into one set of scores for the entire page.
 
 </p>
-<h2><a name="Display the results">Display the results</a><a class="section" href="#Display the results">§</a></h2>
+<h2><a name="Display the results">Display the results</a></h2>
 <p>Now we have a set of scores to display within the document that we just finished rating. In order to prevent the hosted page from affecting how the scores are styled they are displayed in an <a href="http://en.wikipedia.org/wiki/iframe">IFrame</a>, where only the directly included styles will apply. This also allows the markup to be served by the <abbr title="Can You Read It Now?">CYRIN</abbr> server rather than included in JavaScript.
 
 </p>
-<h2><a name="Wrapping up">Wrapping up</a><a class="section" href="#Wrapping up">§</a></h2>
+<h2><a name="Wrapping up">Wrapping up</a></h2>
 <p>That’s all I have to say about <abbr title="Can You Read It Now?">CYRIN</abbr> for now. If you have any questions feel free to contact me at <a href="mailto:kevin.gorski@gmail.com">kevin.gorski@gmail.com</a>.
 
 </p>

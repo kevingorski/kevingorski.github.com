@@ -496,11 +496,6 @@ a[href]:active,
 a[href]:active code {
   color: #c86464;
 }
-a.section {
-  float: right;
-  font-size: 0.75em;
-  text-decoration: none;
-}
 ol,
 ul {
   list-style-position: outside;
