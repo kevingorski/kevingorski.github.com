@@ -87,6 +87,64 @@
 </description>
     </item>
     <item>
+      <title>CYRIN Metrics Part 1</title>
+      <link>http://kevingorski.com/articles/CYRIN-Metrics-Part-1/</link>
+      <pubDate>Mon, 12 Nov 2012 12:00:00 -0700</pubDate>
+      <guid isPermaLink="true">http://kevingorski.com/articles/CYRIN-Metrics-Part-1/</guid>
+      <author></author>
+      <description>&lt;p&gt;Typography has a rich history of wide, specific and sometimes confusing terminology. Today I&rsquo;m going to focus on terms related to readability that are important to understanding why &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt;&lt;/a&gt; recommends what it does, so we can get by with a much smaller set.
+
+&lt;/p&gt;
+&lt;h2&gt;Font Size&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A good default font size will be readible without need for adjustment.
+
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Font size is probably the most familiar metric I&rsquo;ve included here: it&rsquo;s the measure of the height of your text. This won&rsquo;t be an exact match for all glyphs, but they&rsquo;ll all be proportionate to this basic measurement for the same font. Most of the following metrics are based upon multiples and factors of the font size, so it&rsquo;s important to get this right (or use a measurement like em&rsquo;s when expressing the others, which are inherently relative to this baseline).
+
+&lt;/p&gt;
+&lt;p&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; recommends 12 points for body text, where a point is 1/72 of an inch. This is in some ways a holdover from print design where everything eventually has a predictable phyiscal dimension and would be read from a similar distance when printed in a book. For web design things get more tricky as the equivalent number of pixels will differ from screen to screen and may be held different distances from form factor to form factor (computer screen to mobile device). All this to say that when you&rsquo;re in doubt that your users can read your font size, go larger.
+
+&lt;/p&gt;
+&lt;h2&gt;Line Length&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;When line length of text gets too long, it makes text harder to read.
+
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Also called &ldquo;measure,&rdquo; optimal line length is laregely a matter of taste, within certain bounds. It&rsquo;s also one of the most overlooked aspect of typesetting by casual web designers, who may leave lines stretching across an entire screen. Long lines make it more difficult to keep your place in a passage of text, but short lines require too much motion as you make progress. 
+
+&lt;/p&gt;
+&lt;p&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; only starts to give negative ratings when the text greatly under- or over-shoots the commonly given range of 45-75 characters per single column line. Multi-column designs like those found in print newspapers and magazines can be thinner and readible, but are uncommon on the Web.
+
+&lt;/p&gt;
+&lt;h2&gt;Line Leading&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The space between each line of text should be large enough to make visual separation of lines easy without creating an awkward amount of space.
+
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Leading refers to bars of lead that used to be placed vertically between the lines of text when preparing to print. Saying this the correct way (like the element Pb) will keep you from being immediately ejected from the next typography conference you sneak into. I&rsquo;d imagine.
+
+&lt;/p&gt;
+&lt;p&gt;The advice I give in &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; is that leading should be about 1.5 times the height of the text, but if the chosen line length is wide (more than 80 characters per line) or the font is &ldquo;dark&rdquo; (bold or having thick lines) then larger leading is probably needed. The key is being able to effortlessly transition from line to line while reading.
+
+&lt;/p&gt;
+&lt;h2&gt;More to Come&lt;/h2&gt;
+&lt;p&gt;The four remaining metrics in &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt;&lt;/a&gt; are:
+
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Text Color Contrast&lt;/li&gt;
+&lt;li&gt;Margin &amp; Padding&lt;/li&gt;
+&lt;li&gt;Justification&lt;/li&gt;
+&lt;li&gt;Percentage of Text Stylized&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;More like this to follow. Until next time.&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>CYRIN Metrics Part 2</title>
       <link>http://kevingorski.com/articles/CYRIN-Metrics-Part-2/</link>
       <pubDate>Sun, 18 Nov 2012 12:00:00 -0700</pubDate>
@@ -165,64 +223,6 @@
 </description>
     </item>
     <item>
-      <title>CYRIN Metrics Part 1</title>
-      <link>http://kevingorski.com/articles/CYRIN-Metrics-Part-1/</link>
-      <pubDate>Mon, 12 Nov 2012 12:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://kevingorski.com/articles/CYRIN-Metrics-Part-1/</guid>
-      <author></author>
-      <description>&lt;p&gt;Typography has a rich history of wide, specific and sometimes confusing terminology. Today I&rsquo;m going to focus on terms related to readability that are important to understanding why &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt;&lt;/a&gt; recommends what it does, so we can get by with a much smaller set.
-
-&lt;/p&gt;
-&lt;h2&gt;Font Size&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;A good default font size will be readible without need for adjustment.
-
-&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Font size is probably the most familiar metric I&rsquo;ve included here: it&rsquo;s the measure of the height of your text. This won&rsquo;t be an exact match for all glyphs, but they&rsquo;ll all be proportionate to this basic measurement for the same font. Most of the following metrics are based upon multiples and factors of the font size, so it&rsquo;s important to get this right (or use a measurement like em&rsquo;s when expressing the others, which are inherently relative to this baseline).
-
-&lt;/p&gt;
-&lt;p&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; recommends 12 points for body text, where a point is 1/72 of an inch. This is in some ways a holdover from print design where everything eventually has a predictable phyiscal dimension and would be read from a similar distance when printed in a book. For web design things get more tricky as the equivalent number of pixels will differ from screen to screen and may be held different distances from form factor to form factor (computer screen to mobile device). All this to say that when you&rsquo;re in doubt that your users can read your font size, go larger.
-
-&lt;/p&gt;
-&lt;h2&gt;Line Length&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;When line length of text gets too long, it makes text harder to read.
-
-&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Also called &ldquo;measure,&rdquo; optimal line length is laregely a matter of taste, within certain bounds. It&rsquo;s also one of the most overlooked aspect of typesetting by casual web designers, who may leave lines stretching across an entire screen. Long lines make it more difficult to keep your place in a passage of text, but short lines require too much motion as you make progress. 
-
-&lt;/p&gt;
-&lt;p&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; only starts to give negative ratings when the text greatly under- or over-shoots the commonly given range of 45-75 characters per single column line. Multi-column designs like those found in print newspapers and magazines can be thinner and readible, but are uncommon on the Web.
-
-&lt;/p&gt;
-&lt;h2&gt;Line Leading&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The space between each line of text should be large enough to make visual separation of lines easy without creating an awkward amount of space.
-
-&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Leading refers to bars of lead that used to be placed vertically between the lines of text when preparing to print. Saying this the correct way (like the element Pb) will keep you from being immediately ejected from the next typography conference you sneak into. I&rsquo;d imagine.
-
-&lt;/p&gt;
-&lt;p&gt;The advice I give in &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; is that leading should be about 1.5 times the height of the text, but if the chosen line length is wide (more than 80 characters per line) or the font is &ldquo;dark&rdquo; (bold or having thick lines) then larger leading is probably needed. The key is being able to effortlessly transition from line to line while reading.
-
-&lt;/p&gt;
-&lt;h2&gt;More to Come&lt;/h2&gt;
-&lt;p&gt;The four remaining metrics in &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt;&lt;/a&gt; are:
-
-&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Text Color Contrast&lt;/li&gt;
-&lt;li&gt;Margin &amp; Padding&lt;/li&gt;
-&lt;li&gt;Justification&lt;/li&gt;
-&lt;li&gt;Percentage of Text Stylized&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;More like this to follow. Until next time.&lt;/p&gt;
-</description>
-    </item>
-    <item>
       <title>Denver Tours Playlist January-March 2013</title>
       <link>http://kevingorski.com/articles/Denver-Tours-Playlist-Jan-Mar-2013/</link>
       <pubDate>Sun, 13 Jan 2013 12:00:00 -0700</pubDate>
@@ -232,84 +232,6 @@
 
 &lt;/p&gt;
 &lt;iframe class=&quot;playlist&quot; src=&quot;https://rd.io/i/QV5I6DNCe9g&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</description>
-    </item>
-    <item>
-      <title>Typography &amp; Can You Read It&nbsp;Now?</title>
-      <link>http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/</link>
-      <pubDate>Sat, 03 Nov 2012 12:00:00 -0600</pubDate>
-      <guid isPermaLink="true">http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/</guid>
-      <author></author>
-      <description>&lt;p&gt;Typography can be a subtle art. Type is in front of us all day in one form or another, but it can take extreme examples of high- or low-quality typography to &lt;a href=&quot;http://www.typographydeconstructed.com/spur/&quot;&gt;spur&lt;/a&gt; us to think about type. Like most arts, the more you think about it, the more you notice details, which in turn makes you stop and evaluate what you might have glossed over before. This is both enthralling and maddening.
-
-
-&lt;/p&gt;
-&lt;h2&gt;Productive Frustration&lt;/h2&gt;
-&lt;p&gt;My entrance into the spiral of typographic concern started innocently enough: by reading a lot of software development articles on the Web. The content is often well-written by smart and articulate people, but the type is usually set in varying degrees of &lt;a href=&quot;http://en.wikipedia.org/wiki/Readability&quot;&gt;unreadable&lt;/a&gt;.
-
-&lt;/p&gt;
-&lt;p&gt;For non-technical content, there are work-arounds for this problem: use &lt;a href=&quot;http://instapaper.com&quot;&gt;Instapaper&lt;/a&gt;, &lt;a href=&quot;http://readability.com&quot;&gt;Readability&lt;/a&gt;, or Safari&rsquo;s Reader feature to set the text in a more readable way and go on with your life. This is great for prose and digital photos (which can usually be resized without losing meaning), but software development articles tend to include accompanying source code (which has different requirements for readability than prose) and detailed screen shots which tend to only be legible at full size.
-
-&lt;/p&gt;
-&lt;p&gt;Rather than lobbying for these tools to handle the code snippet use case, a different way to solve the problem is to make it easier for authors to make their text &lt;em&gt;readable enough&lt;/em&gt; without having to become typography or &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; expert.
-
-
-&lt;/p&gt;
-&lt;h2&gt;So I Made A Thing&lt;/h2&gt;
-&lt;p&gt;When I started working on &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;Can You Read It Now&lt;/a&gt; (&lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt;) I could identify readable text, but not the ways that distinguished it from the text that was a challenge to read. Since it was clear that I was not the only one with this problem, I spent some time reading about the basics of typesetting in the browser and applied some of what I learned in the &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; &lt;a href=&quot;http://en.wikipedia.org/wiki/Bookmarklet&quot;&gt;bookmarklet&lt;/a&gt;.
-
-&lt;/p&gt;
-&lt;figure&gt;
-&lt;img src=&quot;http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/scores.png&quot; alt=&quot;Example CYRIN scores&quot;&gt;
-&lt;figcaption&gt;&lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; gives immediate feedback in the current browser window&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-
-&lt;h2&gt;What Do I Do With This?&lt;/h2&gt;
-&lt;p&gt;The source for a lot of the ratings are the &lt;abbr title=&quot;World Wide Web Consortium&quot;&gt;W3C&lt;/abbr&gt;&rsquo;s &lt;a href=&quot;http://www.w3.org/WAI/intro/wcag.php&quot;&gt;Web Content Accessibility Guidelines&lt;/a&gt;, which are focused on making content accessible to as many people as possible. I&rsquo;ve used the formulas where they are included with the guidelines for calculating how readable text will be and tried to make clear ratings based on that guidance or personal preference everywhere else. In &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; higher scores (up to 10) mean that the text will be easier and possible for more people to read your content, but anything rated 7 or above can be good enough if you&rsquo;re not targeting visitors with &lt;a href=&quot;http://en.wikipedia.org/wiki/Low_vision&quot;&gt;low-vision&lt;/a&gt;.
-
-&lt;/p&gt;
-&lt;p&gt;&lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; also gives specific recommendations with &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; rules for making the target design more readable.
-
-&lt;/p&gt;
-&lt;figure&gt;
-&lt;img src=&quot;http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/suggestions.png&quot; alt=&quot;Example CYRIN suggestions&quot;&gt;
-&lt;figcaption&gt;Suggestions &amp; &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Finally, &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; also provides short descriptions of the aspects of typesetting that are being measured. There are more aspects of well-set type than are listed here and more subtlety to determining whether text is readable, but I think it&rsquo;s a good start for beginners and casual practitioners.
-
-&lt;/p&gt;
-&lt;figure&gt;
-&lt;img src=&quot;http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/aspect_description.png&quot; alt=&quot;Example CYRIN aspect description&quot;&gt;
-&lt;figcaption&gt;Description of &lt;a href=&quot;http://en.wikipedia.org/wiki/Leading&quot;&gt;line leading&lt;/a&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Go ahead, &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;try it out&lt;/a&gt;.
-
-
-&lt;/p&gt;
-&lt;h2&gt;What&rsquo;s coming&lt;/h2&gt;
-&lt;p&gt;There&rsquo;s more to tell about &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; and some of the basics of typography as it applies to readability, so I hope you&rsquo;ll look forward to:
-
-&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;More on the meanings of metrics that &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; evaluates&lt;/li&gt;
-&lt;li&gt;Notes on other aspects of typography in the browser&lt;/li&gt;
-&lt;li&gt;Technical details about how &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; was built&lt;/li&gt;
-&lt;li&gt;Feature updates&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Other Reading&lt;/h2&gt;
-&lt;p&gt;Here&apos;s some type-geek reading I&rsquo;ve enjoyed:
-
-&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style&quot;&gt;The Elements of Typographic Style&lt;/a&gt; - The One True Typography Book, as far as I know. Covers a great deal of what I&rsquo;d picked up in bits and pieces over time, but in greater detail, historical context and (of course) amazing typography.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://webtypography.net/&quot;&gt;The Elements of Typographic Style Applied to the Web&lt;/a&gt; - A long-running work in progress (started in 2005) that tries to capture more of the specifics of designing for the browser.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://informationarchitects.net/blog/&quot;&gt;Information Architects&lt;/a&gt; - Creators of iA Writer, they have written about how &lt;a href=&quot;http://informationarchitects.net/blog/responsive-typography-the-basics/&quot;&gt;they apply rigorous standards to the display of text&lt;/a&gt; in their cross-device text editors.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://elliotjaystocks.com/&quot;&gt;Elliot Jay Stocks&lt;/a&gt;&rsquo; Tomorrow&rsquo;s web type today series: &lt;a href=&quot;http://elliotjaystocks.com/blog/the-fine-flourish-of-the-ligature/&quot;&gt;ligatures&lt;/a&gt;, &lt;a href=&quot;http://elliotjaystocks.com/blog/expert-subsets-for-css-in-123/&quot;&gt;expert subsets&lt;/a&gt; (for real small caps and lower case numerals), &lt;a href=&quot;http://elliotjaystocks.com/blog/say-it-with-a-swash/&quot;&gt;swashes&lt;/a&gt; &amp; &lt;a href=&quot;http://elliotjaystocks.com/blog/stylesets/&quot;&gt;stylesets&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Until next time.&lt;/p&gt;
-</description>
     </item>
     <item>
       <title>Get More From jQuery Promises</title>
@@ -587,6 +509,84 @@ $(function() {
 
 
 &lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Typography &amp; Can You Read It&nbsp;Now?</title>
+      <link>http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/</link>
+      <pubDate>Sat, 03 Nov 2012 12:00:00 -0600</pubDate>
+      <guid isPermaLink="true">http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/</guid>
+      <author></author>
+      <description>&lt;p&gt;Typography can be a subtle art. Type is in front of us all day in one form or another, but it can take extreme examples of high- or low-quality typography to &lt;a href=&quot;http://www.typographydeconstructed.com/spur/&quot;&gt;spur&lt;/a&gt; us to think about type. Like most arts, the more you think about it, the more you notice details, which in turn makes you stop and evaluate what you might have glossed over before. This is both enthralling and maddening.
+
+
+&lt;/p&gt;
+&lt;h2&gt;Productive Frustration&lt;/h2&gt;
+&lt;p&gt;My entrance into the spiral of typographic concern started innocently enough: by reading a lot of software development articles on the Web. The content is often well-written by smart and articulate people, but the type is usually set in varying degrees of &lt;a href=&quot;http://en.wikipedia.org/wiki/Readability&quot;&gt;unreadable&lt;/a&gt;.
+
+&lt;/p&gt;
+&lt;p&gt;For non-technical content, there are work-arounds for this problem: use &lt;a href=&quot;http://instapaper.com&quot;&gt;Instapaper&lt;/a&gt;, &lt;a href=&quot;http://readability.com&quot;&gt;Readability&lt;/a&gt;, or Safari&rsquo;s Reader feature to set the text in a more readable way and go on with your life. This is great for prose and digital photos (which can usually be resized without losing meaning), but software development articles tend to include accompanying source code (which has different requirements for readability than prose) and detailed screen shots which tend to only be legible at full size.
+
+&lt;/p&gt;
+&lt;p&gt;Rather than lobbying for these tools to handle the code snippet use case, a different way to solve the problem is to make it easier for authors to make their text &lt;em&gt;readable enough&lt;/em&gt; without having to become typography or &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; expert.
+
+
+&lt;/p&gt;
+&lt;h2&gt;So I Made A Thing&lt;/h2&gt;
+&lt;p&gt;When I started working on &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;Can You Read It Now&lt;/a&gt; (&lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt;) I could identify readable text, but not the ways that distinguished it from the text that was a challenge to read. Since it was clear that I was not the only one with this problem, I spent some time reading about the basics of typesetting in the browser and applied some of what I learned in the &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; &lt;a href=&quot;http://en.wikipedia.org/wiki/Bookmarklet&quot;&gt;bookmarklet&lt;/a&gt;.
+
+&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/scores.png&quot; alt=&quot;Example CYRIN scores&quot;&gt;
+&lt;figcaption&gt;&lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; gives immediate feedback in the current browser window&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+&lt;h2&gt;What Do I Do With This?&lt;/h2&gt;
+&lt;p&gt;The source for a lot of the ratings are the &lt;abbr title=&quot;World Wide Web Consortium&quot;&gt;W3C&lt;/abbr&gt;&rsquo;s &lt;a href=&quot;http://www.w3.org/WAI/intro/wcag.php&quot;&gt;Web Content Accessibility Guidelines&lt;/a&gt;, which are focused on making content accessible to as many people as possible. I&rsquo;ve used the formulas where they are included with the guidelines for calculating how readable text will be and tried to make clear ratings based on that guidance or personal preference everywhere else. In &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; higher scores (up to 10) mean that the text will be easier and possible for more people to read your content, but anything rated 7 or above can be good enough if you&rsquo;re not targeting visitors with &lt;a href=&quot;http://en.wikipedia.org/wiki/Low_vision&quot;&gt;low-vision&lt;/a&gt;.
+
+&lt;/p&gt;
+&lt;p&gt;&lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; also gives specific recommendations with &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; rules for making the target design more readable.
+
+&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/suggestions.png&quot; alt=&quot;Example CYRIN suggestions&quot;&gt;
+&lt;figcaption&gt;Suggestions &amp; &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Finally, &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; also provides short descriptions of the aspects of typesetting that are being measured. There are more aspects of well-set type than are listed here and more subtlety to determining whether text is readable, but I think it&rsquo;s a good start for beginners and casual practitioners.
+
+&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/aspect_description.png&quot; alt=&quot;Example CYRIN aspect description&quot;&gt;
+&lt;figcaption&gt;Description of &lt;a href=&quot;http://en.wikipedia.org/wiki/Leading&quot;&gt;line leading&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Go ahead, &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;try it out&lt;/a&gt;.
+
+
+&lt;/p&gt;
+&lt;h2&gt;What&rsquo;s coming&lt;/h2&gt;
+&lt;p&gt;There&rsquo;s more to tell about &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; and some of the basics of typography as it applies to readability, so I hope you&rsquo;ll look forward to:
+
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;More on the meanings of metrics that &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; evaluates&lt;/li&gt;
+&lt;li&gt;Notes on other aspects of typography in the browser&lt;/li&gt;
+&lt;li&gt;Technical details about how &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; was built&lt;/li&gt;
+&lt;li&gt;Feature updates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Other Reading&lt;/h2&gt;
+&lt;p&gt;Here&apos;s some type-geek reading I&rsquo;ve enjoyed:
+
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style&quot;&gt;The Elements of Typographic Style&lt;/a&gt; - The One True Typography Book, as far as I know. Covers a great deal of what I&rsquo;d picked up in bits and pieces over time, but in greater detail, historical context and (of course) amazing typography.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://webtypography.net/&quot;&gt;The Elements of Typographic Style Applied to the Web&lt;/a&gt; - A long-running work in progress (started in 2005) that tries to capture more of the specifics of designing for the browser.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://informationarchitects.net/blog/&quot;&gt;Information Architects&lt;/a&gt; - Creators of iA Writer, they have written about how &lt;a href=&quot;http://informationarchitects.net/blog/responsive-typography-the-basics/&quot;&gt;they apply rigorous standards to the display of text&lt;/a&gt; in their cross-device text editors.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://elliotjaystocks.com/&quot;&gt;Elliot Jay Stocks&lt;/a&gt;&rsquo; Tomorrow&rsquo;s web type today series: &lt;a href=&quot;http://elliotjaystocks.com/blog/the-fine-flourish-of-the-ligature/&quot;&gt;ligatures&lt;/a&gt;, &lt;a href=&quot;http://elliotjaystocks.com/blog/expert-subsets-for-css-in-123/&quot;&gt;expert subsets&lt;/a&gt; (for real small caps and lower case numerals), &lt;a href=&quot;http://elliotjaystocks.com/blog/say-it-with-a-swash/&quot;&gt;swashes&lt;/a&gt; &amp; &lt;a href=&quot;http://elliotjaystocks.com/blog/stylesets/&quot;&gt;stylesets&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Until next time.&lt;/p&gt;
 </description>
     </item>
   </channel>
