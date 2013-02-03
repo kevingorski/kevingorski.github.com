@@ -15,7 +15,7 @@
       })();
       
     </script>
-    <link rel="stylesheet" href="/css/989b4940.styles.css" />
+    <link rel="stylesheet" href="/css/03a24f0a.styles.css" />
     <script src="/js/libs/html5shiv.js"></script>
     <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Kevin Gorski creates &amp; writes about software" />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
@@ -50,27 +50,26 @@
 
 </p>
 <figure class="codelisting">
-  <script src="https://gist.github.com/765b4f1bdf39d1091c03.js"></script>
-  <noscript><pre><code>// Original API
+  <pre><code class="javascript"><span class="comment">// Original API</span>
 $.ajax({
-  url: '<a href="http://example.com/fakeapi">http://example.com/fakeapi</a>', 
-  success: function(data, textStatus, jqXHR) {}, 
-  error: function(jqXHR, textStatus, errorThrown) {}, 
-  complete: function(jqXHR, textStatus) {}
+  url: <span class="string">'&lt;a href="http://example.com/fakeapi"&gt;http://example.com/fakeapi&lt;/a&gt;'</span>,
+  success: <span class="keyword">function</span>(data, textStatus, jqXHR) {},
+  error: <span class="keyword">function</span>(jqXHR, textStatus, errorThrown) {},
+  complete: <span class="keyword">function</span>(jqXHR, textStatus) {}
 });
 
-// With Promises
-$.ajax({ url:'<a href="http://example.com/fakeapi">http://example.com/fakeapi</a>' })
-  .then(function(data, textStatus, jqXHR) {
-    // success
+<span class="comment">// With Promises</span>
+$.ajax({ url:<span class="string">'&lt;a href="http://example.com/fakeapi"&gt;http://example.com/fakeapi&lt;/a&gt;'</span> })
+  .then(<span class="keyword">function</span>(data, textStatus, jqXHR) {
+    <span class="comment">// success</span>
   })
-  .fail(function(jqXHR, textStatus, errorThrown) {
-    // error
+  .fail(<span class="keyword">function</span>(jqXHR, textStatus, errorThrown) {
+    <span class="comment">// error</span>
   })
-  .always(function() {
-    // complete
-    // arguments will mirror success or error as called
-  });</code></pre></noscript>
+  .always(<span class="keyword">function</span>() {
+    <span class="comment">// complete</span>
+    <span class="comment">// arguments will mirror success or error as called</span>
+  });</code></pre>
   <figcaption>Comparing the AJAX APIs</figcaption>
 </figure>
 
@@ -83,21 +82,20 @@ $.ajax({ url:'<a href="http://example.com/fakeapi">http://example.com/fakeapi</a
 
 </p>
 <figure class="codelisting">
-  <script src="https://gist.github.com/18e765eb52964bb2f02e.js"></script>
-  <noscript><pre><code>// Promise to get weather
-$.getJSON('<a href="http://weather.com/forecast/80001">http://weather.com/forecast/80001</a>')
-  .then(function() {
-    // Get the text description of the forecast
-    var description = data.forecast[0].description;
+  <pre><code class="javascript"><span class="comment">// Promise to get weather</span>
+$.getJSON(<span class="string">'&lt;a href="http://weather.com/forecast/80001"&gt;http://weather.com/forecast/80001&lt;/a&gt;'</span>)
+  .then(<span class="keyword">function</span>() {
+    <span class="comment">// Get the text description of the forecast</span>
+    <span class="keyword">var</span> description = data.forecast[<span class="number">0</span>].description;
 
-    // Return promise to get photos
-    return $.getJSON('<a href="http://photos.com/search/">http://photos.com/search/</a>' + description);
+    <span class="comment">// Return promise to get photos</span>
+    <span class="keyword">return</span> $.getJSON(<span class="string">'&lt;a href="http://photos.com/search/"&gt;http://photos.com/search/&lt;/a&gt;'</span> + description);
   })
-  .then(function(data) {
-    var photos = data.photos;
+  .then(<span class="keyword">function</span>(data) {
+    <span class="keyword">var</span> photos = data.photos;
 
-    // Display the photos
-  });</code></pre></noscript>
+    <span class="comment">// Display the photos</span>
+  });</code></pre>
   <figcaption>Chaining promises for easy-to-read async code</figcaption>
 </figure>
 
@@ -113,13 +111,12 @@ $.getJSON('<a href="http://weather.com/forecast/80001">http://weather.com/foreca
 
 </p>
 <figure class="codelisting">
-  <script src="https://gist.github.com/df586dd9482a88b694d1.js"></script>
-  <noscript><pre><code>// Parameter list of promises
-$.when($.get('google'), $.get('bing'))
-  // All finished, results in same order
-  .then(function(googleData, bingData) {
-    // Now compare results
-  });</code></pre></noscript>
+  <pre><code class="javascript"><span class="comment">// Parameter list of promises</span>
+$.when($.get(<span class="string">'google'</span>), $.get(<span class="string">'bing'</span>))
+  <span class="comment">// All finished, results in same order</span>
+  .then(<span class="keyword">function</span>(googleData, bingData) {
+    <span class="comment">// Now compare results</span>
+  });</code></pre>
   <figcaption>Combining multiple promises into an aggregate</figcaption>
 </figure>
 
@@ -132,7 +129,7 @@ $.when($.get('google'), $.get('bing'))
 
 </p>
 <figure class="codelisting">
-  <pre><code>$.when.apply($, arrayOfPromises);</code></pre>
+  <pre><code class="javascript">$.when.apply($, arrayOfPromises);</code></pre>
   <figcaption>Applying <code>when</code> to an arbitrary number of promises</figcaption>
 </figure>
 
@@ -151,23 +148,22 @@ $.when($.get('google'), $.get('bing'))
 
 </p>
 <figure class="codelisting">
-  <script src="https://gist.github.com/7fbd5e9750691b642555.js"></script>
-  <noscript><pre><code>function getTemplate(premiumAccount) {
-  if(!premiumAccount)
-    return 'free template';
+  <pre><code class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">getTemplate</span><span class="params">(premiumAccount)</span> {</span>
+  <span class="keyword">if</span>(!premiumAccount)
+    <span class="keyword">return</span> <span class="string">'free template'</span>;
 
-  // Promise the premium template
-  return $.get('premiumTemplate');
+  <span class="comment">// Promise the premium template</span>
+  <span class="keyword">return</span> $.get(<span class="string">'premiumTemplate'</span>);
 }
 
-function uploadResume(resumeFile, premiumAccount) {
-  return 
+<span class="function"><span class="keyword">function</span> <span class="title">uploadResume</span><span class="params">(resumeFile, premiumAccount)</span> {</span>
+  <span class="keyword">return</span>
     $.when(uploadResume(resumeFile), getTemplate(premiumAccount))
-      .then(function(resumeMediaKey, template) {
-        // Ready to display
-        return renderTemplate(template, resumeMediaKey);
+      .then(<span class="keyword">function</span>(resumeMediaKey, template) {
+        <span class="comment">// Ready to display</span>
+        <span class="keyword">return</span> renderTemplate(template, resumeMediaKey);
       });
-}</code></pre></noscript>
+}</code></pre>
   <figcaption>Combining promises and plain objects</figcaption>
 </figure>
 
@@ -191,23 +187,22 @@ function uploadResume(resumeFile, premiumAccount) {
 
 </p>
 <figure class="codelisting">
-  <script src="https://gist.github.com/ef56fbbf56c7cc62e099.js"></script>
-  <noscript><pre><code>function upload(fileName) {
-  var uploading = $.Deferred();
+  <pre><code class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">upload</span><span class="params">(fileName)</span> {</span>
+  <span class="keyword">var</span> uploading = $.Deferred();
 
-  // Imaginary file upload API
-  file.upload(function(err, mediaKey) {
-    if(err) {
-      // Change to error/failed state
+  <span class="comment">// Imaginary file upload API</span>
+  file.upload(<span class="keyword">function</span>(err, mediaKey) {
+    <span class="keyword">if</span>(err) {
+      <span class="comment">// Change to error/failed state</span>
       uploading.reject(err);
-    } else {
-      // Pass the generated key to observers
+    } <span class="keyword">else</span> {
+      <span class="comment">// Pass the generated key to observers</span>
       uploading.resolve(mediaKey);
     }
   });
 
-  return uploading.promise();
-}</code></pre></noscript>
+  <span class="keyword">return</span> uploading.promise();
+}</code></pre>
   <figcaption>Using resolve, reject, and promise</figcaption>
 </figure>
 
@@ -218,17 +213,16 @@ function uploadResume(resumeFile, premiumAccount) {
 
 </p>
 <figure class="codelisting">
-  <script src="https://gist.github.com/b576c40071617d3f2035.js"></script>
-  <noscript><pre><code>// Task-based code with deferred object "fileUploading"
-file.updating(function(bytesReceived) {
+  <pre><code class="javascript"><span class="comment">// Task-based code with deferred object "fileUploading"</span>
+file.updating(<span class="keyword">function</span>(bytesReceived) {
   uploading.notify(bytesReceived);
 });
 
-// Calling code, could also be the third parameter to "then"
+<span class="comment">// Calling code, could also be the third parameter to "then"</span>
 uploadFile(fileToUpload)
-  .progress(function(bytesReceived) {
-    console.log(bytesReceived + ' B / ' + file.totalBytes + ' B');
-  });</code></pre></noscript>
+  .progress(<span class="keyword">function</span>(bytesReceived) {
+    console.log(bytesReceived + <span class="string">' B / '</span> + file.totalBytes + <span class="string">' B'</span>);
+  });</code></pre>
   <figcaption>Notification via promises</figcaption>
 </figure>
 
@@ -238,65 +232,64 @@ uploadFile(fileToUpload)
 <iframe src="http://bl.ocks.org/d/4415942/" width="100%" height="225"></iframe>
 
 <figure class="codelisting">
-  <script src="https://gist.github.com/4415942.js"></script>
-  <noscript><pre><code>// Imaginary file upload API
-var file = {
-  totalBytes: 300,
-  upload: function(fileName) {
-    var uploading = $.Deferred(),
-      bytesTransferred = 0;
-      transferringInterval = setInterval(function() {
-        bytesTransferred += 50;
+  <pre><code class="javascript"><span class="comment">// Imaginary file upload API</span>
+<span class="keyword">var</span> file = {
+  totalBytes: <span class="number">300</span>,
+  upload: <span class="keyword">function</span>(fileName) {
+    <span class="keyword">var</span> uploading = $.Deferred(),
+      bytesTransferred = <span class="number">0</span>;
+      transferringInterval = setInterval(<span class="keyword">function</span>() {
+        bytesTransferred += <span class="number">50</span>;
 
         uploading.notify(bytesTransferred);
 
-        // Simulate error
-        if(Math.random() > 0.95) {
-          // Change to error/failed state
-          uploading.reject('Simulated network error');
+        <span class="comment">// Simulate error</span>
+        <span class="keyword">if</span>(Math.random() &gt; <span class="number">0.95</span>) {
+          <span class="comment">// Change to error/failed state</span>
+          uploading.reject(<span class="string">'Simulated network error'</span>);
         }
 
-        if(bytesTransferred >= file.totalBytes) {
-          // Pass the generated key to observers
+        <span class="keyword">if</span>(bytesTransferred &gt;= file.totalBytes) {
+          <span class="comment">// Pass the generated key to observers</span>
           clearInterval(transferringInterval);
 
-          uploading.resolve('MEDIAKEY');
+          uploading.resolve(<span class="string">'MEDIAKEY'</span>);
         }
-      }, 250);
+      }, <span class="number">250</span>);
 
-    return uploading.promise();
+    <span class="keyword">return</span> uploading.promise();
   }
 };
 
-$(function() {
-  var $console = $('#console'),
-    $uploadButton = $('#upload');
+$(<span class="keyword">function</span>() {
+  <span class="keyword">var</span> $console = $(<span class="string">'#console'</span>),
+    $uploadButton = $(<span class="string">'#upload'</span>);
 
-  $uploadButton.click(function(){
-    $uploadButton.attr('disabled', 'disabled');
+  $uploadButton.click(<span class="keyword">function</span>(){
+    $uploadButton.attr(<span class="string">'disabled'</span>, <span class="string">'disabled'</span>);
 
     $console.empty();
 
-    file.upload('thefile')
+    file.upload(<span class="string">'thefile'</span>)
       .then(
-        // Success
-        function(resourceKey) {
-          $console.append('<li>File uploaded successfully with key ' + resourceKey + '</li>');
+        <span class="comment">// Success</span>
+        <span class="keyword">function</span>(resourceKey) {
+          $console.append(<span class="string">'&lt;li&gt;File uploaded successfully with key '</span> + resourceKey + <span class="string">'&lt;/li&gt;'</span>);
         },
-        // Failure
-        function(err) {
-          $console.append('<li>File failed to upload: ' + err + '</li>');
+        <span class="comment">// Failure</span>
+        <span class="keyword">function</span>(err) {
+          $console.append(<span class="string">'&lt;li&gt;File failed to upload: '</span> + err + <span class="string">'&lt;/li&gt;'</span>);
         },
-        // Progress
-        function(bytesReceived) {
-          $console.append('<li>' + bytesReceived + ' B / ' + file.totalBytes + ' B</li>');
+        <span class="comment">// Progress</span>
+        <span class="keyword">function</span>(bytesReceived) {
+          $console.append(<span class="string">'&lt;li&gt;'</span> + bytesReceived + <span class="string">' B / '</span> + file.totalBytes + <span class="string">' B&lt;/li&gt;'</span>);
         })
-        .always(function() {
-          $console.append('<li>Complete.</li>');
-          $uploadButton.removeAttr('disabled');
+        .always(<span class="keyword">function</span>() {
+          $console.append(<span class="string">'&lt;li&gt;Complete.&lt;/li&gt;'</span>);
+          $uploadButton.removeAttr(<span class="string">'disabled'</span>);
         });
   });
-});</code></pre></noscript>
+});</code></pre>
   <figcaption>File uploading example</figcaption>
 </figure>
 

@@ -85,7 +85,7 @@ body:after {
   line-height: 1.6em;
 }
 /*
- 
+
   Size, Proportion & Positioning
 
   3 level structure
@@ -433,7 +433,7 @@ iframe.playlist {
   }
 }
 /*
- 
+
   Styles
 
 */
@@ -568,4 +568,60 @@ blockquote:before {
   font-size: 2.5em;
   line-height: 0.5em;
   margin-left: -0.85em;
+}
+/* Custom Highlight.js Theme */
+pre code .comment,
+pre code .title {
+  color: #9ba4ad;
+}
+pre code .variable,
+pre code .attribute,
+pre code .tag,
+pre code .regexp,
+pre code .xml .tag .title,
+pre code .xml .pi,
+pre code .xml .doctype,
+pre code .html .doctype,
+pre code .css .id,
+pre code .css .class,
+pre code .css .pseudo {
+  color: #c66;
+}
+pre code .params,
+pre code .constant {
+  color: #595db3;
+}
+pre code .number,
+pre code .preprocessor,
+pre code .built_in,
+pre code .literal {
+  color: #f0964f;
+}
+pre code .class,
+pre code .css .rules .attribute {
+  color: #f0c674;
+}
+pre code .string,
+pre code .value,
+pre code .inheritance,
+pre code .header,
+pre code .xml .cdata {
+  color: #be0822;
+}
+pre code .css .hexcolor {
+  color: #8abeb7;
+}
+pre code .function,
+pre code.javascript .title {
+  color: #111920;
+}
+pre code .keyword,
+pre code.javascript .function {
+  color: #000863;
+}
+pre code.javascript .xml,
+pre code .xml .javascript,
+pre code .xml .css,
+pre code .xml .cdata {
+  opacity: 0.5;
 }

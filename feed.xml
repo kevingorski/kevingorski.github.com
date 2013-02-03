@@ -35,8 +35,7 @@
 
 &lt;/p&gt;
 &lt;figure class=&quot;codelisting&quot;&gt;
-  &lt;script src=&quot;https://gist.github.com/4366664.js&quot;&gt;&lt;/script&gt;
-  &lt;noscript&gt;&lt;pre&gt;&lt;code&gt;&lt;!-- This code would normally be compressed to one line and not include comments --&gt;
+  &lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&lt;!-- This code would normally be compressed to one line and not include comments --&gt;
 &lt;a id=&quot;Target&quot; href=&quot;javascript:
   // Begin self-executing function
   (function(){
@@ -56,7 +55,7 @@
       CYRIN.Bookmarklet.analyze()
 
     }
-  }());&quot;&gt;CYRIN?&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/noscript&gt;
+  }());&quot;&gt;CYRIN?&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;
   &lt;figcaption&gt;The &lt;a href=&quot;https://gist.github.com/4366664&quot;&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; bookmarklet&lt;/a&gt;, expanded for readability&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -66,7 +65,7 @@
 
 &lt;/p&gt;
 &lt;h2&gt;Get the displayed style of each piece of text&lt;/h2&gt;
-&lt;p&gt;Once we&rsquo;ve got a handle to the container of the text to analyze, we can use jQuery&rsquo;s &lt;a href=&quot;http://api.jquery.com/css/&quot;&gt;css method&lt;/a&gt; to grab the computed &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; properties of each element. 
+&lt;p&gt;Once we&rsquo;ve got a handle to the container of the text to analyze, we can use jQuery&rsquo;s &lt;a href=&quot;http://api.jquery.com/css/&quot;&gt;css method&lt;/a&gt; to grab the computed &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; properties of each element.
 
 &lt;/p&gt;
 &lt;h2&gt;Calculate ratings for each aspect of readability&lt;/h2&gt;
@@ -253,12 +252,11 @@
 
 &lt;/p&gt;
 &lt;figure class=&quot;codelisting&quot;&gt;
-  &lt;script src=&quot;https://gist.github.com/765b4f1bdf39d1091c03.js&quot;&gt;&lt;/script&gt;
-  &lt;noscript&gt;&lt;pre&gt;&lt;code&gt;// Original API
+  &lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;// Original API
 $.ajax({
-  url: &apos;&lt;a href=&quot;http://example.com/fakeapi&quot;&gt;http://example.com/fakeapi&lt;/a&gt;&apos;, 
-  success: function(data, textStatus, jqXHR) {}, 
-  error: function(jqXHR, textStatus, errorThrown) {}, 
+  url: &apos;&lt;a href=&quot;http://example.com/fakeapi&quot;&gt;http://example.com/fakeapi&lt;/a&gt;&apos;,
+  success: function(data, textStatus, jqXHR) {},
+  error: function(jqXHR, textStatus, errorThrown) {},
   complete: function(jqXHR, textStatus) {}
 });
 
@@ -273,7 +271,7 @@ $.ajax({ url:&apos;&lt;a href=&quot;http://example.com/fakeapi&quot;&gt;http://e
   .always(function() {
     // complete
     // arguments will mirror success or error as called
-  });&lt;/code&gt;&lt;/pre&gt;&lt;/noscript&gt;
+  });&lt;/code&gt;&lt;/pre&gt;
   &lt;figcaption&gt;Comparing the AJAX APIs&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -286,8 +284,7 @@ $.ajax({ url:&apos;&lt;a href=&quot;http://example.com/fakeapi&quot;&gt;http://e
 
 &lt;/p&gt;
 &lt;figure class=&quot;codelisting&quot;&gt;
-  &lt;script src=&quot;https://gist.github.com/18e765eb52964bb2f02e.js&quot;&gt;&lt;/script&gt;
-  &lt;noscript&gt;&lt;pre&gt;&lt;code&gt;// Promise to get weather
+  &lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;// Promise to get weather
 $.getJSON(&apos;&lt;a href=&quot;http://weather.com/forecast/80001&quot;&gt;http://weather.com/forecast/80001&lt;/a&gt;&apos;)
   .then(function() {
     // Get the text description of the forecast
@@ -300,7 +297,7 @@ $.getJSON(&apos;&lt;a href=&quot;http://weather.com/forecast/80001&quot;&gt;http
     var photos = data.photos;
 
     // Display the photos
-  });&lt;/code&gt;&lt;/pre&gt;&lt;/noscript&gt;
+  });&lt;/code&gt;&lt;/pre&gt;
   &lt;figcaption&gt;Chaining promises for easy-to-read async code&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -316,13 +313,12 @@ $.getJSON(&apos;&lt;a href=&quot;http://weather.com/forecast/80001&quot;&gt;http
 
 &lt;/p&gt;
 &lt;figure class=&quot;codelisting&quot;&gt;
-  &lt;script src=&quot;https://gist.github.com/df586dd9482a88b694d1.js&quot;&gt;&lt;/script&gt;
-  &lt;noscript&gt;&lt;pre&gt;&lt;code&gt;// Parameter list of promises
+  &lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;// Parameter list of promises
 $.when($.get(&apos;google&apos;), $.get(&apos;bing&apos;))
   // All finished, results in same order
   .then(function(googleData, bingData) {
     // Now compare results
-  });&lt;/code&gt;&lt;/pre&gt;&lt;/noscript&gt;
+  });&lt;/code&gt;&lt;/pre&gt;
   &lt;figcaption&gt;Combining multiple promises into an aggregate&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -335,7 +331,7 @@ $.when($.get(&apos;google&apos;), $.get(&apos;bing&apos;))
 
 &lt;/p&gt;
 &lt;figure class=&quot;codelisting&quot;&gt;
-  &lt;pre&gt;&lt;code&gt;$.when.apply($, arrayOfPromises);&lt;/code&gt;&lt;/pre&gt;
+  &lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;$.when.apply($, arrayOfPromises);&lt;/code&gt;&lt;/pre&gt;
   &lt;figcaption&gt;Applying &lt;code&gt;when&lt;/code&gt; to an arbitrary number of promises&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -354,8 +350,7 @@ $.when($.get(&apos;google&apos;), $.get(&apos;bing&apos;))
 
 &lt;/p&gt;
 &lt;figure class=&quot;codelisting&quot;&gt;
-  &lt;script src=&quot;https://gist.github.com/7fbd5e9750691b642555.js&quot;&gt;&lt;/script&gt;
-  &lt;noscript&gt;&lt;pre&gt;&lt;code&gt;function getTemplate(premiumAccount) {
+  &lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;function getTemplate(premiumAccount) {
   if(!premiumAccount)
     return &apos;free template&apos;;
 
@@ -364,13 +359,13 @@ $.when($.get(&apos;google&apos;), $.get(&apos;bing&apos;))
 }
 
 function uploadResume(resumeFile, premiumAccount) {
-  return 
+  return
     $.when(uploadResume(resumeFile), getTemplate(premiumAccount))
       .then(function(resumeMediaKey, template) {
         // Ready to display
         return renderTemplate(template, resumeMediaKey);
       });
-}&lt;/code&gt;&lt;/pre&gt;&lt;/noscript&gt;
+}&lt;/code&gt;&lt;/pre&gt;
   &lt;figcaption&gt;Combining promises and plain objects&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -394,8 +389,7 @@ function uploadResume(resumeFile, premiumAccount) {
 
 &lt;/p&gt;
 &lt;figure class=&quot;codelisting&quot;&gt;
-  &lt;script src=&quot;https://gist.github.com/ef56fbbf56c7cc62e099.js&quot;&gt;&lt;/script&gt;
-  &lt;noscript&gt;&lt;pre&gt;&lt;code&gt;function upload(fileName) {
+  &lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;function upload(fileName) {
   var uploading = $.Deferred();
 
   // Imaginary file upload API
@@ -410,7 +404,7 @@ function uploadResume(resumeFile, premiumAccount) {
   });
 
   return uploading.promise();
-}&lt;/code&gt;&lt;/pre&gt;&lt;/noscript&gt;
+}&lt;/code&gt;&lt;/pre&gt;
   &lt;figcaption&gt;Using resolve, reject, and promise&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -421,8 +415,7 @@ function uploadResume(resumeFile, premiumAccount) {
 
 &lt;/p&gt;
 &lt;figure class=&quot;codelisting&quot;&gt;
-  &lt;script src=&quot;https://gist.github.com/b576c40071617d3f2035.js&quot;&gt;&lt;/script&gt;
-  &lt;noscript&gt;&lt;pre&gt;&lt;code&gt;// Task-based code with deferred object &quot;fileUploading&quot;
+  &lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;// Task-based code with deferred object &quot;fileUploading&quot;
 file.updating(function(bytesReceived) {
   uploading.notify(bytesReceived);
 });
@@ -431,7 +424,7 @@ file.updating(function(bytesReceived) {
 uploadFile(fileToUpload)
   .progress(function(bytesReceived) {
     console.log(bytesReceived + &apos; B / &apos; + file.totalBytes + &apos; B&apos;);
-  });&lt;/code&gt;&lt;/pre&gt;&lt;/noscript&gt;
+  });&lt;/code&gt;&lt;/pre&gt;
   &lt;figcaption&gt;Notification via promises&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -441,8 +434,7 @@ uploadFile(fileToUpload)
 &lt;iframe src=&quot;http://bl.ocks.org/d/4415942/&quot; width=&quot;100%&quot; height=&quot;225&quot;&gt;&lt;/iframe&gt;
 
 &lt;figure class=&quot;codelisting&quot;&gt;
-  &lt;script src=&quot;https://gist.github.com/4415942.js&quot;&gt;&lt;/script&gt;
-  &lt;noscript&gt;&lt;pre&gt;&lt;code&gt;// Imaginary file upload API
+  &lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;// Imaginary file upload API
 var file = {
   totalBytes: 300,
   upload: function(fileName) {
@@ -499,7 +491,7 @@ $(function() {
           $uploadButton.removeAttr(&apos;disabled&apos;);
         });
   });
-});&lt;/code&gt;&lt;/pre&gt;&lt;/noscript&gt;
+});&lt;/code&gt;&lt;/pre&gt;
   &lt;figcaption&gt;File uploading example&lt;/figcaption&gt;
 &lt;/figure&gt;
 
