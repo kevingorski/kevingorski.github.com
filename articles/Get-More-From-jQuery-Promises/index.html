@@ -15,7 +15,9 @@
       })();
       
     </script>
-    <link rel="stylesheet" href="/css/e809aebb.styles.css" />
+    <!-- build:css /css/styles.css-->
+    <link rel="stylesheet" href="/css/all.css?22cbe157" />
+    <!-- endbuild-->
     <script src="/js/libs/html5shiv.js"></script>
     <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Kevin Gorski creates &amp; writes about software" />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
@@ -36,21 +38,12 @@
                 <iframe border="0" scrolling="no" width="78" height="17" allowtransparency="allowtransparency" frameborder="0" style="margin-bottom: -3px; z-index: 1338; border: 0px; background-color: transparent; overflow: hidden;" src="http://www.instapaper.com/e2?url=http://kevingorski.com/articles/Get-More-From-jQuery-Promises/&amp;title=Get More From jQuery Promises"></iframe>
               </div>
             </header>
-            <section class="content"><p><a href="http://api.jquery.com/category/deferred-object/" title="jQuery promises documentation">Promises and deferred objects</a> were introduced to jQuery way back in <a href="http://blog.jquery.com/2011/01/31/jquery-15-released/">version 1.5</a> as part of a re-write of the <abbr title="Asynchronous JavaScript and XML">AJAX</abbr> module. I’ve only started using them in earnest in the past few months while building <a href="/projects-&amp;-portfolio.html#lms" title="HomeAway Lead Management System"><abbr title="Lead Management System">LMS</abbr></a>, but they’ve become essential to keeping asynchronous code readable and maintainable. There are already <a href="http://msdn.microsoft.com/en-us/magazine/gg723713.aspx" title="Julian Aubourg and Addy Osmani's article on MSDN">a lot</a> <a href="http://www.erichynds.com/jquery/using-deferreds-in-jquery/">of resources</a> available on this subject, but here I’ve included all of the useful details I picked up from different places while learning the ins and outs of using jQuery’s promise implementation.
-
-
-</p>
+            <section class="content"><p>Intro: <a href="http://api.jquery.com/category/deferred-object/" title="jQuery promises documentation">Promises and deferred objects</a> were introduced to jQuery way back in <a href="http://blog.jquery.com/2011/01/31/jquery-15-released/">version 1.5</a> as part of a re-write of the <abbr title="Asynchronous JavaScript and XML">AJAX</abbr> module. I’ve only started using them in earnest in the past few months while building <a href="http://kevingorski.com/projects-&amp;-portfolio.html#lms" title="HomeAway Lead Management System"><abbr title="Lead Management System">LMS</abbr></a>, but they’ve become essential to keeping asynchronous code readable and maintainable. There are already <a href="http://msdn.microsoft.com/en-us/magazine/gg723713.aspx" title="Julian Aubourg and Addy Osmani's article on MSDN">a lot</a> <a href="http://www.erichynds.com/jquery/using-deferreds-in-jquery/">of resources</a> available on this subject, but here I’ve included all of the useful details I picked up from different places while learning the ins and outs of using jQuery’s promise implementation.</p>
 <h2><a name="What Is A Promise Worth?">What Is A Promise Worth?</a></h2>
-<p>A <em>promise</em> represents the result of a single execution of a task that will complete at a time unknown to the caller. It could complete immediately, in the future or it could have already been completed. In code a promise object is used to register callbacks to be executed when the state of that task changes and to manage higher-level workflow, but never to change the state of the task.
-
-
-</p>
+<p>A <em>promise</em> represents the result of a single execution of a task that will complete at a time unknown to the caller. It could complete immediately, in the future or it could have already been completed. In code a promise object is used to register callbacks to be executed when the state of that task changes and to manage higher-level workflow, but never to change the state of the task.</p>
 <h2><a name="Promises From jQuery">Promises From jQuery</a></h2>
-<p>Since promises were introduced as part of the <abbr title="Asynchronous JavaScript and XML">AJAX</abbr> re-write the go-to example is the <a href="http://api.jquery.com/category/ajax"><code>$.ajax</code></a> family of methods which now return promises in addition to the original <abbr title="Application Programming Interface">API</abbr> of accepting success and failure methods in the configuration object:
-
-</p>
-<figure class="codelisting">
-  <pre><code class="javascript"><span class="comment">// Original API</span>
+<p>Since promises were introduced as part of the <abbr title="Asynchronous JavaScript and XML">AJAX</abbr> re-write the go-to example is the <a href="http://api.jquery.com/category/ajax"><code>$.ajax</code></a> family of methods which now return promises in addition to the original <abbr title="Application Programming Interface">API</abbr> of accepting success and failure methods in the configuration object:</p>
+<figure class="codelisting"><pre><code class="javascript"><span class="comment">// Original API</span>
 $.ajax({
   url: <span class="string">'&lt;a href="http://example.com/fakeapi"&gt;http://example.com/fakeapi&lt;/a&gt;'</span>,
   success: <span class="keyword">function</span>(data, textStatus, jqXHR) {},
@@ -69,18 +62,11 @@ $.ajax({ url:<span class="string">'&lt;a href="http://example.com/fakeapi"&gt;ht
   .always(<span class="keyword">function</span>() {
     <span class="comment">// complete</span>
     <span class="comment">// arguments will mirror success or error as called</span>
-  });</code></pre>
-  <figcaption>Comparing the AJAX APIs</figcaption>
-</figure>
+  });</code></pre><figcaption>Comparing the AJAX APIs</figcaption></figure>
 
-<p>It looks a little cleaner, but what more can we do with a promise object?
-
-
-</p>
+<p>It looks a little cleaner, but what more can we do with a promise object?</p>
 <h3><a name="Chaining Promises">Chaining Promises</a></h3>
-<p>If a promise method like <a href="http://api.jquery.com/deferred.then"><code>then</code></a> returns another promise, so you can chain successive calls to form a descriptive timeline of tasks:
-
-</p>
+<p>If a promise method like <a href="http://api.jquery.com/deferred.then"><code>then</code></a> returns another promise, so you can chain successive calls to form a descriptive timeline of tasks:</p>
 <figure class="codelisting">
   <pre><code class="javascript"><span class="comment">// Promise to get weather</span>
 $.getJSON(<span class="string">'&lt;a href="http://weather.com/forecast/80001"&gt;http://weather.com/forecast/80001&lt;/a&gt;'</span>)
@@ -99,17 +85,10 @@ $.getJSON(<span class="string">'&lt;a href="http://weather.com/forecast/80001"&g
   <figcaption>Chaining promises for easy-to-read async code</figcaption>
 </figure>
 
-<p>The promise <abbr title="Application Programming Interface">API</abbr> also includes a function called <code>pipe</code> which was originally different from <code>then</code> for “pre-filtering” the results of a promise, but as of 1.8 <code>then === pipe</code>, as <a href="http://stackoverflow.com/questions/12011925/pipe-and-then-documentation-vs-reality-in-jquery-1-8">discussed on Stack Overflow</a>.
-
-</p>
-<p>In any case, using <code>then</code> is much cleaner than it would have been with configuration objects and nested callbacks, but we can take this further.
-
-
-</p>
+<p>The promise <abbr title="Application Programming Interface">API</abbr> also includes a function called <code>pipe</code> which was originally different from <code>then</code> for “pre-filtering” the results of a promise, but as of 1.8 <code>then === pipe</code>, as <a href="http://stackoverflow.com/questions/12011925/pipe-and-then-documentation-vs-reality-in-jquery-1-8">discussed on Stack Overflow</a>.</p>
+<p>In any case, using <code>then</code> is much cleaner than it would have been with configuration objects and nested callbacks, but we can take this further.</p>
 <h3><a name="Getting Multivariate">Getting Multivariate</a></h3>
-<p>What if we have multiple task-based dependencies, but they don’t depend on each other?
-
-</p>
+<p>What if we have multiple task-based dependencies, but they don’t depend on each other?</p>
 <figure class="codelisting">
   <pre><code class="javascript"><span class="comment">// Parameter list of promises</span>
 $.when($.get(<span class="string">'google'</span>), $.get(<span class="string">'bing'</span>))
@@ -120,33 +99,22 @@ $.when($.get(<span class="string">'google'</span>), $.get(<span class="string">'
   <figcaption>Combining multiple promises into an aggregate</figcaption>
 </figure>
 
-<p>Now we’re getting somewhere! Coordination of multiple asynchronous tasks would otherwise be difficult to write, difficult to read and difficult to debug, but by using promises everything is clear and concise.
-
-
-</p>
+<p>Now we’re getting somewhere! Coordination of multiple asynchronous tasks would otherwise be difficult to write, difficult to read and difficult to debug, but by using promises everything is clear and concise.</p>
 <h3><a name="Say “When?”">Say “When?”</a></h3>
-<p>At some point you will want to conditionally include promises in the parameter list to <a href="http://api.jquery.com/deferred.when"><code>when</code></a>. One way to do this is to add promises to an array and then use <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/Apply"><code>function.apply</code></a> to match the method signature:
-
-</p>
+<p>At some point you will want to conditionally include promises in the parameter list to <a href="http://api.jquery.com/deferred.when"><code>when</code></a>. One way to do this is to add promises to an array and then use <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/Apply"><code>function.apply</code></a> to match the method signature:</p>
 <figure class="codelisting">
   <pre><code class="javascript">$.when.apply($, arrayOfPromises);</code></pre>
   <figcaption>Applying <code>when</code> to an arbitrary number of promises</figcaption>
 </figure>
 
-<p>This will work, but has a few downsides:
-
-</p>
+<p>This will work, but has a few downsides:</p>
 <ul>
 <li><span>It’s an awkward expression to remember and repeat</span></li>
 <li><span>It’s no longer immediately clear what we’re waiting on</span></li>
 <li><span>If you’re expecting results from these promises they will now be given to the callback in an unpredictable order</span></li>
 </ul>
-<p>The first problem can be mitigated by writing a function that does this directly like <a href="https://github.com/kriskowal/q#combination">Q’s <code>all</code> method</a> (Q is another JavaScript promises implementation), but there’s an approach that has none of these downsides which I prefer.
-
-</p>
-<p>When you pass an object that isn’t a promise to <code>when</code> (determined by the existence of a <code>promise</code> function on the object) it’s interpreted as being an immediate result that will be passed through to <code>then</code> just like a successful promise result. By taking advantage of this behavior we can maintain clarity and avoid adding another method to the <abbr title="Application Programming Interface">API</abbr>:
-
-</p>
+<p>The first problem can be mitigated by writing a function that does this directly like <a href="https://github.com/kriskowal/q#combination">Q’s <code>all</code> method</a> (Q is another JavaScript promises implementation), but there’s an approach that has none of these downsides which I prefer.</p>
+<p>When you pass an object that isn’t a promise to <code>when</code> (determined by the existence of a <code>promise</code> function on the object) it’s interpreted as being an immediate result that will be passed through to <code>then</code> just like a successful promise result. By taking advantage of this behavior we can maintain clarity and avoid adding another method to the <abbr title="Application Programming Interface">API</abbr>:</p>
 <figure class="codelisting">
   <pre><code class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">getTemplate</span><span class="params">(premiumAccount)</span> {</span>
   <span class="keyword">if</span>(!premiumAccount)
@@ -169,23 +137,15 @@ $.when($.get(<span class="string">'google'</span>), $.get(<span class="string">'
 
 
 <h2><a name="Making Your Own Promises">Making Your Own Promises</a></h2>
-<p>Now that we know how to use promises, let’s make some of our own using deferred objects.
-
-</p>
-<p>A <em>deferred object</em> can do all that a promise can plus change the state of the task. You won’t see jQuery return a deferred object from anywhere but the factory method <a href="http://api.jquery.com/jQuery.Deferred"><code>$.Deferred</code></a> because the state of a task should only be changed by the code that has implemented that task.
-
-</p>
-<p>Once we’ve created our deferred object, there are three methods that you’ll likely need to use:
-
-</p>
+<p>Now that we know how to use promises, let’s make some of our own using deferred objects.</p>
+<p>A <em>deferred object</em> can do all that a promise can plus change the state of the task. You won’t see jQuery return a deferred object from anywhere but the factory method <a href="http://api.jquery.com/jQuery.Deferred"><code>$.Deferred</code></a> because the state of a task should only be changed by the code that has implemented that task.</p>
+<p>Once we’ve created our deferred object, there are three methods that you’ll likely need to use:</p>
 <ul>
 <li><span><a href="http://api.jquery.com/deferred.resolve"><code>resolve</code></a> - mark this task as having completed successfully, optionally passing values</span></li>
 <li><span><a href="http://api.jquery.com/deferred.reject"><code>reject</code></a> - mark this task as having failed, also with optional values</span></li>
 <li><span><a href="http://api.jquery.com/deferred.promise"><code>promise</code></a> - get the more targeted promise object for attaching handlers to state changes</span></li>
 </ul>
-<p>Here they are in a quick example:
-
-</p>
+<p>Here they are in a quick example:</p>
 <figure class="codelisting">
   <pre><code class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">upload</span><span class="params">(fileName)</span> {</span>
   <span class="keyword">var</span> uploading = $.Deferred();
@@ -206,12 +166,8 @@ $.when($.get(<span class="string">'google'</span>), $.get(<span class="string">'
   <figcaption>Using resolve, reject, and promise</figcaption>
 </figure>
 
-<p>If you want even more control over how the success or failure methods are called, <a href="http://api.jquery.com/deferred.resolveWith"><code>resolveWith</code></a> and <a href="http://api.jquery.com/deferred.rejectWith"><code>rejectWith</code></a> set the first parameter as the context for executing those functions, meaning that within the callback <code>this</code> will point to the object you provide instead of the deferred object.
-
-</p>
-<p>There’s one more feature of jQuery’s promises that seems useful, but I haven’t seen used much: progress notifications. Deferred objects have a <a href="http://api.jquery.com/deferred.notify"><code>notify</code></a> method (and <a href="http://api.jquery.com/deferred.notifyWith"><code>notifyWith</code></a> as above) that will send data to <a href="http://api.jquery.com/deferred.progress"><code>progress</code></a> handlers.
-
-</p>
+<p>If you want even more control over how the success or failure methods are called, <a href="http://api.jquery.com/deferred.resolveWith"><code>resolveWith</code></a> and <a href="http://api.jquery.com/deferred.rejectWith"><code>rejectWith</code></a> set the first parameter as the context for executing those functions, meaning that within the callback <code>this</code> will point to the object you provide instead of the deferred object.</p>
+<p>There’s one more feature of jQuery’s promises that seems useful, but I haven’t seen used much: progress notifications. Deferred objects have a <a href="http://api.jquery.com/deferred.notify"><code>notify</code></a> method (and <a href="http://api.jquery.com/deferred.notifyWith"><code>notifyWith</code></a> as above) that will send data to <a href="http://api.jquery.com/deferred.progress"><code>progress</code></a> handlers.</p>
 <figure class="codelisting">
   <pre><code class="javascript"><span class="comment">// Task-based code with deferred object "fileUploading"</span>
 file.updating(<span class="keyword">function</span>(bytesReceived) {
@@ -226,13 +182,11 @@ uploadFile(fileToUpload)
   <figcaption>Notification via promises</figcaption>
 </figure>
 
-<p>Now let’s put everything together:
-
-</p>
+<p>Now let’s put everything together:</p>
 <iframe src="http://bl.ocks.org/d/4415942/" width="100%" height="225"></iframe>
 
 <figure class="codelisting">
-  <pre><code class="javascript"><span class="comment">// Imaginary file upload API</span>
+<pre><code class="javascript"><span class="comment">// Imaginary file upload API</span>
 <span class="keyword">var</span> file = {
   totalBytes: <span class="number">300</span>,
   upload: <span class="keyword">function</span>(fileName) {
@@ -295,10 +249,7 @@ $(<span class="keyword">function</span>() {
 
 
 <h2><a name="Wrapping Up">Wrapping Up</a></h2>
-<p>That’s promises in a nutshell. Remember that they can be used for more than coordinating network related code: you can model workflows like checkout processes, manage complex <abbr title="Document Object Model">DOM</abbr> interactions like animations, and more. I hope this introduction has given you the tools to appreciate and use promises in your own code.
-
-
-</p>
+<p>That’s promises in a nutshell. Remember that they can be used for more than coordinating network related code: you can model workflows like checkout processes, manage complex <abbr title="Document Object Model">DOM</abbr> interactions like animations, and more. I hope this introduction has given you the tools to appreciate and use promises in your own code.</p>
 <div class="flueron">❧</div></section>
           </article>
         </div>

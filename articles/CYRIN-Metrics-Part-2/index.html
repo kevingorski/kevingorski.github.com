@@ -15,7 +15,9 @@
       })();
       
     </script>
-    <link rel="stylesheet" href="/css/e809aebb.styles.css" />
+    <!-- build:css /css/styles.css-->
+    <link rel="stylesheet" href="/css/all.css?22cbe157" />
+    <!-- endbuild-->
     <script src="/js/libs/html5shiv.js"></script>
     <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Kevin Gorski creates &amp; writes about software" />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
@@ -36,79 +38,41 @@
                 <iframe border="0" scrolling="no" width="78" height="17" allowtransparency="allowtransparency" frameborder="0" style="margin-bottom: -3px; z-index: 1338; border: 0px; background-color: transparent; overflow: hidden;" src="http://www.instapaper.com/e2?url=http://kevingorski.com/articles/CYRIN-Metrics-Part-2/&amp;title=CYRIN Metrics Part 2"></iframe>
               </div>
             </header>
-            <section class="content"><p><a href="http://kevingorski.com/articles/CYRIN-Metrics-Part-1/">Continuing</a> our exploration of typographic terminology used by <a href="http://canyoureaditnow.com"><abbr title="Can You Read It Now?">CYRIN</abbr></a> and how its scores are calculated:
-
-</p>
+            <section class="content"><p><a href="http://kevingorski.com/articles/CYRIN-Metrics-Part-1/">Continuing</a> our exploration of typographic terminology used by <a href="http://canyoureaditnow.com"><abbr title="Can You Read It Now?">CYRIN</abbr></a> and how its scores are calculated:</p>
 <h2><a name="Justification">Justification</a></h2>
 <blockquote>
-<p>Left-justified text is most natural to read for most text.
-
-</p>
+<p>Left-justified text is most natural to read for most text.</p>
 </blockquote>
-<p>The justification of text describes how it will be aligned to the edges of your page, which in turn will determine how words will be distributed throughout those lines.
-
-</p>
-<p>There are four options for justification, but only two are good choices for body text and only one is feasible with the current state of browser technology. Let me explain.
-
-</p>
-<p>Centered text is terrible for reading more than a few lines at a time because of its uneven left edge, making each new line a chore to begin. It can be interesting and artfully used for poetry or a piece with careful art direction, but for readability’s sake it usually passes from interesting to distracting.
-
-</p>
-<p>Right-justified text isn’t easy to follow for languages that read left-to-right for much the same reason, even through the right edge is easy enough to find.
-
-</p>
-<p>Fully-justified text (as often used in books and newspapers) is the easiest option to read when done well. This is — unfortunately — an area of browser technology that lags behind traditional publishing because the algorithm for placing text when fully justified is much more complicated than for text with a ragged edge.
-
-</p>
-<p>The simplest algorithm for full justification is what is currently used: fill a line with words and split the leftover space between each word. This gives the straight edges of full justification, but because it is inflexible it introduces a new readability problem between the edges: <a href="http://en.wikipedia.org/wiki/River_(typography)">“rivers”</a> of vertical whitespace.
-
-</p>
-<p>To avoid this and gain more control over the per-line-layout of text, words get hyphenated and <a href="http://en.wikipedia.org/wiki/Swash_(typography)">swashes</a> (alternate, decorative glyph forms that take up more horizontal space) take the place of some standard glyphs in order to balance each line’s contents.
-
-</p>
-<p>Publishing software is built with automatic and configurable hyphenation and swashing (swashbuckling?) in mind, but as it stands today browsers don’t have features that are as automatic <em>or</em> configurable. <a href="http://www.w3.org/TR/html401/struct/text.html#h-9.3.3">Soft hyphens</a> give you the option to manually include optional hyphenation points in text, but man, what a drag to have to bloat your documents to build yourself what the browser should be doing for you.
-
-</p>
-<p>If these features improve and are available across browsers this recommendation may change, but for now it’s best to stick to left-justified text.
-
-</p>
+<p>The justification of text describes how it will be aligned to the edges of your page, which in turn will determine how words will be distributed throughout those lines.</p>
+<p>There are four options for justification, but only two are good choices for body text and only one is feasible with the current state of browser technology. Let me explain.</p>
+<p>Centered text is terrible for reading more than a few lines at a time because of its uneven left edge, making each new line a chore to begin. It can be interesting and artfully used for poetry or a piece with careful art direction, but for readability’s sake it usually passes from interesting to distracting.</p>
+<p>Right-justified text isn’t easy to follow for languages that read left-to-right for much the same reason, even through the right edge is easy enough to find.</p>
+<p>Fully-justified text (as often used in books and newspapers) is the easiest option to read when done well. This is — unfortunately — an area of browser technology that lags behind traditional publishing because the algorithm for placing text when fully justified is much more complicated than for text with a ragged edge.</p>
+<p>The simplest algorithm for full justification is what is currently used: fill a line with words and split the leftover space between each word. This gives the straight edges of full justification, but because it is inflexible it introduces a new readability problem between the edges: <a href="http://en.wikipedia.org/wiki/River_(typography)">“rivers”</a> of vertical whitespace.</p>
+<p>To avoid this and gain more control over the per-line-layout of text, words get hyphenated and <a href="http://en.wikipedia.org/wiki/Swash_(typography)">swashes</a> (alternate, decorative glyph forms that take up more horizontal space) take the place of some standard glyphs in order to balance each line’s contents.</p>
+<p>Publishing software is built with automatic and configurable hyphenation and swashing (swashbuckling?) in mind, but as it stands today browsers don’t have features that are as automatic <em>or</em> configurable. <a href="http://www.w3.org/TR/html401/struct/text.html#h-9.3.3">Soft hyphens</a> give you the option to manually include optional hyphenation points in text, but man, what a drag to have to bloat your documents to build yourself what the browser should be doing for you.</p>
+<p>If these features improve and are available across browsers this recommendation may change, but for now it’s best to stick to left-justified text.</p>
 <h2><a name="Margin &amp; Padding">Margin &amp; Padding</a></h2>
 <blockquote>
-<p>Creating visual space on the left and right of text will make it easier to visually separate from the rest of the page.
-
-</p>
+<p>Creating visual space on the left and right of text will make it easier to visually separate from the rest of the page.</p>
 </blockquote>
-<p>Margin &amp; padding are <abbr title="Cascading Style Sheets">CSS</abbr> attributes for creating space around specific elements on the page. By keeping the edges of your text clear from other content, background changes or the edge of the screen you’ve prevented your reader from having to fight those distractions to keep focused on your text.
-
-</p>
+<p>Margin &amp; padding are <abbr title="Cascading Style Sheets">CSS</abbr> attributes for creating space around specific elements on the page. By keeping the edges of your text clear from other content, background changes or the edge of the screen you’ve prevented your reader from having to fight those distractions to keep focused on your text.</p>
 <h2><a name="Text Color Contrast">Text Color Contrast</a></h2>
 <blockquote>
-<p>The contrast ratio between the text color and the background color needs to be greater the smaller the text is.
-
-</p>
+<p>The contrast ratio between the text color and the background color needs to be greater the smaller the text is.</p>
 </blockquote>
-<p>Color contrast enters into theory, mathematics and physiology that I only partially understand. It’s big, hairy and complicated, but there’s an algorithm to follow, so for now I trust the <a href="http://www.w3.org/TR/WCAG/"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr></a> and hope that’s enough to be useful.
-
-</p>
+<p>Color contrast enters into theory, mathematics and physiology that I only partially understand. It’s big, hairy and complicated, but there’s an algorithm to follow, so for now I trust the <a href="http://www.w3.org/TR/WCAG/"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr></a> and hope that’s enough to be useful.</p>
 <h2><a name="Percentage of Text Stylized">Percentage of Text Stylized</a></h2>
 <blockquote>
-<p>Bold, italicized, and all-caps text should be kept to a minimum.
-
-</p>
+<p>Bold, italicized, and all-caps text should be kept to a minimum.</p>
 </blockquote>
-<p>Each of these styles have their place in emphacising or decorating specific parts of a body of text, but using any as the mainstay of your document will be a special kind of disaster.
-
-</p>
+<p>Each of these styles have their place in emphacising or decorating specific parts of a body of text, but using any as the mainstay of your document will be a special kind of disaster.</p>
 <h2><a name="Wrapping Up">Wrapping Up</a></h2>
-<p>That’s it for further details of the metrics <abbr title="Can You Read It Now?">CYRIN</abbr> uses to rate text’s readability. After Thanksgiving I’ll cover the technical details of how <abbr title="Can You Read It Now?">CYRIN</abbr> works in the browser.
-
-</p>
-<p>Until next time.
-
-</p>
+<p>That’s it for further details of the metrics <abbr title="Can You Read It Now?">CYRIN</abbr> uses to rate text’s readability. After Thanksgiving I’ll cover the technical details of how <abbr title="Can You Read It Now?">CYRIN</abbr> works in the browser.</p>
+<p>Until next time.</p>
 <div class="flueron">❧</div></section>
             <section class="series">
-              <h3>The <em>CYRIN</em> Series:</h3>
+              <h3>The&nbsp;<em>CYRIN</em> Series:</h3>
               <ol class="articles">
                 <li class="article">
                   <time datetime="2012-11-03" class="publishDate">November 3rd</time><a href="/articles/typography-&amp;-Can-You-Read-It-Now/">Typography &amp; Can You Read It&nbsp;Now?</a>

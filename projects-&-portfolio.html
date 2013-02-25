@@ -15,7 +15,9 @@
       })();
       
     </script>
-    <link rel="stylesheet" href="/css/e809aebb.styles.css" />
+    <!-- build:css /css/styles.css-->
+    <link rel="stylesheet" href="/css/all.css?22cbe157" />
+    <!-- endbuild-->
     <script src="/js/libs/html5shiv.js"></script>
     <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Kevin Gorski creates &amp; writes about software" />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
@@ -30,23 +32,12 @@
         <div class="grid">
           <header>
             <h1>Projects &amp; Portfolio</h1>
-          </header><p>Since getting my Computer Science degree in 2004, I’ve primarily been doing <span class="caphappy">.NET</span> web development at my day job, but I’ve been exploring other languages and environments in my own time. Most of my personal projects are in browser-based JavaScript or <a href="http://nodejs.org">node.js</a>. Both <span class="caphappy">.NET</span> and node have their advantages, but I’m more interested in working with node in the future.
-
-</p>
-<p>Here are some cherry-picked examples of projects I’ve worked on in the past that you might find interesting. If you’re more of a code person, my personal projects are all on <a href="https://github.com/kevingorski">GitHub</a>. I’ve also got <a href="/Kevin%20Gorski%20-%20Resume.pdf">a more formal résumé</a> (<abbr title="Portable Document Format">PDF</abbr>) and a <a href="https://www.linkedin.com/in/kevingorski/">LinkedIn profile</a>.
-
-
-</p>
+          </header><p>Since getting my Computer Science degree in 2004, I’ve primarily been doing <span class="caphappy">.NET</span> web development at my day job, but I’ve been exploring other languages and environments in my own time. Most of my personal projects are in browser-based JavaScript or <a href="http://nodejs.org">node.js</a>. Both <span class="caphappy">.NET</span> and node have their advantages, but I’m more interested in working with node in the future.</p>
+<p>Here are some cherry-picked examples of projects I’ve worked on in the past that you might find interesting. If you’re more of a code person, my personal projects are all on <a href="https://github.com/kevingorski">GitHub</a>. I’ve also got <a href="http://kevingorski.com/Kevin%20Gorski%20-%20Resume.pdf">a more formal résumé</a> (<abbr title="Portable Document Format">PDF</abbr>) and a <a href="https://www.linkedin.com/in/kevingorski/">LinkedIn profile</a>.</p>
 <h2><a name="bcycle">B-Cycle Admin Site &amp; Infrastructure</a></h2>
-<p><a href="http://bcycle.com">B-Cycle</a> was in a prototypical phase when we started working with them to build what would be the first production version of their automated bicycle sharing system. This project was technically interesting because it required multiple physically and logically separated systems to act in concert to provide a responsive end-user experience and an information rich administration system.
-
-</p>
-<p>Bikes are rented and returned to kiosks by users with either a credit card or an <abbr title="Radio Frequency Identification">RFID</abbr> card that had been previously purchased. Kiosks contact a central server to confirm the user account, manage payment details, and track the rented equipment. The central server bridged the distributed kiosks and the administration website, which aggregated user, equipment, and system level data. By tracking the <abbr title="Radio Frequency Identification">RFID</abbr> tag for each bike, usage patterns and equipment location was used to coordinated maintenance and customer service efforts.
-
-</p>
-<p>The administration website included some unique features that made the system powerful:
-
-</p>
+<p><a href="http://bcycle.com">B-Cycle</a> was in a prototypical phase when we started working with them to build what would be the first production version of their automated bicycle sharing system. This project was technically interesting because it required multiple physically and logically separated systems to act in concert to provide a responsive end-user experience and an information rich administration system.</p>
+<p>Bikes are rented and returned to kiosks by users with either a credit card or an <abbr title="Radio Frequency Identification">RFID</abbr> card that had been previously purchased. Kiosks contact a central server to confirm the user account, manage payment details, and track the rented equipment. The central server bridged the distributed kiosks and the administration website, which aggregated user, equipment, and system level data. By tracking the <abbr title="Radio Frequency Identification">RFID</abbr> tag for each bike, usage patterns and equipment location was used to coordinated maintenance and customer service efforts.</p>
+<p>The administration website included some unique features that made the system powerful:</p>
 <ul>
 <li><span><a href="http://maps.google.com/">Google Maps</a>-based dashboard for geographic visualizations of near real-time data</span></li>
 <li><span>Configurable and templated messaging/alert system through email or <abbr title="Short Message Service">SMS</abbr> with localized messages</span></li>
@@ -55,9 +46,7 @@
 <li><span>A public web service for supporting first- and third-party mobile applications</span></li>
 </ul>
 <h3>My Role</h3>
-<p>As the primary developer and architect of the central server application and administration web site I evaluated the high-level and detailed business requirements for technical feasibility, created a development plan that identified potential risks, provided plans to mitigate them, and used continuous integration to show our progress throughout the project.
-
-</p>
+<p>As the primary developer and architect of the central server application and administration web site I evaluated the high-level and detailed business requirements for technical feasibility, created a development plan that identified potential risks, provided plans to mitigate them, and used continuous integration to show our progress throughout the project.</p>
 <h3>Technologies</h3>
 <ul>
 <li><span><span class="caphappy">ASP.NET</span> WebForms</span></li>
@@ -75,12 +64,8 @@
 <li><span>I’m often reminded of this project when passing a B-Cycle or kiosk</span></li>
 </ul>
 <h2><a name="lms">Lead Management System for HomeAway</a></h2>
-<p>Managing vacation rental leads is a manual and unstructured process for many property managment companies, even if they use software to manage availability and the booking process. <a href="http://software.homeaway.com/vacation-rentals/products/lead-management"><abbr title="Lead Management System">LMS</abbr></a> is a “modular application” that tightly integrates into such systems with minimal changes to the existing codebase.
-
-</p>
-<p>There are two technical aspects of <abbr title="Lead Management System">LMS</abbr> that make it modular: the <abbr title="User Interface">UI</abbr> that is loaded via JavaScript from a shared location into any of the participating end-systems and the web service that can transparently call end system-specific implementations as necessary.
-
-</p>
+<p>Managing vacation rental leads is a manual and unstructured process for many property managment companies, even if they use software to manage availability and the booking process. <a href="http://software.homeaway.com/vacation-rentals/products/lead-management"><abbr title="Lead Management System">LMS</abbr></a> is a “modular application” that tightly integrates into such systems with minimal changes to the existing codebase.</p>
+<p>There are two technical aspects of <abbr title="Lead Management System">LMS</abbr> that make it modular: the <abbr title="User Interface">UI</abbr> that is loaded via JavaScript from a shared location into any of the participating end-systems and the web service that can transparently call end system-specific implementations as necessary.</p>
 <h3>Technologies</h3>
 <ul>
 <li><span>Knockout</span></li>
@@ -96,9 +81,7 @@
 <li><span>Working with a motivated and talented development team</span></li>
 </ul>
 <h2><a name="cyrin">Can You Read It Now?</a></h2>
-<p><a href="http://canyoureaditnow.com/">Can You Read It Now</a> (or <abbr title="Can You Read It Now">CYRIN</abbr>) is a two-part project: an <a href="https://github.com/kevingorski/CanYouReadItNow">open-source jQuery plug-in</a> for analyzing the visual readability of text and <a href="http://canyoureaditnow.com/">a bookmarklet</a> to help users make specific style changes to improve readability. I wrote it to help me learn about typography, readability, and bookmarklets.
-
-</p>
+<p><a href="http://canyoureaditnow.com/">Can You Read It Now</a> (or <abbr title="Can You Read It Now">CYRIN</abbr>) is a two-part project: an <a href="https://github.com/kevingorski/CanYouReadItNow">open-source jQuery plug-in</a> for analyzing the visual readability of text and <a href="http://canyoureaditnow.com/">a bookmarklet</a> to help users make specific style changes to improve readability. I wrote it to help me learn about typography, readability, and bookmarklets.</p>
 <h3>Technologies</h3>
 <ul>
 <li><span>jQuery</span></li>

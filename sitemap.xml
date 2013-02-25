@@ -9,6 +9,18 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://kevingorski.com/projects-&amp;-portfolio.html</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>http://kevingorski.com/articles/Denver-Tours-Playlist-Jan-Mar-2013/</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>http://kevingorski.com/articles/Get-More-From-jQuery-Promises/</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>http://kevingorski.com/articles/CYRIN-In-The-Browser/</loc>
     <priority>0.80</priority>
   </url>
@@ -18,14 +30,6 @@
   </url>
   <url>
     <loc>http://kevingorski.com/articles/CYRIN-Metrics-Part-1/</loc>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>http://kevingorski.com/articles/Get-More-From-jQuery-Promises/</loc>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>http://kevingorski.com/articles/Denver-Tours-Playlist-Jan-Mar-2013/</loc>
     <priority>0.80</priority>
   </url>
   <url>
