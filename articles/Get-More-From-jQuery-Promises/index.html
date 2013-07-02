@@ -264,16 +264,14 @@ $(<span class="keyword">function</span>() {
       </div>
     </footer>
     <script>
-      var _gauges = _gauges || [];
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-7004300-1']);
+      _gaq.push(['_trackPageview']);
+      
       (function() {
-        var t   = document.createElement('script');
-        t.type  = 'text/javascript';
-        t.async = true;
-        t.id    = 'gauges-tracker';
-        t.setAttribute('data-site-id', '4e87704ff5a1f5304f000003');
-        t.src = '//secure.gaug.es/track.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(t, s);
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
   </body>
