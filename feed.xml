@@ -5,9 +5,18 @@
     <atom:link href="http://kevingorski.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://kevingorski.com</link>
     <description>Kevin Gorski creates &amp; writes about software</description>
-    <pubDate>Sun, 11 Aug 2013 15:46:00 -0600</pubDate>
+    <pubDate>Thu, 05 Sep 2013 20:49:00 -0600</pubDate>
     <generator>Grunt.js and Jade</generator>
     <language>en</language>
+    <item>
+      <title>Denver Tours Playlist September-October 2013</title>
+      <link>http://kevingorski.com/articles/Denver-Tours-Playlist-Sept-Oct-2013/</link>
+      <pubDate>Thu, 05 Sep 2013 20:49:00 -0600</pubDate>
+      <guid isPermaLink="true">http://kevingorski.com/articles/Denver-Tours-Playlist-Sept-Oct-2013/</guid>
+      <author>Kevin Gorski</author>
+      <description>&lt;p&gt;It&rsquo;s time once again for fall concert season! Here are some acts I&rsquo;m considering seeing as they blow through Denver:&lt;/p&gt;
+&lt;iframe class=&quot;playlist&quot; src=&quot;https://rd.io/i/QV5I6DMEdbg/&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</description>
+    </item>
     <item>
       <title>Software Decay</title>
       <link>http://kevingorski.com/articles/Software-Decay/</link>
