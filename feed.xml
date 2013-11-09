@@ -13,8 +13,8 @@
       <link>http://kevingorski.com/articles/Denver-Tours-Playlist-Sept-Oct-2013/</link>
       <pubDate>Thu, 05 Sep 2013 20:49:00 -0600</pubDate>
       <guid isPermaLink="true">http://kevingorski.com/articles/Denver-Tours-Playlist-Sept-Oct-2013/</guid>
-      <author>Kevin Gorski</author>
-      <description>&lt;p&gt;It&rsquo;s time once again for fall concert season! Here are some acts I&rsquo;m considering seeing as they blow through Denver:&lt;/p&gt;
+      <author>kevin.gorski@gmail.com</author>
+      <description>&lt;p&gt;It&amp;rsquo;s time once again for fall concert season! Here are some acts I&amp;rsquo;m considering seeing as they blow through Denver:&lt;/p&gt;
 &lt;iframe class=&quot;playlist&quot; src=&quot;https://rd.io/i/QV5I6DMEdbg/&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</description>
     </item>
     <item>
@@ -22,7 +22,7 @@
       <link>http://kevingorski.com/articles/Software-Decay/</link>
       <pubDate>Sun, 11 Aug 2013 15:46:00 -0600</pubDate>
       <guid isPermaLink="true">http://kevingorski.com/articles/Software-Decay/</guid>
-      <author>Kevin Gorski</author>
+      <author>kevin.gorski@gmail.com</author>
       <description>&lt;p&gt;Every time you play a song from your digital source of choice the bits representing that song are the same as they were on release day, but those bits also represent a series of tradeoffs made in the course of recording and reproducing that sound. In the meantime, the world changes. Better quality compression, new devices with more storage and processing power, and new ways of reproducing sound for specific environments are created and old recordings sound worse by comparison. &lt;em&gt;The representation stays the same, but expectations, constraints, and contexts change.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The same decay happens to software, but because software is the digital approximation of thought rather than something physical it is necessarily more vulnerable:&lt;/p&gt;
 &lt;ul&gt;
@@ -49,7 +49,7 @@
       <link>http://kevingorski.com/articles/Blocked/</link>
       <pubDate>Sat, 27 Jul 2013 15:30:00 -0600</pubDate>
       <guid isPermaLink="true">http://kevingorski.com/articles/Blocked/</guid>
-      <author>Kevin Gorski</author>
+      <author>kevin.gorski@gmail.com</author>
       <description>&lt;p&gt;The stress from working full bore toward an achievable goal has a very specific feeling to it. It can burn and it can leave you tired, but because it&#39;s cut with the relief or satisfaction of appreciable progress and the potential for growth it&#39;s not entirely draining. With time to rest, you can remain motivated and possibly even happy that you&#39;re returning to this state. Depending on your feelings on exercise, this can be like going for a run or lifting weights.&lt;/p&gt;
 &lt;p&gt;Stress from being blocked is different. It&#39;s heavier, it turns your mood sour, it bends spines out of shape, and worst of all it&#39;s self-perpetuating. It leads you to distraction because of the discomfort of maintaining this posture. Periods of rest are anxious and you dread returning to this state even if you think you&#39;re about to climb your way out of it. This type of stress is more like sitting in an uncomfortable chair: fruitlessly squirming, looking for a way to get comfortable when the only lasting way to improve your situation is to leave the chair.&lt;/p&gt;
 &lt;p&gt;Differentiating between these two states can be obvious in retrospect, but if you recognize it in the moment blocked stress can be almost entirely avoided by changing your path, approach, or focus accordingly.&lt;/p&gt;
@@ -75,8 +75,8 @@
       <link>http://kevingorski.com/articles/Denver-Tours-Playlist-Jan-Mar-2013/</link>
       <pubDate>Sun, 13 Jan 2013 12:00:00 -0700</pubDate>
       <guid isPermaLink="true">http://kevingorski.com/articles/Denver-Tours-Playlist-Jan-Mar-2013/</guid>
-      <author>Kevin Gorski</author>
-      <description>&lt;p&gt;It looks like it&rsquo;s going to be a good few months for live music in Denver, so I put together a quick playlist of a few of the shows I&rsquo;ll probably check out:&lt;/p&gt;
+      <author>kevin.gorski@gmail.com</author>
+      <description>&lt;p&gt;It looks like it&amp;rsquo;s going to be a good few months for live music in Denver, so I put together a quick playlist of a few of the shows I&amp;rsquo;ll probably check out:&lt;/p&gt;
 &lt;iframe class=&quot;playlist&quot; src=&quot;https://rd.io/i/QV5I6DNCe9g&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</description>
     </item>
     <item>
@@ -84,8 +84,8 @@
       <link>http://kevingorski.com/articles/Get-More-From-jQuery-Promises/</link>
       <pubDate>Sat, 05 Jan 2013 12:00:00 -0700</pubDate>
       <guid isPermaLink="true">http://kevingorski.com/articles/Get-More-From-jQuery-Promises/</guid>
-      <author>Kevin Gorski</author>
-      <description>&lt;p&gt;Intro: &lt;a href=&quot;http://api.jquery.com/category/deferred-object/&quot; title=&quot;jQuery promises documentation&quot;&gt;Promises and deferred objects&lt;/a&gt; were introduced to jQuery way back in &lt;a href=&quot;http://blog.jquery.com/2011/01/31/jquery-15-released/&quot;&gt;version 1.5&lt;/a&gt; as part of a re-write of the &lt;abbr title=&quot;Asynchronous JavaScript and XML&quot;&gt;AJAX&lt;/abbr&gt; module. I&rsquo;ve only started using them in earnest in the past few months while building &lt;a href=&quot;http://kevingorski.com/projects-&amp;-portfolio.html#lms&quot; title=&quot;HomeAway Lead Management System&quot;&gt;&lt;abbr title=&quot;Lead Management System&quot;&gt;LMS&lt;/abbr&gt;&lt;/a&gt;, but they&rsquo;ve become essential to keeping asynchronous code readable and maintainable. There are already &lt;a href=&quot;http://msdn.microsoft.com/en-us/magazine/gg723713.aspx&quot; title=&quot;Julian Aubourg and Addy Osmani&#39;s article on MSDN&quot;&gt;a lot&lt;/a&gt; &lt;a href=&quot;http://www.erichynds.com/jquery/using-deferreds-in-jquery/&quot;&gt;of resources&lt;/a&gt; available on this subject, but here I&rsquo;ve included all of the useful details I picked up from different places while learning the ins and outs of using jQuery&rsquo;s promise implementation.&lt;/p&gt;
+      <author>kevin.gorski@gmail.com</author>
+      <description>&lt;p&gt;Intro: &lt;a href=&quot;http://api.jquery.com/category/deferred-object/&quot; title=&quot;jQuery promises documentation&quot;&gt;Promises and deferred objects&lt;/a&gt; were introduced to jQuery way back in &lt;a href=&quot;http://blog.jquery.com/2011/01/31/jquery-15-released/&quot;&gt;version 1.5&lt;/a&gt; as part of a re-write of the &lt;abbr title=&quot;Asynchronous JavaScript and XML&quot;&gt;AJAX&lt;/abbr&gt; module. I&amp;rsquo;ve only started using them in earnest in the past few months while building &lt;a href=&quot;http://kevingorski.com/projects-&amp;-portfolio.html#lms&quot; title=&quot;HomeAway Lead Management System&quot;&gt;&lt;abbr title=&quot;Lead Management System&quot;&gt;LMS&lt;/abbr&gt;&lt;/a&gt;, but they&amp;rsquo;ve become essential to keeping asynchronous code readable and maintainable. There are already &lt;a href=&quot;http://msdn.microsoft.com/en-us/magazine/gg723713.aspx&quot; title=&quot;Julian Aubourg and Addy Osmani&#39;s article on MSDN&quot;&gt;a lot&lt;/a&gt; &lt;a href=&quot;http://www.erichynds.com/jquery/using-deferreds-in-jquery/&quot;&gt;of resources&lt;/a&gt; available on this subject, but here I&amp;rsquo;ve included all of the useful details I picked up from different places while learning the ins and outs of using jQuery&amp;rsquo;s promise implementation.&lt;/p&gt;
 &lt;h2&gt;What Is A Promise Worth?&lt;/h2&gt;
 &lt;p&gt;A &lt;em&gt;promise&lt;/em&gt; represents the result of a single execution of a task that will complete at a time unknown to the caller. It could complete immediately, in the future or it could have already been completed. In code a promise object is used to register callbacks to be executed when the state of that task changes and to manage higher-level workflow, but never to change the state of the task.&lt;/p&gt;
 &lt;h2&gt;Promises From jQuery&lt;/h2&gt;
@@ -132,10 +132,10 @@ $.getJSON(&#39;&lt;a href=&quot;http://weather.com/forecast/80001&quot;&gt;http:
   &lt;figcaption&gt;Chaining promises for easy-to-read async code&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;The promise &lt;abbr title=&quot;Application Programming Interface&quot;&gt;API&lt;/abbr&gt; also includes a function called &lt;code&gt;pipe&lt;/code&gt; which was originally different from &lt;code&gt;then&lt;/code&gt; for &ldquo;pre-filtering&rdquo; the results of a promise, but as of 1.8 &lt;code&gt;then === pipe&lt;/code&gt;, as &lt;a href=&quot;http://stackoverflow.com/questions/12011925/pipe-and-then-documentation-vs-reality-in-jquery-1-8&quot;&gt;discussed on Stack Overflow&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The promise &lt;abbr title=&quot;Application Programming Interface&quot;&gt;API&lt;/abbr&gt; also includes a function called &lt;code&gt;pipe&lt;/code&gt; which was originally different from &lt;code&gt;then&lt;/code&gt; for &amp;ldquo;pre-filtering&amp;rdquo; the results of a promise, but as of 1.8 &lt;code&gt;then === pipe&lt;/code&gt;, as &lt;a href=&quot;http://stackoverflow.com/questions/12011925/pipe-and-then-documentation-vs-reality-in-jquery-1-8&quot;&gt;discussed on Stack Overflow&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In any case, using &lt;code&gt;then&lt;/code&gt; is much cleaner than it would have been with configuration objects and nested callbacks, but we can take this further.&lt;/p&gt;
 &lt;h3&gt;Getting Multivariate&lt;/h3&gt;
-&lt;p&gt;What if we have multiple task-based dependencies, but they don&rsquo;t depend on each other?&lt;/p&gt;
+&lt;p&gt;What if we have multiple task-based dependencies, but they don&amp;rsquo;t depend on each other?&lt;/p&gt;
 &lt;figure class=&quot;codelisting&quot;&gt;
   &lt;pre&gt;&lt;code lang=&quot;javascript&quot; class=&quot;javascript&quot;&gt;// Parameter list of promises
 $.when($.get(&#39;google&#39;), $.get(&#39;bing&#39;))
@@ -146,8 +146,8 @@ $.when($.get(&#39;google&#39;), $.get(&#39;bing&#39;))
   &lt;figcaption&gt;Combining multiple promises into an aggregate&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Now we&rsquo;re getting somewhere! Coordination of multiple asynchronous tasks would otherwise be difficult to write, difficult to read and difficult to debug, but by using promises everything is clear and concise.&lt;/p&gt;
-&lt;h3&gt;Say &ldquo;When?&rdquo;&lt;/h3&gt;
+&lt;p&gt;Now we&amp;rsquo;re getting somewhere! Coordination of multiple asynchronous tasks would otherwise be difficult to write, difficult to read and difficult to debug, but by using promises everything is clear and concise.&lt;/p&gt;
+&lt;h3&gt;Say &amp;ldquo;When?&amp;rdquo;&lt;/h3&gt;
 &lt;p&gt;At some point you will want to conditionally include promises in the parameter list to &lt;a href=&quot;http://api.jquery.com/deferred.when&quot;&gt;&lt;code&gt;when&lt;/code&gt;&lt;/a&gt;. One way to do this is to add promises to an array and then use &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/Apply&quot;&gt;&lt;code&gt;function.apply&lt;/code&gt;&lt;/a&gt; to match the method signature:&lt;/p&gt;
 &lt;figure class=&quot;codelisting&quot;&gt;
   &lt;pre&gt;&lt;code lang=&quot;javascript&quot; class=&quot;javascript&quot;&gt;$.when.apply($, arrayOfPromises);&lt;/code&gt;&lt;/pre&gt;
@@ -156,12 +156,12 @@ $.when($.get(&#39;google&#39;), $.get(&#39;bing&#39;))
 
 &lt;p&gt;This will work, but has a few downsides:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;It&rsquo;s an awkward expression to remember and repeat&lt;/li&gt;
-&lt;li&gt;It&rsquo;s no longer immediately clear what we&rsquo;re waiting on&lt;/li&gt;
-&lt;li&gt;If you&rsquo;re expecting results from these promises they will now be given to the callback in an unpredictable order&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s an awkward expression to remember and repeat&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s no longer immediately clear what we&amp;rsquo;re waiting on&lt;/li&gt;
+&lt;li&gt;If you&amp;rsquo;re expecting results from these promises they will now be given to the callback in an unpredictable order&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The first problem can be mitigated by writing a function that does this directly like &lt;a href=&quot;https://github.com/kriskowal/q#combination&quot;&gt;Q&rsquo;s &lt;code&gt;all&lt;/code&gt; method&lt;/a&gt; (Q is another JavaScript promises implementation), but there&rsquo;s an approach that has none of these downsides which I prefer.&lt;/p&gt;
-&lt;p&gt;When you pass an object that isn&rsquo;t a promise to &lt;code&gt;when&lt;/code&gt; (determined by the existence of a &lt;code&gt;promise&lt;/code&gt; function on the object) it&rsquo;s interpreted as being an immediate result that will be passed through to &lt;code&gt;then&lt;/code&gt; just like a successful promise result. By taking advantage of this behavior we can maintain clarity and avoid adding another method to the &lt;abbr title=&quot;Application Programming Interface&quot;&gt;API&lt;/abbr&gt;:&lt;/p&gt;
+&lt;p&gt;The first problem can be mitigated by writing a function that does this directly like &lt;a href=&quot;https://github.com/kriskowal/q#combination&quot;&gt;Q&amp;rsquo;s &lt;code&gt;all&lt;/code&gt; method&lt;/a&gt; (Q is another JavaScript promises implementation), but there&amp;rsquo;s an approach that has none of these downsides which I prefer.&lt;/p&gt;
+&lt;p&gt;When you pass an object that isn&amp;rsquo;t a promise to &lt;code&gt;when&lt;/code&gt; (determined by the existence of a &lt;code&gt;promise&lt;/code&gt; function on the object) it&amp;rsquo;s interpreted as being an immediate result that will be passed through to &lt;code&gt;then&lt;/code&gt; just like a successful promise result. By taking advantage of this behavior we can maintain clarity and avoid adding another method to the &lt;abbr title=&quot;Application Programming Interface&quot;&gt;API&lt;/abbr&gt;:&lt;/p&gt;
 &lt;figure class=&quot;codelisting&quot;&gt;
   &lt;pre&gt;&lt;code lang=&quot;javascript&quot; class=&quot;javascript&quot;&gt;function getTemplate(premiumAccount) {
   if(!premiumAccount)
@@ -184,9 +184,9 @@ function uploadResume(resumeFile, premiumAccount) {
 
 
 &lt;h2&gt;Making Your Own Promises&lt;/h2&gt;
-&lt;p&gt;Now that we know how to use promises, let&rsquo;s make some of our own using deferred objects.&lt;/p&gt;
-&lt;p&gt;A &lt;em&gt;deferred object&lt;/em&gt; can do all that a promise can plus change the state of the task. You won&rsquo;t see jQuery return a deferred object from anywhere but the factory method &lt;a href=&quot;http://api.jquery.com/jQuery.Deferred&quot;&gt;&lt;code&gt;$.Deferred&lt;/code&gt;&lt;/a&gt; because the state of a task should only be changed by the code that has implemented that task.&lt;/p&gt;
-&lt;p&gt;Once we&rsquo;ve created our deferred object, there are three methods that you&rsquo;ll likely need to use:&lt;/p&gt;
+&lt;p&gt;Now that we know how to use promises, let&amp;rsquo;s make some of our own using deferred objects.&lt;/p&gt;
+&lt;p&gt;A &lt;em&gt;deferred object&lt;/em&gt; can do all that a promise can plus change the state of the task. You won&amp;rsquo;t see jQuery return a deferred object from anywhere but the factory method &lt;a href=&quot;http://api.jquery.com/jQuery.Deferred&quot;&gt;&lt;code&gt;$.Deferred&lt;/code&gt;&lt;/a&gt; because the state of a task should only be changed by the code that has implemented that task.&lt;/p&gt;
+&lt;p&gt;Once we&amp;rsquo;ve created our deferred object, there are three methods that you&amp;rsquo;ll likely need to use:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://api.jquery.com/deferred.resolve&quot;&gt;&lt;code&gt;resolve&lt;/code&gt;&lt;/a&gt; - mark this task as having completed successfully, optionally passing values&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://api.jquery.com/deferred.reject&quot;&gt;&lt;code&gt;reject&lt;/code&gt;&lt;/a&gt; - mark this task as having failed, also with optional values&lt;/li&gt;
@@ -214,14 +214,14 @@ function uploadResume(resumeFile, premiumAccount) {
 &lt;/figure&gt;
 
 &lt;p&gt;If you want even more control over how the success or failure methods are called, &lt;a href=&quot;http://api.jquery.com/deferred.resolveWith&quot;&gt;&lt;code&gt;resolveWith&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;http://api.jquery.com/deferred.rejectWith&quot;&gt;&lt;code&gt;rejectWith&lt;/code&gt;&lt;/a&gt; set the first parameter as the context for executing those functions, meaning that within the callback &lt;code&gt;this&lt;/code&gt; will point to the object you provide instead of the deferred object.&lt;/p&gt;
-&lt;p&gt;There&rsquo;s one more feature of jQuery&rsquo;s promises that seems useful, but I haven&rsquo;t seen used much: progress notifications. Deferred objects have a &lt;a href=&quot;http://api.jquery.com/deferred.notify&quot;&gt;&lt;code&gt;notify&lt;/code&gt;&lt;/a&gt; method (and &lt;a href=&quot;http://api.jquery.com/deferred.notifyWith&quot;&gt;&lt;code&gt;notifyWith&lt;/code&gt;&lt;/a&gt; as above) that will send data to &lt;a href=&quot;http://api.jquery.com/deferred.progress&quot;&gt;&lt;code&gt;progress&lt;/code&gt;&lt;/a&gt; handlers.&lt;/p&gt;
+&lt;p&gt;There&amp;rsquo;s one more feature of jQuery&amp;rsquo;s promises that seems useful, but I haven&amp;rsquo;t seen used much: progress notifications. Deferred objects have a &lt;a href=&quot;http://api.jquery.com/deferred.notify&quot;&gt;&lt;code&gt;notify&lt;/code&gt;&lt;/a&gt; method (and &lt;a href=&quot;http://api.jquery.com/deferred.notifyWith&quot;&gt;&lt;code&gt;notifyWith&lt;/code&gt;&lt;/a&gt; as above) that will send data to &lt;a href=&quot;http://api.jquery.com/deferred.progress&quot;&gt;&lt;code&gt;progress&lt;/code&gt;&lt;/a&gt; handlers.&lt;/p&gt;
 &lt;figure class=&quot;codelisting&quot;&gt;
-  &lt;pre&gt;&lt;code lang=&quot;javascript&quot; class=&quot;javascript&quot;&gt;// Task-based code with deferred object &quot;fileUploading&quot;
+  &lt;pre&gt;&lt;code lang=&quot;javascript&quot; class=&quot;javascript&quot;&gt;// Task-based code with deferred object &amp;quot;fileUploading&amp;quot;
 file.updating(function(bytesReceived) {
   uploading.notify(bytesReceived);
 });
 
-// Calling code, could also be the third parameter to &quot;then&quot;
+// Calling code, could also be the third parameter to &amp;quot;then&amp;quot;
 uploadFile(fileToUpload)
   .progress(function(bytesReceived) {
     console.log(bytesReceived + &#39; B / &#39; + file.totalBytes + &#39; B&#39;);
@@ -229,7 +229,7 @@ uploadFile(fileToUpload)
   &lt;figcaption&gt;Notification via promises&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Now let&rsquo;s put everything together:&lt;/p&gt;
+&lt;p&gt;Now let&amp;rsquo;s put everything together:&lt;/p&gt;
 &lt;iframe src=&quot;http://bl.ocks.org/d/4415942/&quot; width=&quot;100%&quot; height=&quot;225&quot;&gt;&lt;/iframe&gt;
 
 &lt;figure class=&quot;codelisting&quot;&gt;
@@ -245,12 +245,12 @@ var file = {
         uploading.notify(bytesTransferred);
 
         // Simulate error
-        if(Math.random() &gt; 0.95) {
+        if(Math.random() &amp;gt; 0.95) {
           // Change to error/failed state
           uploading.reject(&#39;Simulated network error&#39;);
         }
 
-        if(bytesTransferred &gt;= file.totalBytes) {
+        if(bytesTransferred &amp;gt;= file.totalBytes) {
           // Pass the generated key to observers
           clearInterval(transferringInterval);
 
@@ -275,18 +275,18 @@ $(function() {
       .then(
         // Success
         function(resourceKey) {
-          $console.append(&#39;&lt;li&gt;File uploaded successfully with key &#39; + resourceKey + &#39;&lt;/li&gt;&#39;);
+          $console.append(&#39;&amp;lt;li&amp;gt;File uploaded successfully with key &#39; + resourceKey + &#39;&amp;lt;/li&amp;gt;&#39;);
         },
         // Failure
         function(err) {
-          $console.append(&#39;&lt;li&gt;File failed to upload: &#39; + err + &#39;&lt;/li&gt;&#39;);
+          $console.append(&#39;&amp;lt;li&amp;gt;File failed to upload: &#39; + err + &#39;&amp;lt;/li&amp;gt;&#39;);
         },
         // Progress
         function(bytesReceived) {
-          $console.append(&#39;&lt;li&gt;&#39; + bytesReceived + &#39; B / &#39; + file.totalBytes + &#39; B&lt;/li&gt;&#39;);
+          $console.append(&#39;&amp;lt;li&amp;gt;&#39; + bytesReceived + &#39; B / &#39; + file.totalBytes + &#39; B&amp;lt;/li&amp;gt;&#39;);
         })
         .always(function() {
-          $console.append(&#39;&lt;li&gt;Complete.&lt;/li&gt;&#39;);
+          $console.append(&#39;&amp;lt;li&amp;gt;Complete.&amp;lt;/li&amp;gt;&#39;);
           $uploadButton.removeAttr(&#39;disabled&#39;);
         });
   });
@@ -296,7 +296,7 @@ $(function() {
 
 
 &lt;h2&gt;Wrapping Up&lt;/h2&gt;
-&lt;p&gt;That&rsquo;s promises in a nutshell. Remember that they can be used for more than coordinating network related code: you can model workflows like checkout processes, manage complex &lt;abbr title=&quot;Document Object Model&quot;&gt;DOM&lt;/abbr&gt; interactions like animations, and more. I hope this introduction has given you the tools to appreciate and use promises in your own code.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s promises in a nutshell. Remember that they can be used for more than coordinating network related code: you can model workflows like checkout processes, manage complex &lt;abbr title=&quot;Document Object Model&quot;&gt;DOM&lt;/abbr&gt; interactions like animations, and more. I hope this introduction has given you the tools to appreciate and use promises in your own code.&lt;/p&gt;
 </description>
     </item>
     <item>
@@ -304,7 +304,7 @@ $(function() {
       <link>http://kevingorski.com/articles/CYRIN-In-The-Browser/</link>
       <pubDate>Sun, 16 Dec 2012 12:00:00 -0700</pubDate>
       <guid isPermaLink="true">http://kevingorski.com/articles/CYRIN-In-The-Browser/</guid>
-      <author>Kevin Gorski</author>
+      <author>kevin.gorski@gmail.com</author>
       <description>&lt;p&gt;In order to rate the readability of text on a web page, Can You Read It Now has to do all of the following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Get access to the page contents&lt;/li&gt;
@@ -313,13 +313,13 @@ $(function() {
 &lt;li&gt;Calculate ratings for each aspect of readability&lt;/li&gt;
 &lt;li&gt;Display the ratings to the user&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Accomplishing all of this with one click from the user required making several different trade-offs and design decisions. Let&rsquo;s cover each of these in turn.&lt;/p&gt;
+&lt;p&gt;Accomplishing all of this with one click from the user required making several different trade-offs and design decisions. Let&amp;rsquo;s cover each of these in turn.&lt;/p&gt;
 &lt;h2&gt;Get access to the page contents&lt;/h2&gt;
 &lt;p&gt;The simplest way to give &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; access to the current document would be to add an in-document JavaScript reference on the page to test, but that would mean changing the content of any page you want to rate, which is tedious and unnecessary. A different way to run third-party JavaScript in the context of the current document is a &lt;a href=&quot;http://en.wikipedia.org/wiki/Bookmarklet&quot;&gt;bookmarklet&lt;/a&gt;. As you might be able to gather from the name, bookmarklets are JavaScript that is saved and executed like a bookmark.&lt;/p&gt;
-&lt;p&gt;One pain point of building bookmarklets from a development standpoint is that you can&rsquo;t update the code once it&rsquo;s been saved. This can be mitigated by saving only code to load updatable script from a hosted location (like &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;canyoureaditnow.com&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;One pain point of building bookmarklets from a development standpoint is that you can&amp;rsquo;t update the code once it&amp;rsquo;s been saved. This can be mitigated by saving only code to load updatable script from a hosted location (like &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;canyoureaditnow.com&lt;/a&gt;).&lt;/p&gt;
 &lt;figure class=&quot;codelisting&quot;&gt;
-  &lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&lt;!-- This code would normally be compressed to one line and not include comments --&gt;
-&lt;a id=&quot;Target&quot; href=&quot;javascript:
+  &lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&amp;lt;!-- This code would normally be compressed to one line and not include comments --&amp;gt;
+&amp;lt;a id=&amp;quot;Target&amp;quot; href=&amp;quot;javascript:
   // Begin self-executing function
   (function(){
 
@@ -338,21 +338,21 @@ $(function() {
       CYRIN.Bookmarklet.analyze()
 
     }
-  }());&quot;&gt;CYRIN?&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;
+  }());&amp;quot;&amp;gt;CYRIN?&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/pre&gt;
   &lt;figcaption&gt;The &lt;a href=&quot;https://gist.github.com/4366664&quot;&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; bookmarklet&lt;/a&gt;, expanded for readability&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 
 &lt;h2&gt;Find the text to be analyzed&lt;/h2&gt;
-&lt;p&gt;So, now that the JavaScript is running in the right context, how do we find the text to analyze? I knew it was possible to find the primary text for a page without requiring user input from seeing the Instapaper and Readability bookmarklets in action, but I wasn&rsquo;t sure how to go about implementing something like that myself. Fortunately for me, the &lt;a href=&quot;https://code.google.com/p/arc90labs-readability/&quot;&gt;original Readability bookmark is open source&lt;/a&gt; and I was able to re-use their working solution.&lt;/p&gt;
+&lt;p&gt;So, now that the JavaScript is running in the right context, how do we find the text to analyze? I knew it was possible to find the primary text for a page without requiring user input from seeing the Instapaper and Readability bookmarklets in action, but I wasn&amp;rsquo;t sure how to go about implementing something like that myself. Fortunately for me, the &lt;a href=&quot;https://code.google.com/p/arc90labs-readability/&quot;&gt;original Readability bookmark is open source&lt;/a&gt; and I was able to re-use their working solution.&lt;/p&gt;
 &lt;h2&gt;Get the displayed style of each piece of text&lt;/h2&gt;
-&lt;p&gt;Once we&rsquo;ve got a handle to the container of the text to analyze, we can use jQuery&rsquo;s &lt;a href=&quot;http://api.jquery.com/css/&quot;&gt;css method&lt;/a&gt; to grab the computed &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; properties of each element.&lt;/p&gt;
+&lt;p&gt;Once we&amp;rsquo;ve got a handle to the container of the text to analyze, we can use jQuery&amp;rsquo;s &lt;a href=&quot;http://api.jquery.com/css/&quot;&gt;css method&lt;/a&gt; to grab the computed &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; properties of each element.&lt;/p&gt;
 &lt;h2&gt;Calculate ratings for each aspect of readability&lt;/h2&gt;
 &lt;p&gt;Style data from each piece of text and the elements nearby are used to calculate ratings which are then weighted by how much of the document by character count this text represents. This is how a tree of &lt;abbr title=&quot;Document Object Model&quot;&gt;DOM&lt;/abbr&gt; elements gets rated and turned into one set of scores for the entire page.&lt;/p&gt;
 &lt;h2&gt;Display the results&lt;/h2&gt;
 &lt;p&gt;Now we have a set of scores to display within the document that we just finished rating. In order to prevent the hosted page from affecting how the scores are styled they are displayed in an &lt;a href=&quot;http://en.wikipedia.org/wiki/iframe&quot;&gt;IFrame&lt;/a&gt;, where only the directly included styles will apply. This also allows the markup to be served by the &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; server rather than included in JavaScript.&lt;/p&gt;
 &lt;h2&gt;Wrapping up&lt;/h2&gt;
-&lt;p&gt;That&rsquo;s all I have to say about &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; for now. If you have any questions feel free to contact me at &lt;a href=&quot;mailto:kevin.gorski@gmail.com&quot;&gt;kevin.gorski@gmail.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s all I have to say about &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; for now. If you have any questions feel free to contact me at &lt;a href=&quot;mailto:kevin.gorski@gmail.com&quot;&gt;kevin.gorski@gmail.com&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Until next time.&lt;/p&gt;
 </description>
     </item>
@@ -361,7 +361,7 @@ $(function() {
       <link>http://kevingorski.com/articles/CYRIN-Metrics-Part-2/</link>
       <pubDate>Sun, 18 Nov 2012 12:00:00 -0700</pubDate>
       <guid isPermaLink="true">http://kevingorski.com/articles/CYRIN-Metrics-Part-2/</guid>
-      <author>Kevin Gorski</author>
+      <author>kevin.gorski@gmail.com</author>
       <description>&lt;p&gt;&lt;a href=&quot;http://kevingorski.com/articles/CYRIN-Metrics-Part-1/&quot;&gt;Continuing&lt;/a&gt; our exploration of typographic terminology used by &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt;&lt;/a&gt; and how its scores are calculated:&lt;/p&gt;
 &lt;h2&gt;Justification&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -369,30 +369,30 @@ $(function() {
 &lt;/blockquote&gt;
 &lt;p&gt;The justification of text describes how it will be aligned to the edges of your page, which in turn will determine how words will be distributed throughout those lines.&lt;/p&gt;
 &lt;p&gt;There are four options for justification, but only two are good choices for body text and only one is feasible with the current state of browser technology. Let me explain.&lt;/p&gt;
-&lt;p&gt;Centered text is terrible for reading more than a few lines at a time because of its uneven left edge, making each new line a chore to begin. It can be interesting and artfully used for poetry or a piece with careful art direction, but for readability&rsquo;s sake it usually passes from interesting to distracting.&lt;/p&gt;
-&lt;p&gt;Right-justified text isn&rsquo;t easy to follow for languages that read left-to-right for much the same reason, even through the right edge is easy enough to find.&lt;/p&gt;
+&lt;p&gt;Centered text is terrible for reading more than a few lines at a time because of its uneven left edge, making each new line a chore to begin. It can be interesting and artfully used for poetry or a piece with careful art direction, but for readability&amp;rsquo;s sake it usually passes from interesting to distracting.&lt;/p&gt;
+&lt;p&gt;Right-justified text isn&amp;rsquo;t easy to follow for languages that read left-to-right for much the same reason, even through the right edge is easy enough to find.&lt;/p&gt;
 &lt;p&gt;Fully-justified text (as often used in books and newspapers) is the easiest option to read when done well. This is — unfortunately — an area of browser technology that lags behind traditional publishing because the algorithm for placing text when fully justified is much more complicated than for text with a ragged edge.&lt;/p&gt;
-&lt;p&gt;The simplest algorithm for full justification is what is currently used: fill a line with words and split the leftover space between each word. This gives the straight edges of full justification, but because it is inflexible it introduces a new readability problem between the edges: &lt;a href=&quot;http://en.wikipedia.org/wiki/River_(typography)&quot;&gt;&ldquo;rivers&rdquo;&lt;/a&gt; of vertical whitespace.&lt;/p&gt;
-&lt;p&gt;To avoid this and gain more control over the per-line-layout of text, words get hyphenated and &lt;a href=&quot;http://en.wikipedia.org/wiki/Swash_(typography)&quot;&gt;swashes&lt;/a&gt; (alternate, decorative glyph forms that take up more horizontal space) take the place of some standard glyphs in order to balance each line&rsquo;s contents.&lt;/p&gt;
-&lt;p&gt;Publishing software is built with automatic and configurable hyphenation and swashing (swashbuckling?) in mind, but as it stands today browsers don&rsquo;t have features that are as automatic &lt;em&gt;or&lt;/em&gt; configurable. &lt;a href=&quot;http://www.w3.org/TR/html401/struct/text.html#h-9.3.3&quot;&gt;Soft hyphens&lt;/a&gt; give you the option to manually include optional hyphenation points in text, but man, what a drag to have to bloat your documents to build yourself what the browser should be doing for you.&lt;/p&gt;
-&lt;p&gt;If these features improve and are available across browsers this recommendation may change, but for now it&rsquo;s best to stick to left-justified text.&lt;/p&gt;
+&lt;p&gt;The simplest algorithm for full justification is what is currently used: fill a line with words and split the leftover space between each word. This gives the straight edges of full justification, but because it is inflexible it introduces a new readability problem between the edges: &lt;a href=&quot;http://en.wikipedia.org/wiki/River_(typography)&quot;&gt;&amp;ldquo;rivers&amp;rdquo;&lt;/a&gt; of vertical whitespace.&lt;/p&gt;
+&lt;p&gt;To avoid this and gain more control over the per-line-layout of text, words get hyphenated and &lt;a href=&quot;http://en.wikipedia.org/wiki/Swash_(typography)&quot;&gt;swashes&lt;/a&gt; (alternate, decorative glyph forms that take up more horizontal space) take the place of some standard glyphs in order to balance each line&amp;rsquo;s contents.&lt;/p&gt;
+&lt;p&gt;Publishing software is built with automatic and configurable hyphenation and swashing (swashbuckling?) in mind, but as it stands today browsers don&amp;rsquo;t have features that are as automatic &lt;em&gt;or&lt;/em&gt; configurable. &lt;a href=&quot;http://www.w3.org/TR/html401/struct/text.html#h-9.3.3&quot;&gt;Soft hyphens&lt;/a&gt; give you the option to manually include optional hyphenation points in text, but man, what a drag to have to bloat your documents to build yourself what the browser should be doing for you.&lt;/p&gt;
+&lt;p&gt;If these features improve and are available across browsers this recommendation may change, but for now it&amp;rsquo;s best to stick to left-justified text.&lt;/p&gt;
 &lt;h2&gt;Margin &amp; Padding&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Creating visual space on the left and right of text will make it easier to visually separate from the rest of the page.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Margin &amp; padding are &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; attributes for creating space around specific elements on the page. By keeping the edges of your text clear from other content, background changes or the edge of the screen you&rsquo;ve prevented your reader from having to fight those distractions to keep focused on your text.&lt;/p&gt;
+&lt;p&gt;Margin &amp; padding are &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; attributes for creating space around specific elements on the page. By keeping the edges of your text clear from other content, background changes or the edge of the screen you&amp;rsquo;ve prevented your reader from having to fight those distractions to keep focused on your text.&lt;/p&gt;
 &lt;h2&gt;Text Color Contrast&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The contrast ratio between the text color and the background color needs to be greater the smaller the text is.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Color contrast enters into theory, mathematics and physiology that I only partially understand. It&rsquo;s big, hairy and complicated, but there&rsquo;s an algorithm to follow, so for now I trust the &lt;a href=&quot;http://www.w3.org/TR/WCAG/&quot;&gt;&lt;abbr title=&quot;Web Content Accessibility Guidelines&quot;&gt;WCAG&lt;/abbr&gt;&lt;/a&gt; and hope that&rsquo;s enough to be useful.&lt;/p&gt;
+&lt;p&gt;Color contrast enters into theory, mathematics and physiology that I only partially understand. It&amp;rsquo;s big, hairy and complicated, but there&amp;rsquo;s an algorithm to follow, so for now I trust the &lt;a href=&quot;http://www.w3.org/TR/WCAG/&quot;&gt;&lt;abbr title=&quot;Web Content Accessibility Guidelines&quot;&gt;WCAG&lt;/abbr&gt;&lt;/a&gt; and hope that&amp;rsquo;s enough to be useful.&lt;/p&gt;
 &lt;h2&gt;Percentage of Text Stylized&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Bold, italicized, and all-caps text should be kept to a minimum.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Each of these styles have their place in emphacising or decorating specific parts of a body of text, but using any as the mainstay of your document will be a special kind of disaster.&lt;/p&gt;
 &lt;h2&gt;Wrapping Up&lt;/h2&gt;
-&lt;p&gt;That&rsquo;s it for further details of the metrics &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; uses to rate text&rsquo;s readability. After Thanksgiving I&rsquo;ll cover the technical details of how &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; works in the browser.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s it for further details of the metrics &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; uses to rate text&amp;rsquo;s readability. After Thanksgiving I&amp;rsquo;ll cover the technical details of how &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; works in the browser.&lt;/p&gt;
 &lt;p&gt;Until next time.&lt;/p&gt;
 </description>
     </item>
@@ -401,26 +401,26 @@ $(function() {
       <link>http://kevingorski.com/articles/CYRIN-Metrics-Part-1/</link>
       <pubDate>Mon, 12 Nov 2012 12:00:00 -0700</pubDate>
       <guid isPermaLink="true">http://kevingorski.com/articles/CYRIN-Metrics-Part-1/</guid>
-      <author>Kevin Gorski</author>
-      <description>&lt;p&gt;Typography has a rich history of wide, specific and sometimes confusing terminology. Today I&rsquo;m going to focus on terms related to readability that are important to understanding why &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt;&lt;/a&gt; recommends what it does, so we can get by with a much smaller set.&lt;/p&gt;
+      <author>kevin.gorski@gmail.com</author>
+      <description>&lt;p&gt;Typography has a rich history of wide, specific and sometimes confusing terminology. Today I&amp;rsquo;m going to focus on terms related to readability that are important to understanding why &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt;&lt;/a&gt; recommends what it does, so we can get by with a much smaller set.&lt;/p&gt;
 &lt;h2&gt;Font Size&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;A good default font size will be readible without need for adjustment.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Font size is probably the most familiar metric I&rsquo;ve included here: it&rsquo;s the measure of the height of your text. This won&rsquo;t be an exact match for all glyphs, but they&rsquo;ll all be proportionate to this basic measurement for the same font. Most of the following metrics are based upon multiples and factors of the font size, so it&rsquo;s important to get this right (or use a measurement like em&rsquo;s when expressing the others, which are inherently relative to this baseline).&lt;/p&gt;
-&lt;p&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; recommends 12 points for body text, where a point is 1/72 of an inch. This is in some ways a holdover from print design where everything eventually has a predictable phyiscal dimension and would be read from a similar distance when printed in a book. For web design things get more tricky as the equivalent number of pixels will differ from screen to screen and may be held different distances from form factor to form factor (computer screen to mobile device). All this to say that when you&rsquo;re in doubt that your users can read your font size, go larger.&lt;/p&gt;
+&lt;p&gt;Font size is probably the most familiar metric I&amp;rsquo;ve included here: it&amp;rsquo;s the measure of the height of your text. This won&amp;rsquo;t be an exact match for all glyphs, but they&amp;rsquo;ll all be proportionate to this basic measurement for the same font. Most of the following metrics are based upon multiples and factors of the font size, so it&amp;rsquo;s important to get this right (or use a measurement like em&amp;rsquo;s when expressing the others, which are inherently relative to this baseline).&lt;/p&gt;
+&lt;p&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; recommends 12 points for body text, where a point is 1/72 of an inch. This is in some ways a holdover from print design where everything eventually has a predictable phyiscal dimension and would be read from a similar distance when printed in a book. For web design things get more tricky as the equivalent number of pixels will differ from screen to screen and may be held different distances from form factor to form factor (computer screen to mobile device). All this to say that when you&amp;rsquo;re in doubt that your users can read your font size, go larger.&lt;/p&gt;
 &lt;h2&gt;Line Length&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;When line length of text gets too long, it makes text harder to read.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Also called &ldquo;measure,&rdquo; optimal line length is laregely a matter of taste, within certain bounds. It&rsquo;s also one of the most overlooked aspect of typesetting by casual web designers, who may leave lines stretching across an entire screen. Long lines make it more difficult to keep your place in a passage of text, but short lines require too much motion as you make progress.&lt;/p&gt;
+&lt;p&gt;Also called &amp;ldquo;measure,&amp;rdquo; optimal line length is laregely a matter of taste, within certain bounds. It&amp;rsquo;s also one of the most overlooked aspect of typesetting by casual web designers, who may leave lines stretching across an entire screen. Long lines make it more difficult to keep your place in a passage of text, but short lines require too much motion as you make progress.&lt;/p&gt;
 &lt;p&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; only starts to give negative ratings when the text greatly under- or over-shoots the commonly given range of 45-75 characters per single column line. Multi-column designs like those found in print newspapers and magazines can be thinner and readible, but are uncommon on the Web.&lt;/p&gt;
 &lt;h2&gt;Line Leading&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The space between each line of text should be large enough to make visual separation of lines easy without creating an awkward amount of space.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Leading refers to bars of lead that used to be placed vertically between the lines of text when preparing to print. Saying this the correct way (like the element Pb) will keep you from being immediately ejected from the next typography conference you sneak into. I&rsquo;d imagine.&lt;/p&gt;
-&lt;p&gt;The advice I give in &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; is that leading should be about 1.5 times the height of the text, but if the chosen line length is wide (more than 80 characters per line) or the font is &ldquo;dark&rdquo; (bold or having thick lines) then larger leading is probably needed. The key is being able to effortlessly transition from line to line while reading.&lt;/p&gt;
+&lt;p&gt;Leading refers to bars of lead that used to be placed vertically between the lines of text when preparing to print. Saying this the correct way (like the element Pb) will keep you from being immediately ejected from the next typography conference you sneak into. I&amp;rsquo;d imagine.&lt;/p&gt;
+&lt;p&gt;The advice I give in &lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt; is that leading should be about 1.5 times the height of the text, but if the chosen line length is wide (more than 80 characters per line) or the font is &amp;ldquo;dark&amp;rdquo; (bold or having thick lines) then larger leading is probably needed. The key is being able to effortlessly transition from line to line while reading.&lt;/p&gt;
 &lt;h2&gt;More to Come&lt;/h2&gt;
 &lt;p&gt;The four remaining metrics in &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt;&lt;/a&gt; are:&lt;/p&gt;
 &lt;ul&gt;
@@ -437,11 +437,11 @@ $(function() {
       <link>http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/</link>
       <pubDate>Sat, 03 Nov 2012 12:00:00 -0600</pubDate>
       <guid isPermaLink="true">http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/</guid>
-      <author>Kevin Gorski</author>
+      <author>kevin.gorski@gmail.com</author>
       <description>&lt;p&gt;Typography can be a subtle art. Type is in front of us all day in one form or another, but it can take extreme examples of high- or low-quality typography to &lt;a href=&quot;http://www.typographydeconstructed.com/spur/&quot;&gt;spur&lt;/a&gt; us to think about type. Like most arts, the more you think about it, the more you notice details, which in turn makes you stop and evaluate what you might have glossed over before. This is both enthralling and maddening.&lt;/p&gt;
 &lt;h2&gt;Productive Frustration&lt;/h2&gt;
 &lt;p&gt;My entrance into the spiral of typographic concern started innocently enough: by reading a lot of software development articles on the Web. The content is often well-written by smart and articulate people, but the type is usually set in varying degrees of &lt;a href=&quot;http://en.wikipedia.org/wiki/Readability&quot;&gt;unreadable&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;For non-technical content, there are work-arounds for this problem: use &lt;a href=&quot;http://instapaper.com&quot;&gt;Instapaper&lt;/a&gt;, &lt;a href=&quot;http://readability.com&quot;&gt;Readability&lt;/a&gt;, or Safari&rsquo;s Reader feature to set the text in a more readable way and go on with your life. This is great for prose and digital photos (which can usually be resized without losing meaning), but software development articles tend to include accompanying source code (which has different requirements for readability than prose) and detailed screen shots which tend to only be legible at full size.&lt;/p&gt;
+&lt;p&gt;For non-technical content, there are work-arounds for this problem: use &lt;a href=&quot;http://instapaper.com&quot;&gt;Instapaper&lt;/a&gt;, &lt;a href=&quot;http://readability.com&quot;&gt;Readability&lt;/a&gt;, or Safari&amp;rsquo;s Reader feature to set the text in a more readable way and go on with your life. This is great for prose and digital photos (which can usually be resized without losing meaning), but software development articles tend to include accompanying source code (which has different requirements for readability than prose) and detailed screen shots which tend to only be legible at full size.&lt;/p&gt;
 &lt;p&gt;Rather than lobbying for these tools to handle the code snippet use case, a different way to solve the problem is to make it easier for authors to make their text &lt;em&gt;readable enough&lt;/em&gt; without having to become typography or &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; expert.&lt;/p&gt;
 &lt;h2&gt;So I Made A Thing&lt;/h2&gt;
 &lt;p&gt;When I started working on &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;Can You Read It Now&lt;/a&gt; (&lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt;) I could identify readable text, but not the ways that distinguished it from the text that was a challenge to read. Since it was clear that I was not the only one with this problem, I spent some time reading about the basics of typesetting in the browser and applied some of what I learned in the &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; &lt;a href=&quot;http://en.wikipedia.org/wiki/Bookmarklet&quot;&gt;bookmarklet&lt;/a&gt;.&lt;/p&gt;
@@ -452,22 +452,22 @@ $(function() {
 
 
 &lt;h2&gt;What Do I Do With This?&lt;/h2&gt;
-&lt;p&gt;The source for a lot of the ratings are the &lt;abbr title=&quot;World Wide Web Consortium&quot;&gt;W3C&lt;/abbr&gt;&rsquo;s &lt;a href=&quot;http://www.w3.org/WAI/intro/wcag.php&quot;&gt;Web Content Accessibility Guidelines&lt;/a&gt;, which are focused on making content accessible to as many people as possible. I&rsquo;ve used the formulas where they are included with the guidelines for calculating how readable text will be and tried to make clear ratings based on that guidance or personal preference everywhere else. In &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; higher scores (up to 10) mean that the text will be easier and possible for more people to read your content, but anything rated 7 or above can be good enough if you&rsquo;re not targeting visitors with &lt;a href=&quot;http://en.wikipedia.org/wiki/Low_vision&quot;&gt;low-vision&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The source for a lot of the ratings are the &lt;abbr title=&quot;World Wide Web Consortium&quot;&gt;W3C&lt;/abbr&gt;&amp;rsquo;s &lt;a href=&quot;http://www.w3.org/WAI/intro/wcag.php&quot;&gt;Web Content Accessibility Guidelines&lt;/a&gt;, which are focused on making content accessible to as many people as possible. I&amp;rsquo;ve used the formulas where they are included with the guidelines for calculating how readable text will be and tried to make clear ratings based on that guidance or personal preference everywhere else. In &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; higher scores (up to 10) mean that the text will be easier and possible for more people to read your content, but anything rated 7 or above can be good enough if you&amp;rsquo;re not targeting visitors with &lt;a href=&quot;http://en.wikipedia.org/wiki/Low_vision&quot;&gt;low-vision&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; also gives specific recommendations with &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; rules for making the target design more readable.&lt;/p&gt;
 &lt;figure&gt;
 &lt;img src=&quot;http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/suggestions.png&quot; alt=&quot;Example CYRIN suggestions&quot;&gt;
 &lt;figcaption&gt;Suggestions &amp; &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Finally, &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; also provides short descriptions of the aspects of typesetting that are being measured. There are more aspects of well-set type than are listed here and more subtlety to determining whether text is readable, but I think it&rsquo;s a good start for beginners and casual practitioners.&lt;/p&gt;
+&lt;p&gt;Finally, &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; also provides short descriptions of the aspects of typesetting that are being measured. There are more aspects of well-set type than are listed here and more subtlety to determining whether text is readable, but I think it&amp;rsquo;s a good start for beginners and casual practitioners.&lt;/p&gt;
 &lt;figure&gt;
 &lt;img src=&quot;http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/aspect_description.png&quot; alt=&quot;Example CYRIN aspect description&quot;&gt;
 &lt;figcaption&gt;Description of &lt;a href=&quot;http://en.wikipedia.org/wiki/Leading&quot;&gt;line leading&lt;/a&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Go ahead, &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;try it out&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;What&rsquo;s coming&lt;/h2&gt;
-&lt;p&gt;There&rsquo;s more to tell about &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; and some of the basics of typography as it applies to readability, so I hope you&rsquo;ll look forward to:&lt;/p&gt;
+&lt;h2&gt;What&amp;rsquo;s coming&lt;/h2&gt;
+&lt;p&gt;There&amp;rsquo;s more to tell about &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; and some of the basics of typography as it applies to readability, so I hope you&amp;rsquo;ll look forward to:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;More on the meanings of metrics that &lt;abbr title=&quot;Can You Read It Now&quot;&gt;CYRIN&lt;/abbr&gt; evaluates&lt;/li&gt;
 &lt;li&gt;Notes on other aspects of typography in the browser&lt;/li&gt;
@@ -475,12 +475,12 @@ $(function() {
 &lt;li&gt;Feature updates&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Other Reading&lt;/h2&gt;
-&lt;p&gt;Here&#39;s some type-geek reading I&rsquo;ve enjoyed:&lt;/p&gt;
+&lt;p&gt;Here&#39;s some type-geek reading I&amp;rsquo;ve enjoyed:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style&quot;&gt;The Elements of Typographic Style&lt;/a&gt; - The One True Typography Book, as far as I know. Covers a great deal of what I&rsquo;d picked up in bits and pieces over time, but in greater detail, historical context and (of course) amazing typography.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style&quot;&gt;The Elements of Typographic Style&lt;/a&gt; - The One True Typography Book, as far as I know. Covers a great deal of what I&amp;rsquo;d picked up in bits and pieces over time, but in greater detail, historical context and (of course) amazing typography.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://webtypography.net/&quot;&gt;The Elements of Typographic Style Applied to the Web&lt;/a&gt; - A long-running work in progress (started in 2005) that tries to capture more of the specifics of designing for the browser.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://informationarchitects.net/blog/&quot;&gt;Information Architects&lt;/a&gt; - Creators of iA Writer, they have written about how &lt;a href=&quot;http://informationarchitects.net/blog/responsive-typography-the-basics/&quot;&gt;they apply rigorous standards to the display of text&lt;/a&gt; in their cross-device text editors.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://elliotjaystocks.com/&quot;&gt;Elliot Jay Stocks&lt;/a&gt;&rsquo; Tomorrow&rsquo;s web type today series: &lt;a href=&quot;http://elliotjaystocks.com/blog/the-fine-flourish-of-the-ligature/&quot;&gt;ligatures&lt;/a&gt;, &lt;a href=&quot;http://elliotjaystocks.com/blog/expert-subsets-for-css-in-123/&quot;&gt;expert subsets&lt;/a&gt; (for real small caps and lower case numerals), &lt;a href=&quot;http://elliotjaystocks.com/blog/say-it-with-a-swash/&quot;&gt;swashes&lt;/a&gt; &amp; &lt;a href=&quot;http://elliotjaystocks.com/blog/stylesets/&quot;&gt;stylesets&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://elliotjaystocks.com/&quot;&gt;Elliot Jay Stocks&lt;/a&gt;&amp;rsquo; Tomorrow&amp;rsquo;s web type today series: &lt;a href=&quot;http://elliotjaystocks.com/blog/the-fine-flourish-of-the-ligature/&quot;&gt;ligatures&lt;/a&gt;, &lt;a href=&quot;http://elliotjaystocks.com/blog/expert-subsets-for-css-in-123/&quot;&gt;expert subsets&lt;/a&gt; (for real small caps and lower case numerals), &lt;a href=&quot;http://elliotjaystocks.com/blog/say-it-with-a-swash/&quot;&gt;swashes&lt;/a&gt; &amp; &lt;a href=&quot;http://elliotjaystocks.com/blog/stylesets/&quot;&gt;stylesets&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Until next time.&lt;/p&gt;
 </description>
