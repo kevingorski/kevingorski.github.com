@@ -13,7 +13,7 @@
       <link>http://kevingorski.com/articles/Denver-Tours-Playlist-Sept-Oct-2013/</link>
       <pubDate>Thu, 05 Sep 2013 20:49:00 -0600</pubDate>
       <guid isPermaLink="true">http://kevingorski.com/articles/Denver-Tours-Playlist-Sept-Oct-2013/</guid>
-      <author>kevin.gorski@gmail.com</author>
+      <author>kevin.gorski@gmail.com (Kevin Gorski)</author>
       <description>&lt;p&gt;It&amp;rsquo;s time once again for fall concert season! Here are some acts I&amp;rsquo;m considering seeing as they blow through Denver:&lt;/p&gt;
 &lt;iframe class=&quot;playlist&quot; src=&quot;https://rd.io/i/QV5I6DMEdbg/&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</description>
     </item>
@@ -22,7 +22,7 @@
       <link>http://kevingorski.com/articles/Software-Decay/</link>
       <pubDate>Sun, 11 Aug 2013 15:46:00 -0600</pubDate>
       <guid isPermaLink="true">http://kevingorski.com/articles/Software-Decay/</guid>
-      <author>kevin.gorski@gmail.com</author>
+      <author>kevin.gorski@gmail.com (Kevin Gorski)</author>
       <description>&lt;p&gt;Every time you play a song from your digital source of choice the bits representing that song are the same as they were on release day, but those bits also represent a series of tradeoffs made in the course of recording and reproducing that sound. In the meantime, the world changes. Better quality compression, new devices with more storage and processing power, and new ways of reproducing sound for specific environments are created and old recordings sound worse by comparison. &lt;em&gt;The representation stays the same, but expectations, constraints, and contexts change.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The same decay happens to software, but because software is the digital approximation of thought rather than something physical it is necessarily more vulnerable:&lt;/p&gt;
 &lt;ul&gt;
@@ -49,7 +49,7 @@
       <link>http://kevingorski.com/articles/Blocked/</link>
       <pubDate>Sat, 27 Jul 2013 15:30:00 -0600</pubDate>
       <guid isPermaLink="true">http://kevingorski.com/articles/Blocked/</guid>
-      <author>kevin.gorski@gmail.com</author>
+      <author>kevin.gorski@gmail.com (Kevin Gorski)</author>
       <description>&lt;p&gt;The stress from working full bore toward an achievable goal has a very specific feeling to it. It can burn and it can leave you tired, but because it&#39;s cut with the relief or satisfaction of appreciable progress and the potential for growth it&#39;s not entirely draining. With time to rest, you can remain motivated and possibly even happy that you&#39;re returning to this state. Depending on your feelings on exercise, this can be like going for a run or lifting weights.&lt;/p&gt;
 &lt;p&gt;Stress from being blocked is different. It&#39;s heavier, it turns your mood sour, it bends spines out of shape, and worst of all it&#39;s self-perpetuating. It leads you to distraction because of the discomfort of maintaining this posture. Periods of rest are anxious and you dread returning to this state even if you think you&#39;re about to climb your way out of it. This type of stress is more like sitting in an uncomfortable chair: fruitlessly squirming, looking for a way to get comfortable when the only lasting way to improve your situation is to leave the chair.&lt;/p&gt;
 &lt;p&gt;Differentiating between these two states can be obvious in retrospect, but if you recognize it in the moment blocked stress can be almost entirely avoided by changing your path, approach, or focus accordingly.&lt;/p&gt;
@@ -75,7 +75,7 @@
       <link>http://kevingorski.com/articles/Denver-Tours-Playlist-Jan-Mar-2013/</link>
       <pubDate>Sun, 13 Jan 2013 12:00:00 -0700</pubDate>
       <guid isPermaLink="true">http://kevingorski.com/articles/Denver-Tours-Playlist-Jan-Mar-2013/</guid>
-      <author>kevin.gorski@gmail.com</author>
+      <author>kevin.gorski@gmail.com (Kevin Gorski)</author>
       <description>&lt;p&gt;It looks like it&amp;rsquo;s going to be a good few months for live music in Denver, so I put together a quick playlist of a few of the shows I&amp;rsquo;ll probably check out:&lt;/p&gt;
 &lt;iframe class=&quot;playlist&quot; src=&quot;https://rd.io/i/QV5I6DNCe9g&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</description>
     </item>
@@ -84,7 +84,7 @@
       <link>http://kevingorski.com/articles/Get-More-From-jQuery-Promises/</link>
       <pubDate>Sat, 05 Jan 2013 12:00:00 -0700</pubDate>
       <guid isPermaLink="true">http://kevingorski.com/articles/Get-More-From-jQuery-Promises/</guid>
-      <author>kevin.gorski@gmail.com</author>
+      <author>kevin.gorski@gmail.com (Kevin Gorski)</author>
       <description>&lt;p&gt;Intro: &lt;a href=&quot;http://api.jquery.com/category/deferred-object/&quot; title=&quot;jQuery promises documentation&quot;&gt;Promises and deferred objects&lt;/a&gt; were introduced to jQuery way back in &lt;a href=&quot;http://blog.jquery.com/2011/01/31/jquery-15-released/&quot;&gt;version 1.5&lt;/a&gt; as part of a re-write of the &lt;abbr title=&quot;Asynchronous JavaScript and XML&quot;&gt;AJAX&lt;/abbr&gt; module. I&amp;rsquo;ve only started using them in earnest in the past few months while building &lt;a href=&quot;http://kevingorski.com/projects-&amp;-portfolio.html#lms&quot; title=&quot;HomeAway Lead Management System&quot;&gt;&lt;abbr title=&quot;Lead Management System&quot;&gt;LMS&lt;/abbr&gt;&lt;/a&gt;, but they&amp;rsquo;ve become essential to keeping asynchronous code readable and maintainable. There are already &lt;a href=&quot;http://msdn.microsoft.com/en-us/magazine/gg723713.aspx&quot; title=&quot;Julian Aubourg and Addy Osmani&#39;s article on MSDN&quot;&gt;a lot&lt;/a&gt; &lt;a href=&quot;http://www.erichynds.com/jquery/using-deferreds-in-jquery/&quot;&gt;of resources&lt;/a&gt; available on this subject, but here I&amp;rsquo;ve included all of the useful details I picked up from different places while learning the ins and outs of using jQuery&amp;rsquo;s promise implementation.&lt;/p&gt;
 &lt;h2&gt;What Is A Promise Worth?&lt;/h2&gt;
 &lt;p&gt;A &lt;em&gt;promise&lt;/em&gt; represents the result of a single execution of a task that will complete at a time unknown to the caller. It could complete immediately, in the future or it could have already been completed. In code a promise object is used to register callbacks to be executed when the state of that task changes and to manage higher-level workflow, but never to change the state of the task.&lt;/p&gt;
@@ -304,7 +304,7 @@ $(function() {
       <link>http://kevingorski.com/articles/CYRIN-In-The-Browser/</link>
       <pubDate>Sun, 16 Dec 2012 12:00:00 -0700</pubDate>
       <guid isPermaLink="true">http://kevingorski.com/articles/CYRIN-In-The-Browser/</guid>
-      <author>kevin.gorski@gmail.com</author>
+      <author>kevin.gorski@gmail.com (Kevin Gorski)</author>
       <description>&lt;p&gt;In order to rate the readability of text on a web page, Can You Read It Now has to do all of the following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Get access to the page contents&lt;/li&gt;
@@ -361,7 +361,7 @@ $(function() {
       <link>http://kevingorski.com/articles/CYRIN-Metrics-Part-2/</link>
       <pubDate>Sun, 18 Nov 2012 12:00:00 -0700</pubDate>
       <guid isPermaLink="true">http://kevingorski.com/articles/CYRIN-Metrics-Part-2/</guid>
-      <author>kevin.gorski@gmail.com</author>
+      <author>kevin.gorski@gmail.com (Kevin Gorski)</author>
       <description>&lt;p&gt;&lt;a href=&quot;http://kevingorski.com/articles/CYRIN-Metrics-Part-1/&quot;&gt;Continuing&lt;/a&gt; our exploration of typographic terminology used by &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt;&lt;/a&gt; and how its scores are calculated:&lt;/p&gt;
 &lt;h2&gt;Justification&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -401,7 +401,7 @@ $(function() {
       <link>http://kevingorski.com/articles/CYRIN-Metrics-Part-1/</link>
       <pubDate>Mon, 12 Nov 2012 12:00:00 -0700</pubDate>
       <guid isPermaLink="true">http://kevingorski.com/articles/CYRIN-Metrics-Part-1/</guid>
-      <author>kevin.gorski@gmail.com</author>
+      <author>kevin.gorski@gmail.com (Kevin Gorski)</author>
       <description>&lt;p&gt;Typography has a rich history of wide, specific and sometimes confusing terminology. Today I&amp;rsquo;m going to focus on terms related to readability that are important to understanding why &lt;a href=&quot;http://canyoureaditnow.com&quot;&gt;&lt;abbr title=&quot;Can You Read It Now?&quot;&gt;CYRIN&lt;/abbr&gt;&lt;/a&gt; recommends what it does, so we can get by with a much smaller set.&lt;/p&gt;
 &lt;h2&gt;Font Size&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -433,11 +433,11 @@ $(function() {
 </description>
     </item>
     <item>
-      <title>Typography &amp; Can You Read It&nbsp;Now?</title>
+      <title>Typography &amp; Can You Read It&amp;nbsp;Now?</title>
       <link>http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/</link>
       <pubDate>Sat, 03 Nov 2012 12:00:00 -0600</pubDate>
       <guid isPermaLink="true">http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/</guid>
-      <author>kevin.gorski@gmail.com</author>
+      <author>kevin.gorski@gmail.com (Kevin Gorski)</author>
       <description>&lt;p&gt;Typography can be a subtle art. Type is in front of us all day in one form or another, but it can take extreme examples of high- or low-quality typography to &lt;a href=&quot;http://www.typographydeconstructed.com/spur/&quot;&gt;spur&lt;/a&gt; us to think about type. Like most arts, the more you think about it, the more you notice details, which in turn makes you stop and evaluate what you might have glossed over before. This is both enthralling and maddening.&lt;/p&gt;
 &lt;h2&gt;Productive Frustration&lt;/h2&gt;
 &lt;p&gt;My entrance into the spiral of typographic concern started innocently enough: by reading a lot of software development articles on the Web. The content is often well-written by smart and articulate people, but the type is usually set in varying degrees of &lt;a href=&quot;http://en.wikipedia.org/wiki/Readability&quot;&gt;unreadable&lt;/a&gt;.&lt;/p&gt;
