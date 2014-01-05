@@ -94,15 +94,16 @@ body:after{clear:both}
 .center:before,.grid:before,.center:after,.grid:after{content:"";display:table}
 .center:after,.grid:after{clear:both}
 h1{font-size:32px;line-height:1.15em}
-header.home h1{margin:1.25em 0 0;line-height:.9em}
+body > header h1{margin:.67em 0 0}
+header.home h1{margin:1em 0 0;line-height:.9em}
 header.home h2{margin:0;line-height:1.5em}
-body > header h1.center{margin:1em auto}
 #intro{padding-top:2em}
 #content .grid{padding-bottom:2em}
 article.post h1{margin-bottom:0}
 #profile{height:75px;width:75px;border-radius:50%;float:right;margin:1.5em 0}
-#metadata,header.home h2{display:block;font-size:13px;margin-bottom:3em}
-#metadata iframe{float:right}
+#metadata,header.home h2,header.home nav{display:block;font-size:13px}
+header.home nav{font-size:11px}
+#metadata iframe{float:right;margin-top:0}
 h2,#writing h1,#work h1{font-size:25px;line-height:2em;margin:.75em 0 0}
 h3{font-size:20px}
 #writing article.summary{margin-bottom:1em;}
@@ -118,6 +119,13 @@ code{color:#777;font-family:Consolas,'Liberation Mono',Courier,monospace}
 .gist{text-align:left;}
 .gist .gist-file .gist-data .data{font-size:.65em}
 dl,menu,ol,ul{padding-left:0}
+.rss{display:none}
+header.home nav .home{display:none}
+nav{text-align:center;margin-bottom:1em;}
+header nav{text-align:left;}
+header nav ul{margin:0}
+header nav a,header nav a:link{color:#6e6e6e}
+nav ul,nav li{display:inline-block}
 body > footer{padding:3em 0 5em;text-align:center}
 section.archive,section.series{margin-top:1em;}
 section.archive ol,section.series ol{list-style:none;padding:0}
@@ -129,8 +137,11 @@ iframe.playlist{display:block;margin:1em auto;height:250px;width:250px}
 #writing article.summary{padding:0 1.4em}
 }@media screen and (min-width: 620px){.center{width:568px}
 .grid{display:inline;float:left;overflow:hidden;width:527px;margin:0 6px;*width:526.9479166666666px;*margin:0 5.947916666666667px;padding-left:24px;padding-right:24px;overflow:visible}
-h1,header.home h1{font-size:70px;margin-left:-6px}
+h1,header.home h1{font-size:70px}
 #profile{height:150px;width:150px;margin:3.2em 0}
+header.home nav{font-size:14px}
+.rss{display:inline-block}
+footer nav li.home{display:inline-block}
 #writing h1,#work h1,h2,body > header h1{font-size:35px}
 #writing article.summary h1,header.home h2,h3{font-size:22px}
 #metadata{font-size:14px}

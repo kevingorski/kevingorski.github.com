@@ -1,13 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link rel="dns-prefetch" href="//use.typekit.net" />
-    <title>Typography &amp; Can You Read It&nbsp;Now? - Kevin Gorski
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="dns-prefetch" href="//use.typekit.net">
+    <title>Typography & Can You Read It&nbsp;Now? - Kevin Gorski
     </title>
-    <meta name="description" content="Kevin Gorski creates &amp; writes about software" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kevin Gorski creates &amp; writes about software">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
       (function() {
         var config = { kitId: 'cyf1blw', scriptTimeout: 3000 };
@@ -16,16 +16,28 @@
       
     </script>
     <!-- build:css /css/styles.css-->
-    <link rel="stylesheet" href="/css/all.css?22cbe157" />
+    <link rel="stylesheet" href="/css/all.css">
     <!-- endbuild-->
     <script src="/js/libs/html5shiv.js"></script>
-    <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Kevin Gorski creates &amp; writes about software" />
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Kevin Gorski creates &amp; writes about software">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
   </head>
   <body><!--[if lt IE 7]>
     <p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
     <header class="clearfix">
-      <h1 class="center"><a href="/" class="grid">Kevin Gorski</a></h1>
+      <div class="center">
+        <div class="grid">
+          <h1><a href="/">Kevin Gorski</a></h1>
+          <nav>
+            <ul>
+              <li class="home"><a href="/" class="back">Home</a></li>
+              <li><span class="home"> &middot; </span><a href="/archive.html">Writing</a></li>
+              <li> &middot; <a href="/projects-&amp;-portfolio.html">Projects&nbsp;&amp;&nbsp;Portfolio</a></li>
+              <li class="rss"> &middot; <a href="/feed.xml">RSS</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
     <div id="content" role="main" class="clearfix">
       <div class="center">
@@ -35,55 +47,55 @@
               <h1>Typography &amp; Can You Read It&nbsp;Now?</h1>
               <div id="metadata">
                 <time datetime="2012-11-03" class="publishDate">November 3rd, 2012</time>
-                <iframe border="0" scrolling="no" width="78" height="17" allowtransparency="allowtransparency" frameborder="0" style="margin-bottom: -3px; z-index: 1338; border: 0px; background-color: transparent; overflow: hidden;" src="http://www.instapaper.com/e2?url=http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/&amp;title=Typography &amp; Can You Read It&nbsp;Now?"></iframe>
+                <iframe border="0" scrolling="no" width="78" height="17" allowtransparency frameborder="0" style="margin-bottom: -3px; z-index: 1338; border: 0px; background-color: transparent; overflow: hidden;" src="http://www.instapaper.com/e2?url=http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/&amp;title=Typography &amp; Can You Read It&nbsp;Now?"></iframe>
               </div>
             </header>
             <section class="content"><p>Typography can be a subtle art. Type is in front of us all day in one form or another, but it can take extreme examples of high- or low-quality typography to <a href="http://www.typographydeconstructed.com/spur/">spur</a> us to think about type. Like most arts, the more you think about it, the more you notice details, which in turn makes you stop and evaluate what you might have glossed over before. This is both enthralling and maddening.</p>
-<h2><a name="Productive Frustration">Productive Frustration</a></h2>
+<h2>Productive Frustration</h2>
 <p>My entrance into the spiral of typographic concern started innocently enough: by reading a lot of software development articles on the Web. The content is often well-written by smart and articulate people, but the type is usually set in varying degrees of <a href="http://en.wikipedia.org/wiki/Readability">unreadable</a>.</p>
-<p>For non-technical content, there are work-arounds for this problem: use <a href="http://instapaper.com">Instapaper</a>, <a href="http://readability.com">Readability</a>, or Safari’s Reader feature to set the text in a more readable way and go on with your life. This is great for prose and digital photos (which can usually be resized without losing meaning), but software development articles tend to include accompanying source code (which has different requirements for readability than prose) and detailed screen shots which tend to only be legible at full size.</p>
+<p>For non-technical content, there are work-arounds for this problem: use <a href="http://instapaper.com">Instapaper</a>, <a href="http://readability.com">Readability</a>, or Safari&rsquo;s Reader feature to set the text in a more readable way and go on with your life. This is great for prose and digital photos (which can usually be resized without losing meaning), but software development articles tend to include accompanying source code (which has different requirements for readability than prose) and detailed screen shots which tend to only be legible at full size.</p>
 <p>Rather than lobbying for these tools to handle the code snippet use case, a different way to solve the problem is to make it easier for authors to make their text <em>readable enough</em> without having to become typography or <abbr title="Cascading Style Sheets">CSS</abbr> expert.</p>
-<h2><a name="So I Made A Thing">So I Made A Thing</a></h2>
+<h2>So I Made A Thing</h2>
 <p>When I started working on <a href="http://canyoureaditnow.com">Can You Read It Now</a> (<abbr title="Can You Read It Now">CYRIN</abbr>) I could identify readable text, but not the ways that distinguished it from the text that was a challenge to read. Since it was clear that I was not the only one with this problem, I spent some time reading about the basics of typesetting in the browser and applied some of what I learned in the <abbr title="Can You Read It Now">CYRIN</abbr> <a href="http://en.wikipedia.org/wiki/Bookmarklet">bookmarklet</a>.</p>
 <figure>
-<img src="http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/scores.png" alt="Example CYRIN scores" />
+<img src="http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/scores.png" alt="Example CYRIN scores">
 <figcaption><abbr title="Can You Read It Now">CYRIN</abbr> gives immediate feedback in the current browser window</figcaption>
 </figure>
 
 
-<h2><a name="What Do I Do With This?">What Do I Do With This?</a></h2>
-<p>The source for a lot of the ratings are the <abbr title="World Wide Web Consortium">W3C</abbr>’s <a href="http://www.w3.org/WAI/intro/wcag.php">Web Content Accessibility Guidelines</a>, which are focused on making content accessible to as many people as possible. I’ve used the formulas where they are included with the guidelines for calculating how readable text will be and tried to make clear ratings based on that guidance or personal preference everywhere else. In <abbr title="Can You Read It Now">CYRIN</abbr> higher scores (up to 10) mean that the text will be easier and possible for more people to read your content, but anything rated 7 or above can be good enough if you’re not targeting visitors with <a href="http://en.wikipedia.org/wiki/Low_vision">low-vision</a>.</p>
+<h2>What Do I Do With This?</h2>
+<p>The source for a lot of the ratings are the <abbr title="World Wide Web Consortium">W3C</abbr>&rsquo;s <a href="http://www.w3.org/WAI/intro/wcag.php">Web Content Accessibility Guidelines</a>, which are focused on making content accessible to as many people as possible. I&rsquo;ve used the formulas where they are included with the guidelines for calculating how readable text will be and tried to make clear ratings based on that guidance or personal preference everywhere else. In <abbr title="Can You Read It Now">CYRIN</abbr> higher scores (up to 10) mean that the text will be easier and possible for more people to read your content, but anything rated 7 or above can be good enough if you&rsquo;re not targeting visitors with <a href="http://en.wikipedia.org/wiki/Low_vision">low-vision</a>.</p>
 <p><abbr title="Can You Read It Now">CYRIN</abbr> also gives specific recommendations with <abbr title="Cascading Style Sheets">CSS</abbr> rules for making the target design more readable.</p>
 <figure>
-<img src="http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/suggestions.png" alt="Example CYRIN suggestions" />
+<img src="http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/suggestions.png" alt="Example CYRIN suggestions">
 <figcaption>Suggestions &amp; <abbr title="Cascading Style Sheets">CSS</abbr></figcaption>
 </figure>
 
-<p>Finally, <abbr title="Can You Read It Now">CYRIN</abbr> also provides short descriptions of the aspects of typesetting that are being measured. There are more aspects of well-set type than are listed here and more subtlety to determining whether text is readable, but I think it’s a good start for beginners and casual practitioners.</p>
+<p>Finally, <abbr title="Can You Read It Now">CYRIN</abbr> also provides short descriptions of the aspects of typesetting that are being measured. There are more aspects of well-set type than are listed here and more subtlety to determining whether text is readable, but I think it&rsquo;s a good start for beginners and casual practitioners.</p>
 <figure>
-<img src="http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/aspect_description.png" alt="Example CYRIN aspect description" />
+<img src="http://kevingorski.com/articles/typography-&amp;-Can-You-Read-It-Now/aspect_description.png" alt="Example CYRIN aspect description">
 <figcaption>Description of <a href="http://en.wikipedia.org/wiki/Leading">line leading</a></figcaption>
 </figure>
 
 <p>Go ahead, <a href="http://canyoureaditnow.com">try it out</a>.</p>
-<h2><a name="What’s coming">What’s coming</a></h2>
-<p>There’s more to tell about <abbr title="Can You Read It Now">CYRIN</abbr> and some of the basics of typography as it applies to readability, so I hope you’ll look forward to:</p>
+<h2>What&rsquo;s coming</h2>
+<p>There&rsquo;s more to tell about <abbr title="Can You Read It Now">CYRIN</abbr> and some of the basics of typography as it applies to readability, so I hope you&rsquo;ll look forward to:</p>
 <ul>
-<li><span>More on the meanings of metrics that <abbr title="Can You Read It Now">CYRIN</abbr> evaluates</span></li>
-<li><span>Notes on other aspects of typography in the browser</span></li>
-<li><span>Technical details about how <abbr title="Can You Read It Now">CYRIN</abbr> was built</span></li>
-<li><span>Feature updates</span></li>
+<li>More on the meanings of metrics that <abbr title="Can You Read It Now">CYRIN</abbr> evaluates</li>
+<li>Notes on other aspects of typography in the browser</li>
+<li>Technical details about how <abbr title="Can You Read It Now">CYRIN</abbr> was built</li>
+<li>Feature updates</li>
 </ul>
-<h2><a name="Other Reading">Other Reading</a></h2>
-<p>Here's some type-geek reading I’ve enjoyed:</p>
+<h2>Other Reading</h2>
+<p>Here&#39;s some type-geek reading I&rsquo;ve enjoyed:</p>
 <ul>
-<li><span><a href="http://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style">The Elements of Typographic Style</a> - The One True Typography Book, as far as I know. Covers a great deal of what I’d picked up in bits and pieces over time, but in greater detail, historical context and (of course) amazing typography.</span></li>
-<li><span><a href="http://webtypography.net/">The Elements of Typographic Style Applied to the Web</a> - A long-running work in progress (started in 2005) that tries to capture more of the specifics of designing for the browser.</span></li>
-<li><span><a href="http://informationarchitects.net/blog/">Information Architects</a> - Creators of iA Writer, they have written about how <a href="http://informationarchitects.net/blog/responsive-typography-the-basics/">they apply rigorous standards to the display of text</a> in their cross-device text editors.</span></li>
-<li><span><a href="http://elliotjaystocks.com/">Elliot Jay Stocks</a>’ Tomorrow’s web type today series: <a href="http://elliotjaystocks.com/blog/the-fine-flourish-of-the-ligature/">ligatures</a>, <a href="http://elliotjaystocks.com/blog/expert-subsets-for-css-in-123/">expert subsets</a> (for real small caps and lower case numerals), <a href="http://elliotjaystocks.com/blog/say-it-with-a-swash/">swashes</a> &amp; <a href="http://elliotjaystocks.com/blog/stylesets/">stylesets</a>.</span></li>
+<li><a href="http://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style">The Elements of Typographic Style</a> - The One True Typography Book, as far as I know. Covers a great deal of what I&rsquo;d picked up in bits and pieces over time, but in greater detail, historical context and (of course) amazing typography.</li>
+<li><a href="http://webtypography.net/">The Elements of Typographic Style Applied to the Web</a> - A long-running work in progress (started in 2005) that tries to capture more of the specifics of designing for the browser.</li>
+<li><a href="http://informationarchitects.net/blog/">Information Architects</a> - Creators of iA Writer, they have written about how <a href="http://informationarchitects.net/blog/responsive-typography-the-basics/">they apply rigorous standards to the display of text</a> in their cross-device text editors.</li>
+<li><a href="http://elliotjaystocks.com/">Elliot Jay Stocks</a>&rsquo; Tomorrow&rsquo;s web type today series: <a href="http://elliotjaystocks.com/blog/the-fine-flourish-of-the-ligature/">ligatures</a>, <a href="http://elliotjaystocks.com/blog/expert-subsets-for-css-in-123/">expert subsets</a> (for real small caps and lower case numerals), <a href="http://elliotjaystocks.com/blog/say-it-with-a-swash/">swashes</a> &amp; <a href="http://elliotjaystocks.com/blog/stylesets/">stylesets</a>.</li>
 </ul>
 <p>Until next time.</p>
-<div class="flueron">❧</div></section>
+<div class="flueron">&#10087;</div></section>
             <section class="series">
               <h3>The&nbsp;<em>CYRIN</em> Series:</h3>
               <ol class="articles">
@@ -108,7 +120,13 @@
     <footer class="clearfix">
       <div class="center">
         <div class="grid">
-          <nav><a href="/" class="back">Home</a> · <a href="/archive.html">The&nbsp;Archives</a> · <a href="/projects-&amp;-portfolio.html">Projects&nbsp;&amp;&nbsp;Portfolio</a> · <a href="/feed.xml">Articles&nbsp;RSS</a>
+          <nav>
+            <ul>
+              <li class="home"><a href="/" class="back">Home</a></li>
+              <li><span class="home"> &middot; </span><a href="/archive.html">Writing</a></li>
+              <li> &middot; <a href="/projects-&amp;-portfolio.html">Projects&nbsp;&amp;&nbsp;Portfolio</a></li>
+              <li class="rss"> &middot; <a href="/feed.xml">RSS</a></li>
+            </ul>
           </nav>
         </div>
       </div>

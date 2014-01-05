@@ -1,13 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link rel="dns-prefetch" href="//use.typekit.net" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="dns-prefetch" href="//use.typekit.net">
     <title>Projects &amp; Porfolio - Kevin Gorski
     </title>
-    <meta name="description" content="Kevin Gorski creates &amp; writes about software" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kevin Gorski creates &amp; writes about software">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
       (function() {
         var config = { kitId: 'cyf1blw', scriptTimeout: 3000 };
@@ -16,28 +16,39 @@
       
     </script>
     <!-- build:css /css/styles.css-->
-    <link rel="stylesheet" href="/css/all.css?22cbe157" />
+    <link rel="stylesheet" href="/css/all.css">
     <!-- endbuild-->
     <script src="/js/libs/html5shiv.js"></script>
-    <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Kevin Gorski creates &amp; writes about software" />
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Kevin Gorski creates &amp; writes about software">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
   </head>
   <body><!--[if lt IE 7]>
     <p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
     <header class="clearfix">
-      <h1 class="center"><a href="/" class="grid">Kevin Gorski</a></h1>
+      <div class="center">
+        <div class="grid">
+          <h1><a href="/">Kevin Gorski</a></h1>
+          <nav>
+            <ul>
+              <li class="home"><a href="/" class="back">Home</a></li>
+              <li><span class="home"> &middot; </span><a href="/archive.html">Writing</a></li>
+              <li class="rss"> &middot; <a href="/feed.xml">RSS</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
     <div id="content" role="main" class="clearfix">
       <div class="center">
         <div class="grid">
           <header>
-            <h1>Projects &amp; Portfolio</h1>
-          </header><p>Since getting my Computer Science degree in 2004, I’ve primarily been doing <span class="caphappy">.NET</span> web development at my day job, but I’ve been exploring other languages and environments in my own time. Most of my personal projects are in browser-based JavaScript or <a href="http://nodejs.org">node.js</a>. Both <span class="caphappy">.NET</span> and node have their advantages, but I’m more interested in working with node in the future.</p>
-<p>Here are some cherry-picked examples of projects I’ve worked on in the past that you might find interesting. If you’re more of a code person, my personal projects are all on <a href="https://github.com/kevingorski">GitHub</a>. I’ve also got <a href="http://kevingorski.com/Kevin%20Gorski%20-%20Resume.pdf">a more formal résumé</a> (<abbr title="Portable Document Format">PDF</abbr>) and a <a href="https://www.linkedin.com/in/kevingorski/">LinkedIn profile</a>.</p>
-<h2><a name="rezgrid">LMS and RezGrid Modules for <a href="http://software.homeaway.com/"><abbr title="HomeAway Software for Professionals">HASP</abbr></a></a></h2>
-<p>At <abbr title="HomeAway Software for Professionals">HASP</abbr>, we develop for and support several similar, but separate software systems for property managers. Instead of building significant new features in each of the systems separately, some are built as "modules" and are loaded into each of the systems after being built once. This saves initial development time, increases consistency, and introduces some interesting design problems. I've worked on two modules as part of the modular team.</p>
+            <h1>Projects & Portfolio</h1>
+          </header><p>Since getting my Computer Science degree in 2004, I&rsquo;ve primarily been doing <span class="caphappy">.NET</span> web development at my day job, but I&rsquo;ve been exploring other languages and environments in my own time. Most of my personal projects are in browser-based JavaScript or <a href="http://nodejs.org">node.js</a>. Both <span class="caphappy">.NET</span> and node have their advantages, but I&rsquo;m more interested in working with node in the future.</p>
+<p>Here are some cherry-picked examples of projects I&rsquo;ve worked on in the past that you might find interesting. If you&rsquo;re more of a code person, my personal projects are all on <a href="https://github.com/kevingorski">GitHub</a>. I&rsquo;ve also got <a href="http://kevingorski.com/Kevin%20Gorski%20-%20Resume.pdf">a more formal résumé</a> (<abbr title="Portable Document Format">PDF</abbr>) and a <a href="https://www.linkedin.com/in/kevingorski/">LinkedIn profile</a>.</p>
+<h2><a name="rezgrid">LMS and RezGrid Modules for <a href="http://software.homeaway.com/">HomeAway Software</a></a></h2>
+<p>At HomeAway Software we develop for and support several similar, but separate software systems for property managers. Instead of building significant new features in each of the systems separately, some are built as &ldquo;modules&rdquo; and are loaded into each of the systems after being built once. This saves initial development time, increases consistency, and introduces some interesting design problems. I&#39;ve worked on two modules as part of the modular team.</p>
 <p>The first modular application was <a href="http://software.homeaway.com/vacation-rentals/products/lead-management"><abbr title="Lead Management System">LMS</abbr></a>, which helps property management companies track inquiries about their properties with realtime availability, templated messaging, and reporting. For many property managers this replaces a paper-based inquiry management process, which can be slow, error-prone, and difficult to share among different reservationists.</p>
-<p>The second web-based modular application is the new reservation grid. Over time, many different grids and availability visualizations have been built into property management software, including those in the <abbr title="HomeAway Software for Professionals">HASP</abbr> product portfolio. This reservation grid was meant to combine some of the most useful features from those products with modern HomeAway design sensibility and make the result a module. The RezGrid visualizes unit availability with customizable unit and reservation information, searches units with advanced filters, books new reservations, and displays unit and reservation details.</p>
+<p>The second web-based modular application is the new reservation grid. Over time, many different grids and availability visualizations have been built into property management software, including those in the HomeAway Software product portfolio. This reservation grid was meant to combine some of the most useful features from those products with modern HomeAway design sensibility and make the result a module. The RezGrid visualizes unit availability with customizable unit and reservation information, searches units with advanced filters, books new reservations, and displays unit and reservation details.</p>
 <h3>Technologies</h3>
 <ul>
 <li><span>Knockout</span></li>
@@ -50,7 +61,7 @@
 <h3>My Favorite Parts</h3>
 <ul>
 <li><span>Working with a motivated and talented development team</span></li>
-<li><span>Knockout has been a lot of fun to work with and has been able to handle all we’ve wanted to do with it</span> </li>
+<li><span>Knockout has been a lot of fun to work with and has been able to handle all we&rsquo;ve wanted to do with it</span> </li>
 <li><span>Building a backwards-compatible API translation layer was challenging, but worthwhile</span></li>
 </ul>
 <h2><a name="bcycle">B-Cycle Admin Site &amp; Infrastructure</a></h2>
@@ -80,7 +91,7 @@
 <ul>
 <li><span>A feel-good goal for the product: more biking, less driving, and better city living</span></li>
 <li><span>The development team cared about the success and well-being of the project and had many productive discussions about both the software and business</span></li>
-<li><span>I’m often reminded of this project when passing a B-Cycle or kiosk</span></li>
+<li><span>I&rsquo;m often reminded of this project when passing a B-Cycle or kiosk</span></li>
 </ul>
 <h2><a name="cyrin">Can You Read It Now?</a></h2>
 <p><a href="http://canyoureaditnow.com/">Can You Read It Now</a> (or <abbr title="Can You Read It Now">CYRIN</abbr>) is a two-part project: an <a href="https://github.com/kevingorski/CanYouReadItNow">open-source jQuery plug-in</a> for analyzing the visual readability of text and <a href="http://canyoureaditnow.com/">a bookmarklet</a> to help users make specific style changes to improve readability. I wrote it to help me learn about typography, readability, and bookmarklets.</p>
@@ -92,9 +103,9 @@
 </ul>
 <h3>My Favorite Parts</h3>
 <ul>
-<li><span>It’s a strange kind of fun evaluating specific pages for readability</span></li>
+<li><span>It&rsquo;s a strange kind of fun evaluating specific pages for readability</span></li>
 <li><span>This was one of my first attempts at a non-trivial JavaScript codebase for both client and server</span></li>
-<li><span>I made the design for the <abbr title="Can You Read It Now">CYRIN</abbr> homepage and I don’t hate it</span></li>
+<li><span>I made the design for the <abbr title="Can You Read It Now">CYRIN</abbr> homepage and I don&rsquo;t hate it</span></li>
 </ul>
 <h2><a name="trackboard">TrackBoard</a></h2>
 <p><a href="https://github.com/kevingorski/TrackBoard">TrackBoard</a> is a browser-based dashboard built with <abbr title="Hypertext Markup Language">HTML</abbr>5, <abbr title="Cascading Style Sheets">CSS</abbr>3, and JavaScript. You can <a href="http://kevingorski.github.com/TrackBoard">see a demo of TrackBoard here</a>. Many features have been prioritized to maximize the opportunity to combine progressive enhancement and new-at-the-time browser features rather than based upon delivering something immediately useful. The overall goal was to have something more visually pleasing and immediately useful to a development team like the <a href="http://www.panic.com/blog/2010/03/the-panic-status-board/">Panic Status Board</a>. There are other, more complete commercial products in the same vein like <a href="http://www.geckoboard.com/">Geckoboard</a> that now exist in this space, but I was able to implement a decent set of features by utilizing open source libraries like <a href="http://jquery.com/">jQuery</a> and <a href="http://modernizr.com/">Modernizr</a>.</p>
@@ -105,7 +116,12 @@
     <footer class="clearfix">
       <div class="center">
         <div class="grid">
-          <nav><a href="/" class="back">Home</a> · <a href="/archive.html">The&nbsp;Archives</a> · <a href="/feed.xml">Articles&nbsp;RSS</a>
+          <nav>
+            <ul>
+              <li class="home"><a href="/" class="back">Home</a></li>
+              <li><span class="home"> &middot; </span><a href="/archive.html">Writing</a></li>
+              <li class="rss"> &middot; <a href="/feed.xml">RSS</a></li>
+            </ul>
           </nav>
         </div>
       </div>
