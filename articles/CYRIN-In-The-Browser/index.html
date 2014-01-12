@@ -1,13 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link rel="dns-prefetch" href="//use.typekit.net" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="dns-prefetch" href="//use.typekit.net">
     <title>CYRIN In The Browser - Kevin Gorski
     </title>
-    <meta name="description" content="Kevin Gorski creates &amp; writes about software" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kevin Gorski creates &amp; writes about software">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
       (function() {
         var config = { kitId: 'cyf1blw', scriptTimeout: 3000 };
@@ -16,11 +16,11 @@
       
     </script>
     <!-- build:css /css/styles.css-->
-    <link rel="stylesheet" href="/css/all.css?24e02a8a" />
+    <link rel="stylesheet" href="/css/all.css">
     <!-- endbuild-->
     <script src="/js/libs/html5shiv.js"></script>
-    <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Kevin Gorski creates &amp; writes about software" />
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Kevin Gorski creates &amp; writes about software">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
   </head>
   <body><!--[if lt IE 7]>
     <p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -30,10 +30,12 @@
           <h1><a href="/">Kevin Gorski</a></h1>
           <nav>
             <ul>
-              <li class="home"><a href="/" class="back">Home</a></li>
-              <li><span class="home"> · </span><a href="/archive.html">Writing</a></li>
-              <li> · <a href="/projects-&amp;-portfolio.html">Projects&nbsp;&amp;&nbsp;Portfolio</a></li>
-              <li class="rss"> · <a href="/feed.xml">RSS</a></li>
+              <li><a href="/archive.html">Writing</a>
+              </li>
+              <li>&middot; <a href="/projects-&amp;-portfolio.html">Projects&nbsp;&amp;&nbsp;Portfolio</a>
+              </li>
+              <li>&middot; <a href="/feed.xml">RSS</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -47,35 +49,35 @@
               <h1>CYRIN In The Browser</h1>
               <div id="metadata">
                 <time datetime="2012-12-16" class="publishDate">December 16th, 2012</time>
-                <iframe border="0" scrolling="no" width="78" height="17" allowtransparency="allowtransparency" frameborder="0" style="margin-bottom: -3px; z-index: 1338; border: 0px; background-color: transparent; overflow: hidden;" src="http://www.instapaper.com/e2?url=http://kevingorski.com/articles/CYRIN-In-The-Browser/&amp;title=CYRIN In The Browser"></iframe>
+                <iframe border="0" scrolling="no" width="78" height="17" allowtransparency frameborder="0" style="margin-bottom: -3px; z-index: 1338; border: 0px; background-color: transparent; overflow: hidden;" src="http://www.instapaper.com/e2?url=http://kevingorski.com/articles/CYRIN-In-The-Browser/&amp;title=CYRIN In The Browser"></iframe>
               </div>
             </header>
             <section class="content"><p>In order to rate the readability of text on a web page, Can You Read It Now has to do all of the following:</p>
 <ul>
-<li><span>Get access to the page contents</span></li>
-<li><span>Find the text to be analyzed</span></li>
-<li><span>Get the displayed style of each piece of text</span></li>
-<li><span>Calculate ratings for each aspect of readability</span></li>
-<li><span>Display the ratings to the user</span></li>
+<li>Get access to the page contents</li>
+<li>Find the text to be analyzed</li>
+<li>Get the displayed style of each piece of text</li>
+<li>Calculate ratings for each aspect of readability</li>
+<li>Display the ratings to the user</li>
 </ul>
-<p>Accomplishing all of this with one click from the user required making several different trade-offs and design decisions. Let’s cover each of these in turn.</p>
-<h2><a name="Get access to the page contents">Get access to the page contents</a></h2>
+<p>Accomplishing all of this with one click from the user required making several different trade-offs and design decisions. Let&rsquo;s cover each of these in turn.</p>
+<h2>Get access to the page contents</h2>
 <p>The simplest way to give <abbr title="Can You Read It Now?">CYRIN</abbr> access to the current document would be to add an in-document JavaScript reference on the page to test, but that would mean changing the content of any page you want to rate, which is tedious and unnecessary. A different way to run third-party JavaScript in the context of the current document is a <a href="http://en.wikipedia.org/wiki/Bookmarklet">bookmarklet</a>. As you might be able to gather from the name, bookmarklets are JavaScript that is saved and executed like a bookmark.</p>
-<p>One pain point of building bookmarklets from a development standpoint is that you can’t update the code once it’s been saved. This can be mitigated by saving only code to load updatable script from a hosted location (like <a href="http://canyoureaditnow.com">canyoureaditnow.com</a>).</p>
+<p>One pain point of building bookmarklets from a development standpoint is that you can&rsquo;t update the code once it&rsquo;s been saved. This can be mitigated by saving only code to load updatable script from a hosted location (like <a href="http://canyoureaditnow.com">canyoureaditnow.com</a>).</p>
 <figure class="codelisting">
-  <pre><code class="xml"><span class="comment">&lt;!-- This code would normally be compressed to one line and not include comments --&gt;</span>
-<span class="tag">&lt;<span class="title">a</span> <span class="attribute">id</span>=<span class="value">"Target"</span> <span class="attribute">href</span>=<span class="value">"javascript:
+  <pre><code class="xml">&lt;!-- This code would normally be compressed to one line and not include comments --&gt;
+&lt;a id=&quot;Target&quot; href=&quot;javascript:
   // Begin self-executing function
   (function(){
 
     // Check for existing definitions
-    if(typeof CYRIN == 'undefined'
-     ||typeof CYRIN.Bookmarklet == 'undefined'){
+    if(typeof CYRIN == &#39;undefined&#39;
+     ||typeof CYRIN.Bookmarklet == &#39;undefined&#39;){
 
       // Include updatable script
       document.body.appendChild(
-        document.createElement('script')
-      ).src = '&lt;a href="</span><span class="attribute">http:</span>//<span class="attribute">canyoureaditnow.com</span>/<span class="attribute">Bookmarklet.js</span>?"&gt;</span>http://canyoureaditnow.com/Bookmarklet.js?<span class="tag">&lt;/<span class="title">a</span>&gt;</span>' + (Math.random())
+        document.createElement(&#39;script&#39;)
+      ).src = &#39;<a href="http://canyoureaditnow.com/Bookmarklet.js?">http://canyoureaditnow.com/Bookmarklet.js?</a>&#39; + (Math.random())
 
     } else {
 
@@ -83,23 +85,23 @@
       CYRIN.Bookmarklet.analyze()
 
     }
-  }());"&gt;CYRIN?<span class="tag">&lt;/<span class="title">a</span>&gt;</span></code></pre>
+  }());&quot;&gt;CYRIN?&lt;/a&gt;</code></pre>
   <figcaption>The <a href="https://gist.github.com/4366664"><abbr title="Can You Read It Now?">CYRIN</abbr> bookmarklet</a>, expanded for readability</figcaption>
 </figure>
 
 
-<h2><a name="Find the text to be analyzed">Find the text to be analyzed</a></h2>
-<p>So, now that the JavaScript is running in the right context, how do we find the text to analyze? I knew it was possible to find the primary text for a page without requiring user input from seeing the Instapaper and Readability bookmarklets in action, but I wasn’t sure how to go about implementing something like that myself. Fortunately for me, the <a href="https://code.google.com/p/arc90labs-readability/">original Readability bookmark is open source</a> and I was able to re-use their working solution.</p>
-<h2><a name="Get the displayed style of each piece of text">Get the displayed style of each piece of text</a></h2>
-<p>Once we’ve got a handle to the container of the text to analyze, we can use jQuery’s <a href="http://api.jquery.com/css/">css method</a> to grab the computed <abbr title="Cascading Style Sheets">CSS</abbr> properties of each element.</p>
-<h2><a name="Calculate ratings for each aspect of readability">Calculate ratings for each aspect of readability</a></h2>
+<h2>Find the text to be analyzed</h2>
+<p>So, now that the JavaScript is running in the right context, how do we find the text to analyze? I knew it was possible to find the primary text for a page without requiring user input from seeing the Instapaper and Readability bookmarklets in action, but I wasn&rsquo;t sure how to go about implementing something like that myself. Fortunately for me, the <a href="https://code.google.com/p/arc90labs-readability/">original Readability bookmark is open source</a> and I was able to re-use their working solution.</p>
+<h2>Get the displayed style of each piece of text</h2>
+<p>Once we&rsquo;ve got a handle to the container of the text to analyze, we can use jQuery&rsquo;s <a href="http://api.jquery.com/css/">css method</a> to grab the computed <abbr title="Cascading Style Sheets">CSS</abbr> properties of each element.</p>
+<h2>Calculate ratings for each aspect of readability</h2>
 <p>Style data from each piece of text and the elements nearby are used to calculate ratings which are then weighted by how much of the document by character count this text represents. This is how a tree of <abbr title="Document Object Model">DOM</abbr> elements gets rated and turned into one set of scores for the entire page.</p>
-<h2><a name="Display the results">Display the results</a></h2>
+<h2>Display the results</h2>
 <p>Now we have a set of scores to display within the document that we just finished rating. In order to prevent the hosted page from affecting how the scores are styled they are displayed in an <a href="http://en.wikipedia.org/wiki/iframe">IFrame</a>, where only the directly included styles will apply. This also allows the markup to be served by the <abbr title="Can You Read It Now?">CYRIN</abbr> server rather than included in JavaScript.</p>
-<h2><a name="Wrapping up">Wrapping up</a></h2>
-<p>That’s all I have to say about <abbr title="Can You Read It Now?">CYRIN</abbr> for now. If you have any questions feel free to contact me at <a href="mailto:kevin.gorski@gmail.com">kevin.gorski@gmail.com</a>.</p>
+<h2>Wrapping up</h2>
+<p>That&rsquo;s all I have to say about <abbr title="Can You Read It Now?">CYRIN</abbr> for now. If you have any questions feel free to contact me at <a href="mailto:kevin.gorski@gmail.com">kevin.gorski@gmail.com</a>.</p>
 <p>Until next time.</p>
-<div class="flueron">❧</div></section>
+<div class="flueron">&#10087;</div></section>
             <section class="series clearfix">
               <h3>The&nbsp;<em>CYRIN</em> Series:</h3>
               <ol class="articles">
@@ -144,10 +146,14 @@
         <div class="grid">
           <nav>
             <ul>
-              <li class="home"><a href="/" class="back">Home</a></li>
-              <li><span class="home"> · </span><a href="/archive.html">Writing</a></li>
-              <li> · <a href="/projects-&amp;-portfolio.html">Projects&nbsp;&amp;&nbsp;Portfolio</a></li>
-              <li class="rss"> · <a href="/feed.xml">RSS</a></li>
+              <li><a href="/">Home</a>
+              </li>
+              <li>&middot; <a href="/archive.html">Writing</a>
+              </li>
+              <li>&middot; <a href="/projects-&amp;-portfolio.html">Projects&nbsp;&amp;&nbsp;Portfolio</a>
+              </li>
+              <li>&middot; <a href="/feed.xml">RSS</a>
+              </li>
             </ul>
           </nav>
         </div>

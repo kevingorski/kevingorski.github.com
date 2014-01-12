@@ -120,11 +120,11 @@ code{color:#777;font-family:Consolas,'Liberation Mono',Courier,monospace}
 .gist .gist-file .gist-data .data{font-size:.65em}
 dl,menu,ol,ul{padding-left:0}
 .rss{display:none}
-header.home nav .home{display:none}
+header nav .home{display:none}
+header a,header a:link,header a:visited{color:#6e6e6e}
 nav{text-align:center;margin-bottom:1em;}
 header nav{text-align:left;}
 header nav ul{margin:0}
-header nav a,header nav a:link{color:#6e6e6e}
 nav ul,nav li{display:inline-block}
 body > footer{padding:3em 0 5em;text-align:center}
 section.archive,section.series,section.surrounding{margin-top:1em;}
