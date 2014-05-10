@@ -119,6 +119,7 @@ code{color:#777;font-family:Consolas,'Liberation Mono',Courier,monospace}
 .gist{text-align:left;}
 .gist .gist-file .gist-data .data{font-size:.65em}
 dl,menu,ol,ul{padding-left:0}
+ul ul{padding-left:1.5em;margin-top:0;margin-bottom:0}
 .rss{display:none}
 header nav .home{display:none}
 header a,header a:link,header a:visited{color:#6e6e6e}

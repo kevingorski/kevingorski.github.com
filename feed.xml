@@ -5,9 +5,93 @@
     <atom:link href="http://kevingorski.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://kevingorski.com</link>
     <description>Kevin Gorski creates &amp; writes about software</description>
-    <pubDate>Thu, 05 Sep 2013 20:49:00 -0600</pubDate>
+    <pubDate>Sat, 10 May 2014 17:03:00 -0600</pubDate>
     <generator>Grunt.js and Jade</generator>
     <language>en</language>
+    <item>
+      <title>Time and Software</title>
+      <link>http://kevingorski.com/articles/Time-and-Software/</link>
+      <pubDate>Sat, 10 May 2014 17:03:00 -0600</pubDate>
+      <guid isPermaLink="true">http://kevingorski.com/articles/Time-and-Software/</guid>
+      <author>kevin.gorski@gmail.com (Kevin Gorski)</author>
+      <description>&lt;p&gt;There are few things more frustrating in building and using software than an awkward and error-prone system. No such system is as commonly encountered as time. &lt;a href=&quot;http://msmvps.com/blogs/jon_skeet/archive/2009/11/02/omg-ponies-aka-humanity-epic-fail.aspx&quot;&gt;I&amp;rsquo;m not the first person to point this out&lt;/a&gt;, but I&amp;rsquo;d like to contribute a series of questions that might help to explain how your system is mistreating time. Not all systems will require paying attention to all of these details, but knowing what tradeoffs you are willing to make is at the heart of engineering and design.&lt;/p&gt;
+&lt;p&gt;A time-themed playlist to listen to while you read:&lt;/p&gt;
+&lt;iframe class=&quot;playlist&quot; src=&quot;https://rd.io/i/QV5I6DPSE1U/&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;h2&gt;Time Prompts&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;How does your system handle date entry?&lt;ul&gt;
+&lt;li&gt;Are there dates that are not valid for entry? How is this communicated to the user?&lt;/li&gt;
+&lt;li&gt;For text inputs:&lt;ul&gt;
+&lt;li&gt;Which of the following formats do you accept?&lt;ul&gt;
+&lt;li&gt;MM/DD/YY&lt;/li&gt;
+&lt;li&gt;MM/DD/YYYY&lt;/li&gt;
+&lt;li&gt;DD/MM/YY&lt;/li&gt;
+&lt;li&gt;DD/MM/YYYY&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Would it make sense to accept logical shorthands like the following?&lt;ul&gt;
+&lt;li&gt;Yesterday&lt;/li&gt;
+&lt;li&gt;Last Sunday&lt;/li&gt;
+&lt;li&gt;+1w&lt;/li&gt;
+&lt;li&gt;Night before Christmas&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;For visual inputs:&lt;ul&gt;
+&lt;li&gt;Is a calendar or list of days/months/years really the best input choice?&lt;ul&gt;
+&lt;li&gt;Before/after target date - age verification&lt;/li&gt;
+&lt;li&gt;Timeline - selecting a date range within a context of other events&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;What is your expected scale of input?&lt;ul&gt;
+&lt;li&gt;Past dates&lt;ul&gt;
+&lt;li&gt;Long ago - historical data entry&lt;/li&gt;
+&lt;li&gt;Within decades - selecting birthdays for adults&lt;/li&gt;
+&lt;li&gt;Within years - selecting birthdays for children&lt;/li&gt;
+&lt;li&gt;Within months - not sure?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Very recent or very near future&lt;/li&gt;
+&lt;li&gt;Future dates&lt;ul&gt;
+&lt;li&gt;Within months - scheduling appointments&lt;/li&gt;
+&lt;li&gt;Within years - goal setting&lt;/li&gt;
+&lt;li&gt;Within decades - retirement planning&lt;/li&gt;
+&lt;li&gt;Far future - science fiction timeline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;When comparing two times:&lt;ul&gt;
+&lt;li&gt;Are your measurements in the same timezone?&lt;/li&gt;
+&lt;li&gt;Are your measurements coming from the same source? If not, are the clocks of the different sources in sync?&lt;/li&gt;
+&lt;li&gt;Does the result of your comparisons round partial units (days/hours/minutes/etc) as desired?&lt;/li&gt;
+&lt;li&gt;What happens if the result is negative?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Timezones!&lt;ul&gt;
+&lt;li&gt;What happens when measurements cross a daylight savings boundary?&lt;/li&gt;
+&lt;li&gt;Does your system handle to-the-hour daylight savings changes?&lt;/li&gt;
+&lt;li&gt;Does your system handle historical and present daylight savings behaviors?&lt;/li&gt;
+&lt;li&gt;When you display a time to the user, which timezone should it be in?&lt;ul&gt;
+&lt;li&gt;Configured timezone&lt;/li&gt;
+&lt;li&gt;Entered timezone - data sources from different timezones cause trouble here&lt;/li&gt;
+&lt;li&gt;Server timezone - what happens if the server moves?&lt;/li&gt;
+&lt;li&gt;User-local timezone - what happens if the user is in another timezone or has to communicate to another user of the system in a different timezone?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Out of Time&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;m sure there are plenty of other details to working with time that I&amp;rsquo;ve missed, but it&amp;rsquo;s a large enough sampling to show how much of an iceberg time can be. I hope this forewarning helps you navigate around it safely.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Denver Tours Playlist September-October 2013</title>
       <link>http://kevingorski.com/articles/Denver-Tours-Playlist-Sept-Oct-2013/</link>

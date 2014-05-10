@@ -13,6 +13,10 @@
     <priority>0.90</priority>
   </url>
   <url>
+    <loc>http://kevingorski.com/articles/Time-and-Software/</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>http://kevingorski.com/articles/Denver-Tours-Playlist-Sept-Oct-2013/</loc>
     <priority>0.80</priority>
   </url>
