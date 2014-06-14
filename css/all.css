@@ -127,6 +127,8 @@ nav{text-align:center;margin-bottom:1em;}
 header nav{text-align:left;}
 header nav ul{margin:0}
 nav ul,nav li{display:inline-block}
+nav a,.contact a,nav .spacer,.contact .spacer{display:inline-block}
+nav .spacer,.contact .spacer{text-align:center;width:3em}
 body > footer{padding:3em 0 5em;text-align:center}
 section.archive,section.series,section.surrounding{margin-top:1em;}
 section.archive ol,section.series ol,section.surrounding ol{list-style:none;padding:0}
