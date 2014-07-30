@@ -5,9 +5,89 @@
     <atom:link href="http://kevingorski.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://kevingorski.com</link>
     <description>Kevin Gorski creates &amp; writes about software</description>
-    <pubDate>Sat, 10 May 2014 17:03:00 -0600</pubDate>
+    <pubDate>Sun, 20 Jul 2014 14:30:00 -0600</pubDate>
     <generator>Grunt.js and Jade</generator>
     <language>en</language>
+    <item>
+      <title>Load-bearing JavaScript - Name Every Function</title>
+      <link>http://kevingorski.com/articles/Load-bearing-JavaScript-Name-Every-Function/</link>
+      <pubDate>Sun, 20 Jul 2014 14:30:00 -0600</pubDate>
+      <guid isPermaLink="true">http://kevingorski.com/articles/Load-bearing-JavaScript-Name-Every-Function/</guid>
+      <author>kevin.gorski@gmail.com (Kevin Gorski)</author>
+      <description>&lt;p&gt;When writing non-trivial, maintainable JavaScript, I&amp;rsquo;ve found that there are some simple guidelines which can improve the development experience. The first of these is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Name every function&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Functions are the basic building block of JavaScript and are correspondingly easy to define throughout your code. The most terse form (and probably the most familiar one) is in the anonymous form:&lt;/p&gt;
+&lt;figure class=&quot;codelisting&quot;&gt;&lt;pre&gt;&lt;code lang=&quot;javascript&quot; class=&quot;javascript&quot;&gt;$(&#39;.confirm&#39;).click(function() {
+  // handle confirmation
+});&lt;/code&gt;&lt;/pre&gt;
+&lt;figcaption&gt;An anonymous function&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;This is usually fine for small scripts and examples, but as your codebase grows, brevity is less important than other factors:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Improved debugging experience - stack traces can tell you which function errors are being thrown from or through&lt;/li&gt;
+&lt;li&gt;Surfacing refactoring opportunities - when you stop to name a function, you can tell if its intent is clear and if it should be broken down into smaller pieces&lt;/li&gt;
+&lt;li&gt;Readability - scanning and searching for the names of functions once they&amp;rsquo;re written can be easier than recognizing blocks of code&lt;/li&gt;
+&lt;li&gt;Shortened path to re-use - once you&amp;rsquo;ve got a named function the possibility for re-use is one step shorter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are two ways to reference a function by name, each having slightly different syntax and behavior. The first is to assign an anonymous function to a variable. Pretty straightforward:&lt;/p&gt;
+&lt;figure class=&quot;codelisting&quot;&gt;&lt;pre&gt;&lt;code lang=&quot;javascript&quot; class=&quot;javascript&quot;&gt;var anonymousConfirm = function() {
+  // handle confirmation
+};
+
+$(&#39;.confirm&#39;).click(anonymousConfirm);&lt;/code&gt;&lt;/pre&gt;
+&lt;figcaption&gt;Still anonymous, but referenced by a named variable&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Not too surprising, but using a function variable &lt;em&gt;isn&amp;rsquo;t the same&lt;/em&gt; as having a named function, and only named functions will have their names show up in a stack trace.&lt;/p&gt;
+&lt;figure class=&quot;codelisting&quot;&gt;&lt;pre&gt;&lt;code lang=&quot;javascript&quot; class=&quot;javascript&quot;&gt;function namedConfirm() {
+  // handle confirmation
+}
+
+$(&#39;.confirm&#39;).click(namedConfirm);&lt;/code&gt;&lt;/pre&gt;
+&lt;figcaption&gt;A real named function&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;It doesn&amp;rsquo;t look that much different, does it? It&#39;s fewer characters than assigning a variable and doesn&amp;rsquo;t requre a semicolin at the end of the statement (&amp;ldquo;require&amp;rdquo;), which is apparently a big deal to some devs. More interesting to me, however, is that the following example is valid with named functions, whereas with function variables it would not be:&lt;/p&gt;
+&lt;figure class=&quot;codelisting&quot;&gt;&lt;pre&gt;&lt;code lang=&quot;javascript&quot; class=&quot;javascript&quot;&gt;$(&#39;.confirm&#39;).click(namedConfirm);
+
+function namedConfirm() {
+  // handle confirmation
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;figcaption&gt;Referencing named functions before definition&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;This works because of a feature/behavior of JavaScript called function-hoisting, which &amp;ldquo;moves&amp;rdquo; named function definitions to the top of the current scope (usually another function) when the code is executed. This example was easy to read, but doesn&amp;rsquo;t illustrate why you might want to do such a thing. Here&amp;rsquo;s a slightly more realistic use case:&lt;/p&gt;
+&lt;figure class=&quot;codelisting&quot;&gt;&lt;pre&gt;&lt;code lang=&quot;javascript&quot; class=&quot;javascript&quot;&gt;function mixinSomeStuff(target) {
+  // Single place to look for methods added, contents separated
+  return $.extend(target, {
+    doSomething: doSomething,
+    anotherThing: anotherThing,
+    // etc.
+  });
+
+  function sharedPrivateHelper() {
+    // Shy, but useful
+  }
+
+  function doSomething() {
+    // something!
+    sharedPrivateHelper();
+  }
+
+  function anotherThing(other) {
+    // more!
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;figcaption&gt;Assigning named functions to object properties&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Separating the public interface from the implementation details like this is a matter of taste, but I find it more readable.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s it for the first item in &lt;em&gt;Load-bearing JavaScript&lt;/em&gt;, I hope you&amp;rsquo;ve found it helpful!&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Time and Software</title>
       <link>http://kevingorski.com/articles/Time-and-Software/</link>
