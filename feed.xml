@@ -5,9 +5,80 @@
     <atom:link href="http://kevingorski.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://kevingorski.com</link>
     <description>Kevin Gorski creates &amp; writes about software</description>
-    <pubDate>Sun, 20 Jul 2014 14:30:00 -0600</pubDate>
+    <pubDate>Mon, 18 Aug 2014 20:55:00 -0600</pubDate>
     <generator>Grunt.js and Jade</generator>
     <language>en</language>
+    <item>
+      <title>Load-bearing JavaScript - Control &quot;this&quot;</title>
+      <link>http://kevingorski.com/articles/Control-This/</link>
+      <pubDate>Mon, 18 Aug 2014 20:55:00 -0600</pubDate>
+      <guid isPermaLink="true">http://kevingorski.com/articles/Control-This/</guid>
+      <author>kevin.gorski@gmail.com (Kevin Gorski)</author>
+      <description>&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Master the &amp;ldquo;this&amp;rdquo; keyword&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you&amp;rsquo;ve used an object-oriented language that also has the &lt;code&gt;this&lt;/code&gt; keyword, you may be surprised that it means something more subtle in JavaScript.&lt;/p&gt;
+&lt;p&gt;With many OO languages, &lt;code&gt;this&lt;/code&gt; means the current instance of this class type (or a sub-class of that type). Methods are never disassociated from the instances that own them, so &lt;code&gt;this&lt;/code&gt; always means the the owner.&lt;/p&gt;
+&lt;p&gt;In JavaScript, &lt;code&gt;this&lt;/code&gt; depends entirely on how the function was invoked. The first way a function can be invoked is to execute it anonymously:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;function run() {
+  console.log(this, &#39;is running&#39;);
+}
+
+run();&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In this case, there is no explicit object on which &lt;code&gt;run&lt;/code&gt; was invoked, so the global context is used, which is &lt;code&gt;window&lt;/code&gt; in the browser and is another object in runtime environments like Node.&lt;/p&gt;
+&lt;p&gt;To make an object &amp;quot;own&amp;quot; a function, the simplest way is to assign it to a property:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var task = {
+  run: run
+}
+
+task.run(); // Object is running&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you&amp;rsquo;ve got a JavaScript constructor, you can also assign it to the protoype of that constructor:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;function Task() {
+}
+
+Task.prototype.run = run;
+
+var task = new Task();
+
+task.run(); // =&amp;gt; Task is running&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In either of those cases, invoking the function in the context of the object is done with the &amp;ldquo;dot&amp;rdquo; operator, which you&amp;rsquo;ve probably seen enough times to be ignoring at this point, but there&amp;rsquo;s a subtle difference to the &lt;em&gt;executing dot operator&lt;/em&gt; and the &lt;em&gt;accessing dot operator&lt;/em&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;task.run(); // =&amp;gt; executing
+
+var anonymousRun = task.run; // accessing
+
+anonymousRun(); // this = window/global&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is difference is important when trying to use functions on objects as callbacks. To keep the desired context object you can write an anonymous function that then calls the object&amp;rsquo;s function:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$(&#39;.run&#39;).click(function() {
+  task.run();
+});&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is such a common pattern that many libraries build in constructing such a function to be used like so:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$(&#39;.run&#39;).click($.proxy(task.run, task));&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But how does the &lt;code&gt;proxy&lt;/code&gt; function work? It utilizes a function object native function to apply a specific context object and pass parameters to it. Something like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;function proxy(fn, context) {
+  return function () {
+    return fn.apply(context, arguments);
+  };
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;arguments&lt;/code&gt; keyword is an array-like object of all the arguments passed  to the currently executing function. The only difference between &lt;code&gt;call&lt;/code&gt; and &lt;code&gt;apply&lt;/code&gt; is how they accept arguments. While &lt;code&gt;apply&lt;/code&gt; takes an array, &lt;code&gt;call&lt;/code&gt; expects there to be N parameters after the context object for each parameter to be passed to the function.&lt;/p&gt;
+&lt;p&gt;As JavaScript apps grow in complexity, you almost inevitably reach the point where it&amp;rsquo;s easier to read a function created within another function than to attempt to pass enough context around for separate actions. In these cases keeping track of what &lt;code&gt;this&lt;/code&gt; points to can be tricky, so it&amp;rsquo;s usually best to assign &lt;code&gt;this&lt;/code&gt; to a descriptively-named local variable at the beginning of each function. That way, if you need the inner or outer context object it will be obvious what to use and if code moves within your codebase it will be easy to spot context changes.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;function addThings(things) {
+  var container = this;
+
+  function clickThing() {
+    console.log(&#39;Contained by &#39;, container);
+  }
+
+  for(var index = 0; index &amp;lt; things.length; index++) {
+    things[index].onclick = clickThing;
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I hope now you can not only touch &lt;code&gt;this&lt;/code&gt;, but fully grasp it.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Load-bearing JavaScript - Name Every Function</title>
       <link>http://kevingorski.com/articles/Load-bearing-JavaScript-Name-Every-Function/</link>
