@@ -9,7 +9,7 @@
     <generator>Grunt.js and Jade</generator>
     <language>en</language>
     <item>
-      <title>Load-bearing JavaScript - Control &quot;this&quot;</title>
+      <title>Control  this </title>
       <link>http://kevingorski.com/articles/Control-This/</link>
       <pubDate>Mon, 18 Aug 2014 20:55:00 -0600</pubDate>
       <guid isPermaLink="true">http://kevingorski.com/articles/Control-This/</guid>
@@ -80,10 +80,10 @@ anonymousRun(); // this = window/global&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     <item>
-      <title>Load-bearing JavaScript - Name Every Function</title>
-      <link>http://kevingorski.com/articles/Load-bearing-JavaScript-Name-Every-Function/</link>
+      <title>Name Every Function</title>
+      <link>http://kevingorski.com/articles/Name-Every-Function/</link>
       <pubDate>Sun, 20 Jul 2014 14:30:00 -0600</pubDate>
-      <guid isPermaLink="true">http://kevingorski.com/articles/Load-bearing-JavaScript-Name-Every-Function/</guid>
+      <guid isPermaLink="true">http://kevingorski.com/articles/Name-Every-Function/</guid>
       <author>kevin.gorski@gmail.com (Kevin Gorski)</author>
       <description>&lt;p&gt;When writing non-trivial, maintainable JavaScript, I&amp;rsquo;ve found that there are some simple guidelines which can improve the development experience. The first of these is:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -156,7 +156,7 @@ function namedConfirm() {
 &lt;/figure&gt;
 
 &lt;p&gt;Separating the public interface from the implementation details like this is a matter of taste, but I find it more readable.&lt;/p&gt;
-&lt;p&gt;That&amp;rsquo;s it for the first item in &lt;em&gt;Load-bearing JavaScript&lt;/em&gt;, I hope you&amp;rsquo;ve found it helpful!&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s it for now, I hope you&amp;rsquo;ve found it helpful!&lt;/p&gt;
 </description>
     </item>
     <item>
